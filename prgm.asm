@@ -11,9 +11,22 @@
 	out => 0x08
 	jmp {addr} => 0x09 @ addr`8
 	jz  {addr} => 0x0a @ addr`8
-	jc  {addr} => 0x0b @ addr`8
+	jnz {addr} => 0x0b @ addr`8
+	jc  {addr} => 0x0c @ addr`8
+	jnc {addr} => 0x0d @ addr`8
 	hlt => 0x0c
 }
+
+; no stack, uses address 0xff as return address, no nested calls
+; returns in 0xfe
+; args start at 0xf0, end at 0xfd
+
+; scratch memory:
+; 0xe0-ef
+
+; divide:
+; 	lda $0
+; 	sta 0xe0
 
 ; biggest = 0xfd
 ; second  = 0xfe
