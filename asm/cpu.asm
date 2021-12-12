@@ -2,39 +2,39 @@
 {
     nop => 0x00
 
-	lda {addr: u8} => 0x01 @ addr
-	lda ${val: i8} => 0x02 @ val
+	lda {addr: u8} => 0x01 @ addr`8
+	lda ${val: i8} => 0x02 @ val`8
 
-	sta {addr: u8} => 0x03 @ addr
+	sta {addr: u8} => 0x03 @ addr`8
 
-	add {addr: u8} => 0x04 @ addr
-	add ${val: i8} => 0x05 @ val
+	add {addr: u8} => 0x04 @ addr`8
+	add ${val: i8} => 0x05 @ val`8
 
-	sub {addr: u8} => 0x06 @ addr
-	sub ${val: i9} => 0x07 @ val
+	sub {addr: u8} => 0x06 @ addr`8
+	sub ${val: i9} => 0x07 @ val`8
 
 	out => 0x08
 	hlt => 0x09
 
-	jmp {addr: u8} => 0x0a @ addr
+	jmp {addr: u8} => 0x0a @ addr `8
 
-	jz  {addr: u8} => 0x0b @ addr
-	je  {addr: u8} => 0x0b @ addr
-	jnz {addr: u8} => 0x0c @ addr
-	jne {addr: u8} => 0x0c @ addr
+	jz  {addr: u8} => 0x0b @ addr `8
+	je  {addr: u8} => 0x0b @ addr `8
+	jnz {addr: u8} => 0x0c @ addr `8
+	jne {addr: u8} => 0x0c @ addr `8
 
-	jc  {addr: u8} => 0x0d @ addr
-	jnc {addr: u8} => 0x0e @ addr
+	jc  {addr: u8} => 0x0d @ addr `8
+	jnc {addr: u8} => 0x0e @ addr `8
 
-	js  {addr: u8} => 0x0f @ addr
-	jns {addr: u8} => 0x10 @ addr
+	js  {addr: u8} => 0x0f @ addr `8
+	jns {addr: u8} => 0x10 @ addr `8
 
-	jmp #{addr: u8} => 0x11 @ addr
+	jmp #{addr: u8} => 0x11 @ addr`8
 
-	jz  #{addr: u8} => 0x12 @ addr
-	je  #{addr: u8} => 0x12 @ addr
-	jnz #{addr: u8} => 0x13 @ addr
-	jne #{addr: u8} => 0x13 @ addr
+	jz  #{addr: u8} => 0x12 @ addr`8
+	je  #{addr: u8} => 0x12 @ addr`8
+	jnz #{addr: u8} => 0x13 @ addr`8
+	jne #{addr: u8} => 0x13 @ addr`8
 
 	jc  #{addr: u8} => 0x14 @ addr
 	jnc #{addr: u8} => 0x15 @ addr

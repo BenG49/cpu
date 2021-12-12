@@ -38,13 +38,19 @@ def udiv(a: int, b: int) -> int:
 
 	return out
 
+def divisible(a: int, b: int) -> bool:
+	while a >= b:
+		a -= b
+
+	return not a
+
 def umul(a: int, b: int) -> int:
-	if a == 0 or b == 0:
+	if b == 0:
 		return 0
 
 	out = 0
 
-	while a > 0:
+	while a - 1 >= 0:
 		out += b
 		a -= 1
 
@@ -58,4 +64,25 @@ def isqrt(n: int) -> int:
 
 	return x - 1
 
-print(isqrt(27))
+def primes():
+	print(2)
+	i = 3
+
+	while True:
+		if i > 100:
+			break
+
+		j = 3
+		while True:
+			if j == i:
+				print(i)
+				break
+
+			if divisible(i, j):
+				break
+
+			j += 1
+
+		i += 2
+
+primes()
