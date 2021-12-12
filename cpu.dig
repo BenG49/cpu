@@ -516,16 +516,6 @@
       <pos x="60" y="1340"/>
     </visualElement>
     <visualElement>
-      <elementName>Text</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Description</string>
-          <string>If TCLK=5</string>
-        </entry>
-      </elementAttributes>
-      <pos x="20" y="1380"/>
-    </visualElement>
-    <visualElement>
       <elementName>Tunnel</elementName>
       <elementAttributes>
         <entry>
@@ -604,7 +594,7 @@
       <elementAttributes>
         <entry>
           <string>AddrBits</string>
-          <int>13</int>
+          <int>14</int>
         </entry>
         <entry>
           <string>rotation</string>
@@ -647,7 +637,7 @@
         </entry>
         <entry>
           <string>Output Splitting</string>
-          <string>13</string>
+          <string>14</string>
         </entry>
       </elementAttributes>
       <pos x="400" y="1320"/>
@@ -1077,7 +1067,7 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>RAM</string>
+          <string>Bus</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -1095,7 +1085,7 @@
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>ram</string>
+          <string>bus</string>
         </entry>
       </elementAttributes>
       <pos x="-160" y="780"/>
@@ -1105,14 +1095,14 @@
       <elementAttributes>
         <entry>
           <string>rotation</string>
-          <rotation rotation="1"/>
+          <rotation rotation="3"/>
         </entry>
         <entry>
           <string>NetName</string>
-          <string>ram</string>
+          <string>bus</string>
         </entry>
       </elementAttributes>
-      <pos x="160" y="660"/>
+      <pos x="280" y="1220"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -1309,12 +1299,12 @@
       <elementName>Rectangle</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>Clock</string>
-        </entry>
-        <entry>
           <string>RectHeight</string>
           <int>12</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Clock</string>
         </entry>
         <entry>
           <string>RectWidth</string>
@@ -1395,16 +1385,16 @@
       <elementName>Const</elementName>
       <elementAttributes>
         <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
           <string>Value</string>
           <long>255</long>
         </entry>
         <entry>
           <string>Bits</string>
           <int>8</int>
-        </entry>
-        <entry>
-          <string>rotation</string>
-          <rotation rotation="1"/>
         </entry>
       </elementAttributes>
       <pos x="580" y="880"/>
@@ -2063,15 +2053,11 @@
     </wire>
     <wire>
       <p1 x="140" y="680"/>
-      <p2 x="160" y="680"/>
+      <p2 x="280" y="680"/>
     </wire>
     <wire>
       <p1 x="520" y="680"/>
       <p2 x="540" y="680"/>
-    </wire>
-    <wire>
-      <p1 x="160" y="680"/>
-      <p2 x="280" y="680"/>
     </wire>
     <wire>
       <p1 x="540" y="680"/>
@@ -2210,6 +2196,10 @@
       <p2 x="280" y="720"/>
     </wire>
     <wire>
+      <p1 x="280" y="1200"/>
+      <p2 x="280" y="1220"/>
+    </wire>
+    <wire>
       <p1 x="280" y="720"/>
       <p2 x="280" y="860"/>
     </wire>
@@ -2260,10 +2250,6 @@
     <wire>
       <p1 x="160" y="1000"/>
       <p2 x="160" y="1020"/>
-    </wire>
-    <wire>
-      <p1 x="160" y="660"/>
-      <p2 x="160" y="680"/>
     </wire>
     <wire>
       <p1 x="100" y="220"/>

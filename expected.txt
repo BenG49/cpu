@@ -8,12 +8,14 @@ addr instr tclk cf zf sf
 0006  SUB   0   0  0  0:   0x8080 MAI CO 
 0007 SUBI   0   0  0  0:   0x8080 MAI CO 
 0008  OUT   0   0  0  0:   0x8080 MAI CO 
-0009  JMP   0   0  0  0:   0x8080 MAI CO 
-000a   JZ   0   0  0  0:   0x8080 MAI CO 
-000b  JNZ   0   0  0  0:   0x8080 MAI CO 
-000c   JC   0   0  0  0:   0x8080 MAI CO 
-000d  JNC   0   0  0  0:   0x8080 MAI CO 
-000e  HLT   0   0  0  0:   0x8080 MAI CO 
+0009  HLT   0   0  0  0:   0x8080 MAI CO 
+000a  JMP   0   0  0  0:   0x8080 MAI CO 
+000b   JZ   0   0  0  0:   0x8080 MAI CO 
+000c  JNZ   0   0  0  0:   0x8080 MAI CO 
+000d   JC   0   0  0  0:   0x8080 MAI CO 
+000e  JNC   0   0  0  0:   0x8080 MAI CO 
+000f   JS   0   0  0  0:   0x8080 MAI CO 
+0010  JNS   0   0  0  0:   0x8080 MAI CO 
 0100  NOP   1   0  0  0:   0x4030 II RO CE 
 0101  LDA   1   0  0  0:   0x4030 II RO CE 
 0102 LDAI   1   0  0  0:   0x4030 II RO CE 
@@ -23,12 +25,14 @@ addr instr tclk cf zf sf
 0106  SUB   1   0  0  0:   0x4030 II RO CE 
 0107 SUBI   1   0  0  0:   0x4030 II RO CE 
 0108  OUT   1   0  0  0:   0x4030 II RO CE 
-0109  JMP   1   0  0  0:   0x4030 II RO CE 
-010a   JZ   1   0  0  0:   0x4030 II RO CE 
-010b  JNZ   1   0  0  0:   0x4030 II RO CE 
-010c   JC   1   0  0  0:   0x4030 II RO CE 
-010d  JNC   1   0  0  0:   0x4030 II RO CE 
-010e  HLT   1   0  0  0:   0x4030 II RO CE 
+0109  HLT   1   0  0  0:   0x4030 II RO CE 
+010a  JMP   1   0  0  0:   0x4030 II RO CE 
+010b   JZ   1   0  0  0:   0x4030 II RO CE 
+010c  JNZ   1   0  0  0:   0x4030 II RO CE 
+010d   JC   1   0  0  0:   0x4030 II RO CE 
+010e  JNC   1   0  0  0:   0x4030 II RO CE 
+010f   JS   1   0  0  0:   0x4030 II RO CE 
+0110  JNS   1   0  0  0:   0x4030 II RO CE 
 0200  NOP   2   0  0  0:   0x0000 
 0201  LDA   2   0  0  0:   0x8080 MAI CO 
 0202 LDAI   2   0  0  0:   0x8080 MAI CO 
@@ -38,12 +42,14 @@ addr instr tclk cf zf sf
 0206  SUB   2   0  0  0:   0x8080 MAI CO 
 0207 SUBI   2   0  0  0:   0x8080 MAI CO 
 0208  OUT   2   0  0  0:   0x0808 OI AO 
-0209  JMP   2   0  0  0:   0x8080 MAI CO 
-020a   JZ   2   0  0  0:   0x8080 MAI CO 
-020b  JNZ   2   0  0  0:   0x8080 MAI CO 
-020c   JC   2   0  0  0:   0x8080 MAI CO 
-020d  JNC   2   0  0  0:   0x8080 MAI CO 
-020e  HLT   2   0  0  0:   0x0004 HT 
+0209  HLT   2   0  0  0:   0x0004 HT 
+020a  JMP   2   0  0  0:   0x8080 MAI CO 
+020b   JZ   2   0  0  0:   0x8080 MAI CO 
+020c  JNZ   2   0  0  0:   0x8080 MAI CO 
+020d   JC   2   0  0  0:   0x8080 MAI CO 
+020e  JNC   2   0  0  0:   0x8080 MAI CO 
+020f   JS   2   0  0  0:   0x8080 MAI CO 
+0210  JNS   2   0  0  0:   0x8080 MAI CO 
 0300  NOP   3   0  0  0:   0x0000 
 0301  LDA   3   0  0  0:   0x40a0 RO MAI CE 
 0302 LDAI   3   0  0  0:   0x5020 RO AI CE 
@@ -53,12 +59,14 @@ addr instr tclk cf zf sf
 0306  SUB   3   0  0  0:   0x40a0 RO MAI CE 
 0307 SUBI   3   0  0  0:   0x4420 RO BI CE 
 0308  OUT   3   0  0  0:   0x0002 T0 
-0309  JMP   3   0  0  0:   0x2020 RO J 
-030a   JZ   3   0  0  0:   0x4002 T0 CE 
-030b  JNZ   3   0  0  0:   0x2020 RO J 
-030c   JC   3   0  0  0:   0x4002 T0 CE 
-030d  JNC   3   0  0  0:   0x2020 RO J 
-030e  HLT   3   0  0  0:   0x0000 
+0309  HLT   3   0  0  0:   0x0000 
+030a  JMP   3   0  0  0:   0x2020 RO J 
+030b   JZ   3   0  0  0:   0x4002 T0 CE 
+030c  JNZ   3   0  0  0:   0x2020 RO J 
+030d   JC   3   0  0  0:   0x4002 T0 CE 
+030e  JNC   3   0  0  0:   0x2020 RO J 
+030f   JS   3   0  0  0:   0x4002 T0 CE 
+0310  JNS   3   0  0  0:   0x2020 RO J 
 0400  NOP   4   0  0  0:   0x0000 
 0401  LDA   4   0  0  0:   0x1020 RO AI 
 0402 LDAI   4   0  0  0:   0x0002 T0 
@@ -68,12 +76,14 @@ addr instr tclk cf zf sf
 0406  SUB   4   0  0  0:   0x0420 RO BI 
 0407 SUBI   4   0  0  0:   0x1301 FI SU EO AI 
 0408  OUT   4   0  0  0:   0x0000 
-0409  JMP   4   0  0  0:   0x0002 T0 
-040a   JZ   4   0  0  0:   0x0000 
-040b  JNZ   4   0  0  0:   0x0002 T0 
-040c   JC   4   0  0  0:   0x0000 
-040d  JNC   4   0  0  0:   0x0002 T0 
-040e  HLT   4   0  0  0:   0x0000 
+0409  HLT   4   0  0  0:   0x0000 
+040a  JMP   4   0  0  0:   0x0002 T0 
+040b   JZ   4   0  0  0:   0x0000 
+040c  JNZ   4   0  0  0:   0x0002 T0 
+040d   JC   4   0  0  0:   0x0000 
+040e  JNC   4   0  0  0:   0x0002 T0 
+040f   JS   4   0  0  0:   0x0000 
+0410  JNS   4   0  0  0:   0x0002 T0 
 0500  NOP   5   0  0  0:   0x0000 
 0501  LDA   5   0  0  0:   0x0002 T0 
 0502 LDAI   5   0  0  0:   0x0000 
@@ -83,12 +93,14 @@ addr instr tclk cf zf sf
 0506  SUB   5   0  0  0:   0x1301 FI SU EO AI 
 0507 SUBI   5   0  0  0:   0x0002 T0 
 0508  OUT   5   0  0  0:   0x0000 
-0509  JMP   5   0  0  0:   0x0000 
-050a   JZ   5   0  0  0:   0x0000 
-050b  JNZ   5   0  0  0:   0x0000 
-050c   JC   5   0  0  0:   0x0000 
-050d  JNC   5   0  0  0:   0x0000 
-050e  HLT   5   0  0  0:   0x0000 
+0509  HLT   5   0  0  0:   0x0000 
+050a  JMP   5   0  0  0:   0x0000 
+050b   JZ   5   0  0  0:   0x0000 
+050c  JNZ   5   0  0  0:   0x0000 
+050d   JC   5   0  0  0:   0x0000 
+050e  JNC   5   0  0  0:   0x0000 
+050f   JS   5   0  0  0:   0x0000 
+0510  JNS   5   0  0  0:   0x0000 
 0800  NOP   0   1  0  0:   0x8080 MAI CO 
 0801  LDA   0   1  0  0:   0x8080 MAI CO 
 0802 LDAI   0   1  0  0:   0x8080 MAI CO 
@@ -98,12 +110,14 @@ addr instr tclk cf zf sf
 0806  SUB   0   1  0  0:   0x8080 MAI CO 
 0807 SUBI   0   1  0  0:   0x8080 MAI CO 
 0808  OUT   0   1  0  0:   0x8080 MAI CO 
-0809  JMP   0   1  0  0:   0x8080 MAI CO 
-080a   JZ   0   1  0  0:   0x8080 MAI CO 
-080b  JNZ   0   1  0  0:   0x8080 MAI CO 
-080c   JC   0   1  0  0:   0x8080 MAI CO 
-080d  JNC   0   1  0  0:   0x8080 MAI CO 
-080e  HLT   0   1  0  0:   0x8080 MAI CO 
+0809  HLT   0   1  0  0:   0x8080 MAI CO 
+080a  JMP   0   1  0  0:   0x8080 MAI CO 
+080b   JZ   0   1  0  0:   0x8080 MAI CO 
+080c  JNZ   0   1  0  0:   0x8080 MAI CO 
+080d   JC   0   1  0  0:   0x8080 MAI CO 
+080e  JNC   0   1  0  0:   0x8080 MAI CO 
+080f   JS   0   1  0  0:   0x8080 MAI CO 
+0810  JNS   0   1  0  0:   0x8080 MAI CO 
 0900  NOP   1   1  0  0:   0x4030 II RO CE 
 0901  LDA   1   1  0  0:   0x4030 II RO CE 
 0902 LDAI   1   1  0  0:   0x4030 II RO CE 
@@ -113,12 +127,14 @@ addr instr tclk cf zf sf
 0906  SUB   1   1  0  0:   0x4030 II RO CE 
 0907 SUBI   1   1  0  0:   0x4030 II RO CE 
 0908  OUT   1   1  0  0:   0x4030 II RO CE 
-0909  JMP   1   1  0  0:   0x4030 II RO CE 
-090a   JZ   1   1  0  0:   0x4030 II RO CE 
-090b  JNZ   1   1  0  0:   0x4030 II RO CE 
-090c   JC   1   1  0  0:   0x4030 II RO CE 
-090d  JNC   1   1  0  0:   0x4030 II RO CE 
-090e  HLT   1   1  0  0:   0x4030 II RO CE 
+0909  HLT   1   1  0  0:   0x4030 II RO CE 
+090a  JMP   1   1  0  0:   0x4030 II RO CE 
+090b   JZ   1   1  0  0:   0x4030 II RO CE 
+090c  JNZ   1   1  0  0:   0x4030 II RO CE 
+090d   JC   1   1  0  0:   0x4030 II RO CE 
+090e  JNC   1   1  0  0:   0x4030 II RO CE 
+090f   JS   1   1  0  0:   0x4030 II RO CE 
+0910  JNS   1   1  0  0:   0x4030 II RO CE 
 0a00  NOP   2   1  0  0:   0x0000 
 0a01  LDA   2   1  0  0:   0x8080 MAI CO 
 0a02 LDAI   2   1  0  0:   0x8080 MAI CO 
@@ -128,12 +144,14 @@ addr instr tclk cf zf sf
 0a06  SUB   2   1  0  0:   0x8080 MAI CO 
 0a07 SUBI   2   1  0  0:   0x8080 MAI CO 
 0a08  OUT   2   1  0  0:   0x0808 OI AO 
-0a09  JMP   2   1  0  0:   0x8080 MAI CO 
-0a0a   JZ   2   1  0  0:   0x8080 MAI CO 
-0a0b  JNZ   2   1  0  0:   0x8080 MAI CO 
-0a0c   JC   2   1  0  0:   0x8080 MAI CO 
-0a0d  JNC   2   1  0  0:   0x8080 MAI CO 
-0a0e  HLT   2   1  0  0:   0x0004 HT 
+0a09  HLT   2   1  0  0:   0x0004 HT 
+0a0a  JMP   2   1  0  0:   0x8080 MAI CO 
+0a0b   JZ   2   1  0  0:   0x8080 MAI CO 
+0a0c  JNZ   2   1  0  0:   0x8080 MAI CO 
+0a0d   JC   2   1  0  0:   0x8080 MAI CO 
+0a0e  JNC   2   1  0  0:   0x8080 MAI CO 
+0a0f   JS   2   1  0  0:   0x8080 MAI CO 
+0a10  JNS   2   1  0  0:   0x8080 MAI CO 
 0b00  NOP   3   1  0  0:   0x0000 
 0b01  LDA   3   1  0  0:   0x40a0 RO MAI CE 
 0b02 LDAI   3   1  0  0:   0x5020 RO AI CE 
@@ -143,12 +161,14 @@ addr instr tclk cf zf sf
 0b06  SUB   3   1  0  0:   0x40a0 RO MAI CE 
 0b07 SUBI   3   1  0  0:   0x4420 RO BI CE 
 0b08  OUT   3   1  0  0:   0x0002 T0 
-0b09  JMP   3   1  0  0:   0x2020 RO J 
-0b0a   JZ   3   1  0  0:   0x4002 T0 CE 
-0b0b  JNZ   3   1  0  0:   0x2020 RO J 
-0b0c   JC   3   1  0  0:   0x2020 RO J 
-0b0d  JNC   3   1  0  0:   0x4002 T0 CE 
-0b0e  HLT   3   1  0  0:   0x0000 
+0b09  HLT   3   1  0  0:   0x0000 
+0b0a  JMP   3   1  0  0:   0x2020 RO J 
+0b0b   JZ   3   1  0  0:   0x4002 T0 CE 
+0b0c  JNZ   3   1  0  0:   0x2020 RO J 
+0b0d   JC   3   1  0  0:   0x2020 RO J 
+0b0e  JNC   3   1  0  0:   0x4002 T0 CE 
+0b0f   JS   3   1  0  0:   0x4002 T0 CE 
+0b10  JNS   3   1  0  0:   0x2020 RO J 
 0c00  NOP   4   1  0  0:   0x0000 
 0c01  LDA   4   1  0  0:   0x1020 RO AI 
 0c02 LDAI   4   1  0  0:   0x0002 T0 
@@ -158,12 +178,14 @@ addr instr tclk cf zf sf
 0c06  SUB   4   1  0  0:   0x0420 RO BI 
 0c07 SUBI   4   1  0  0:   0x1301 FI SU EO AI 
 0c08  OUT   4   1  0  0:   0x0000 
-0c09  JMP   4   1  0  0:   0x0002 T0 
-0c0a   JZ   4   1  0  0:   0x0000 
-0c0b  JNZ   4   1  0  0:   0x0002 T0 
-0c0c   JC   4   1  0  0:   0x0002 T0 
-0c0d  JNC   4   1  0  0:   0x0000 
-0c0e  HLT   4   1  0  0:   0x0000 
+0c09  HLT   4   1  0  0:   0x0000 
+0c0a  JMP   4   1  0  0:   0x0002 T0 
+0c0b   JZ   4   1  0  0:   0x0000 
+0c0c  JNZ   4   1  0  0:   0x0002 T0 
+0c0d   JC   4   1  0  0:   0x0002 T0 
+0c0e  JNC   4   1  0  0:   0x0000 
+0c0f   JS   4   1  0  0:   0x0000 
+0c10  JNS   4   1  0  0:   0x0002 T0 
 0d00  NOP   5   1  0  0:   0x0000 
 0d01  LDA   5   1  0  0:   0x0002 T0 
 0d02 LDAI   5   1  0  0:   0x0000 
@@ -173,12 +195,14 @@ addr instr tclk cf zf sf
 0d06  SUB   5   1  0  0:   0x1301 FI SU EO AI 
 0d07 SUBI   5   1  0  0:   0x0002 T0 
 0d08  OUT   5   1  0  0:   0x0000 
-0d09  JMP   5   1  0  0:   0x0000 
-0d0a   JZ   5   1  0  0:   0x0000 
-0d0b  JNZ   5   1  0  0:   0x0000 
-0d0c   JC   5   1  0  0:   0x0000 
-0d0d  JNC   5   1  0  0:   0x0000 
-0d0e  HLT   5   1  0  0:   0x0000 
+0d09  HLT   5   1  0  0:   0x0000 
+0d0a  JMP   5   1  0  0:   0x0000 
+0d0b   JZ   5   1  0  0:   0x0000 
+0d0c  JNZ   5   1  0  0:   0x0000 
+0d0d   JC   5   1  0  0:   0x0000 
+0d0e  JNC   5   1  0  0:   0x0000 
+0d0f   JS   5   1  0  0:   0x0000 
+0d10  JNS   5   1  0  0:   0x0000 
 1000  NOP   0   0  1  0:   0x8080 MAI CO 
 1001  LDA   0   0  1  0:   0x8080 MAI CO 
 1002 LDAI   0   0  1  0:   0x8080 MAI CO 
@@ -188,12 +212,14 @@ addr instr tclk cf zf sf
 1006  SUB   0   0  1  0:   0x8080 MAI CO 
 1007 SUBI   0   0  1  0:   0x8080 MAI CO 
 1008  OUT   0   0  1  0:   0x8080 MAI CO 
-1009  JMP   0   0  1  0:   0x8080 MAI CO 
-100a   JZ   0   0  1  0:   0x8080 MAI CO 
-100b  JNZ   0   0  1  0:   0x8080 MAI CO 
-100c   JC   0   0  1  0:   0x8080 MAI CO 
-100d  JNC   0   0  1  0:   0x8080 MAI CO 
-100e  HLT   0   0  1  0:   0x8080 MAI CO 
+1009  HLT   0   0  1  0:   0x8080 MAI CO 
+100a  JMP   0   0  1  0:   0x8080 MAI CO 
+100b   JZ   0   0  1  0:   0x8080 MAI CO 
+100c  JNZ   0   0  1  0:   0x8080 MAI CO 
+100d   JC   0   0  1  0:   0x8080 MAI CO 
+100e  JNC   0   0  1  0:   0x8080 MAI CO 
+100f   JS   0   0  1  0:   0x8080 MAI CO 
+1010  JNS   0   0  1  0:   0x8080 MAI CO 
 1100  NOP   1   0  1  0:   0x4030 II RO CE 
 1101  LDA   1   0  1  0:   0x4030 II RO CE 
 1102 LDAI   1   0  1  0:   0x4030 II RO CE 
@@ -203,12 +229,14 @@ addr instr tclk cf zf sf
 1106  SUB   1   0  1  0:   0x4030 II RO CE 
 1107 SUBI   1   0  1  0:   0x4030 II RO CE 
 1108  OUT   1   0  1  0:   0x4030 II RO CE 
-1109  JMP   1   0  1  0:   0x4030 II RO CE 
-110a   JZ   1   0  1  0:   0x4030 II RO CE 
-110b  JNZ   1   0  1  0:   0x4030 II RO CE 
-110c   JC   1   0  1  0:   0x4030 II RO CE 
-110d  JNC   1   0  1  0:   0x4030 II RO CE 
-110e  HLT   1   0  1  0:   0x4030 II RO CE 
+1109  HLT   1   0  1  0:   0x4030 II RO CE 
+110a  JMP   1   0  1  0:   0x4030 II RO CE 
+110b   JZ   1   0  1  0:   0x4030 II RO CE 
+110c  JNZ   1   0  1  0:   0x4030 II RO CE 
+110d   JC   1   0  1  0:   0x4030 II RO CE 
+110e  JNC   1   0  1  0:   0x4030 II RO CE 
+110f   JS   1   0  1  0:   0x4030 II RO CE 
+1110  JNS   1   0  1  0:   0x4030 II RO CE 
 1200  NOP   2   0  1  0:   0x0000 
 1201  LDA   2   0  1  0:   0x8080 MAI CO 
 1202 LDAI   2   0  1  0:   0x8080 MAI CO 
@@ -218,12 +246,14 @@ addr instr tclk cf zf sf
 1206  SUB   2   0  1  0:   0x8080 MAI CO 
 1207 SUBI   2   0  1  0:   0x8080 MAI CO 
 1208  OUT   2   0  1  0:   0x0808 OI AO 
-1209  JMP   2   0  1  0:   0x8080 MAI CO 
-120a   JZ   2   0  1  0:   0x8080 MAI CO 
-120b  JNZ   2   0  1  0:   0x8080 MAI CO 
-120c   JC   2   0  1  0:   0x8080 MAI CO 
-120d  JNC   2   0  1  0:   0x8080 MAI CO 
-120e  HLT   2   0  1  0:   0x0004 HT 
+1209  HLT   2   0  1  0:   0x0004 HT 
+120a  JMP   2   0  1  0:   0x8080 MAI CO 
+120b   JZ   2   0  1  0:   0x8080 MAI CO 
+120c  JNZ   2   0  1  0:   0x8080 MAI CO 
+120d   JC   2   0  1  0:   0x8080 MAI CO 
+120e  JNC   2   0  1  0:   0x8080 MAI CO 
+120f   JS   2   0  1  0:   0x8080 MAI CO 
+1210  JNS   2   0  1  0:   0x8080 MAI CO 
 1300  NOP   3   0  1  0:   0x0000 
 1301  LDA   3   0  1  0:   0x40a0 RO MAI CE 
 1302 LDAI   3   0  1  0:   0x5020 RO AI CE 
@@ -233,12 +263,14 @@ addr instr tclk cf zf sf
 1306  SUB   3   0  1  0:   0x40a0 RO MAI CE 
 1307 SUBI   3   0  1  0:   0x4420 RO BI CE 
 1308  OUT   3   0  1  0:   0x0002 T0 
-1309  JMP   3   0  1  0:   0x2020 RO J 
-130a   JZ   3   0  1  0:   0x2020 RO J 
-130b  JNZ   3   0  1  0:   0x4002 T0 CE 
-130c   JC   3   0  1  0:   0x4002 T0 CE 
-130d  JNC   3   0  1  0:   0x2020 RO J 
-130e  HLT   3   0  1  0:   0x0000 
+1309  HLT   3   0  1  0:   0x0000 
+130a  JMP   3   0  1  0:   0x2020 RO J 
+130b   JZ   3   0  1  0:   0x2020 RO J 
+130c  JNZ   3   0  1  0:   0x4002 T0 CE 
+130d   JC   3   0  1  0:   0x4002 T0 CE 
+130e  JNC   3   0  1  0:   0x2020 RO J 
+130f   JS   3   0  1  0:   0x4002 T0 CE 
+1310  JNS   3   0  1  0:   0x2020 RO J 
 1400  NOP   4   0  1  0:   0x0000 
 1401  LDA   4   0  1  0:   0x1020 RO AI 
 1402 LDAI   4   0  1  0:   0x0002 T0 
@@ -248,12 +280,14 @@ addr instr tclk cf zf sf
 1406  SUB   4   0  1  0:   0x0420 RO BI 
 1407 SUBI   4   0  1  0:   0x1301 FI SU EO AI 
 1408  OUT   4   0  1  0:   0x0000 
-1409  JMP   4   0  1  0:   0x0002 T0 
-140a   JZ   4   0  1  0:   0x0002 T0 
-140b  JNZ   4   0  1  0:   0x0000 
-140c   JC   4   0  1  0:   0x0000 
-140d  JNC   4   0  1  0:   0x0002 T0 
-140e  HLT   4   0  1  0:   0x0000 
+1409  HLT   4   0  1  0:   0x0000 
+140a  JMP   4   0  1  0:   0x0002 T0 
+140b   JZ   4   0  1  0:   0x0002 T0 
+140c  JNZ   4   0  1  0:   0x0000 
+140d   JC   4   0  1  0:   0x0000 
+140e  JNC   4   0  1  0:   0x0002 T0 
+140f   JS   4   0  1  0:   0x0000 
+1410  JNS   4   0  1  0:   0x0002 T0 
 1500  NOP   5   0  1  0:   0x0000 
 1501  LDA   5   0  1  0:   0x0002 T0 
 1502 LDAI   5   0  1  0:   0x0000 
@@ -263,12 +297,14 @@ addr instr tclk cf zf sf
 1506  SUB   5   0  1  0:   0x1301 FI SU EO AI 
 1507 SUBI   5   0  1  0:   0x0002 T0 
 1508  OUT   5   0  1  0:   0x0000 
-1509  JMP   5   0  1  0:   0x0000 
-150a   JZ   5   0  1  0:   0x0000 
-150b  JNZ   5   0  1  0:   0x0000 
-150c   JC   5   0  1  0:   0x0000 
-150d  JNC   5   0  1  0:   0x0000 
-150e  HLT   5   0  1  0:   0x0000 
+1509  HLT   5   0  1  0:   0x0000 
+150a  JMP   5   0  1  0:   0x0000 
+150b   JZ   5   0  1  0:   0x0000 
+150c  JNZ   5   0  1  0:   0x0000 
+150d   JC   5   0  1  0:   0x0000 
+150e  JNC   5   0  1  0:   0x0000 
+150f   JS   5   0  1  0:   0x0000 
+1510  JNS   5   0  1  0:   0x0000 
 1800  NOP   0   1  1  0:   0x8080 MAI CO 
 1801  LDA   0   1  1  0:   0x8080 MAI CO 
 1802 LDAI   0   1  1  0:   0x8080 MAI CO 
@@ -278,12 +314,14 @@ addr instr tclk cf zf sf
 1806  SUB   0   1  1  0:   0x8080 MAI CO 
 1807 SUBI   0   1  1  0:   0x8080 MAI CO 
 1808  OUT   0   1  1  0:   0x8080 MAI CO 
-1809  JMP   0   1  1  0:   0x8080 MAI CO 
-180a   JZ   0   1  1  0:   0x8080 MAI CO 
-180b  JNZ   0   1  1  0:   0x8080 MAI CO 
-180c   JC   0   1  1  0:   0x8080 MAI CO 
-180d  JNC   0   1  1  0:   0x8080 MAI CO 
-180e  HLT   0   1  1  0:   0x8080 MAI CO 
+1809  HLT   0   1  1  0:   0x8080 MAI CO 
+180a  JMP   0   1  1  0:   0x8080 MAI CO 
+180b   JZ   0   1  1  0:   0x8080 MAI CO 
+180c  JNZ   0   1  1  0:   0x8080 MAI CO 
+180d   JC   0   1  1  0:   0x8080 MAI CO 
+180e  JNC   0   1  1  0:   0x8080 MAI CO 
+180f   JS   0   1  1  0:   0x8080 MAI CO 
+1810  JNS   0   1  1  0:   0x8080 MAI CO 
 1900  NOP   1   1  1  0:   0x4030 II RO CE 
 1901  LDA   1   1  1  0:   0x4030 II RO CE 
 1902 LDAI   1   1  1  0:   0x4030 II RO CE 
@@ -293,12 +331,14 @@ addr instr tclk cf zf sf
 1906  SUB   1   1  1  0:   0x4030 II RO CE 
 1907 SUBI   1   1  1  0:   0x4030 II RO CE 
 1908  OUT   1   1  1  0:   0x4030 II RO CE 
-1909  JMP   1   1  1  0:   0x4030 II RO CE 
-190a   JZ   1   1  1  0:   0x4030 II RO CE 
-190b  JNZ   1   1  1  0:   0x4030 II RO CE 
-190c   JC   1   1  1  0:   0x4030 II RO CE 
-190d  JNC   1   1  1  0:   0x4030 II RO CE 
-190e  HLT   1   1  1  0:   0x4030 II RO CE 
+1909  HLT   1   1  1  0:   0x4030 II RO CE 
+190a  JMP   1   1  1  0:   0x4030 II RO CE 
+190b   JZ   1   1  1  0:   0x4030 II RO CE 
+190c  JNZ   1   1  1  0:   0x4030 II RO CE 
+190d   JC   1   1  1  0:   0x4030 II RO CE 
+190e  JNC   1   1  1  0:   0x4030 II RO CE 
+190f   JS   1   1  1  0:   0x4030 II RO CE 
+1910  JNS   1   1  1  0:   0x4030 II RO CE 
 1a00  NOP   2   1  1  0:   0x0000 
 1a01  LDA   2   1  1  0:   0x8080 MAI CO 
 1a02 LDAI   2   1  1  0:   0x8080 MAI CO 
@@ -308,12 +348,14 @@ addr instr tclk cf zf sf
 1a06  SUB   2   1  1  0:   0x8080 MAI CO 
 1a07 SUBI   2   1  1  0:   0x8080 MAI CO 
 1a08  OUT   2   1  1  0:   0x0808 OI AO 
-1a09  JMP   2   1  1  0:   0x8080 MAI CO 
-1a0a   JZ   2   1  1  0:   0x8080 MAI CO 
-1a0b  JNZ   2   1  1  0:   0x8080 MAI CO 
-1a0c   JC   2   1  1  0:   0x8080 MAI CO 
-1a0d  JNC   2   1  1  0:   0x8080 MAI CO 
-1a0e  HLT   2   1  1  0:   0x0004 HT 
+1a09  HLT   2   1  1  0:   0x0004 HT 
+1a0a  JMP   2   1  1  0:   0x8080 MAI CO 
+1a0b   JZ   2   1  1  0:   0x8080 MAI CO 
+1a0c  JNZ   2   1  1  0:   0x8080 MAI CO 
+1a0d   JC   2   1  1  0:   0x8080 MAI CO 
+1a0e  JNC   2   1  1  0:   0x8080 MAI CO 
+1a0f   JS   2   1  1  0:   0x8080 MAI CO 
+1a10  JNS   2   1  1  0:   0x8080 MAI CO 
 1b00  NOP   3   1  1  0:   0x0000 
 1b01  LDA   3   1  1  0:   0x40a0 RO MAI CE 
 1b02 LDAI   3   1  1  0:   0x5020 RO AI CE 
@@ -323,12 +365,14 @@ addr instr tclk cf zf sf
 1b06  SUB   3   1  1  0:   0x40a0 RO MAI CE 
 1b07 SUBI   3   1  1  0:   0x4420 RO BI CE 
 1b08  OUT   3   1  1  0:   0x0002 T0 
-1b09  JMP   3   1  1  0:   0x2020 RO J 
-1b0a   JZ   3   1  1  0:   0x2020 RO J 
-1b0b  JNZ   3   1  1  0:   0x4002 T0 CE 
-1b0c   JC   3   1  1  0:   0x2020 RO J 
-1b0d  JNC   3   1  1  0:   0x4002 T0 CE 
-1b0e  HLT   3   1  1  0:   0x0000 
+1b09  HLT   3   1  1  0:   0x0000 
+1b0a  JMP   3   1  1  0:   0x2020 RO J 
+1b0b   JZ   3   1  1  0:   0x2020 RO J 
+1b0c  JNZ   3   1  1  0:   0x4002 T0 CE 
+1b0d   JC   3   1  1  0:   0x2020 RO J 
+1b0e  JNC   3   1  1  0:   0x4002 T0 CE 
+1b0f   JS   3   1  1  0:   0x4002 T0 CE 
+1b10  JNS   3   1  1  0:   0x2020 RO J 
 1c00  NOP   4   1  1  0:   0x0000 
 1c01  LDA   4   1  1  0:   0x1020 RO AI 
 1c02 LDAI   4   1  1  0:   0x0002 T0 
@@ -338,12 +382,14 @@ addr instr tclk cf zf sf
 1c06  SUB   4   1  1  0:   0x0420 RO BI 
 1c07 SUBI   4   1  1  0:   0x1301 FI SU EO AI 
 1c08  OUT   4   1  1  0:   0x0000 
-1c09  JMP   4   1  1  0:   0x0002 T0 
-1c0a   JZ   4   1  1  0:   0x0002 T0 
-1c0b  JNZ   4   1  1  0:   0x0000 
-1c0c   JC   4   1  1  0:   0x0002 T0 
-1c0d  JNC   4   1  1  0:   0x0000 
-1c0e  HLT   4   1  1  0:   0x0000 
+1c09  HLT   4   1  1  0:   0x0000 
+1c0a  JMP   4   1  1  0:   0x0002 T0 
+1c0b   JZ   4   1  1  0:   0x0002 T0 
+1c0c  JNZ   4   1  1  0:   0x0000 
+1c0d   JC   4   1  1  0:   0x0002 T0 
+1c0e  JNC   4   1  1  0:   0x0000 
+1c0f   JS   4   1  1  0:   0x0000 
+1c10  JNS   4   1  1  0:   0x0002 T0 
 1d00  NOP   5   1  1  0:   0x0000 
 1d01  LDA   5   1  1  0:   0x0002 T0 
 1d02 LDAI   5   1  1  0:   0x0000 
@@ -353,12 +399,14 @@ addr instr tclk cf zf sf
 1d06  SUB   5   1  1  0:   0x1301 FI SU EO AI 
 1d07 SUBI   5   1  1  0:   0x0002 T0 
 1d08  OUT   5   1  1  0:   0x0000 
-1d09  JMP   5   1  1  0:   0x0000 
-1d0a   JZ   5   1  1  0:   0x0000 
-1d0b  JNZ   5   1  1  0:   0x0000 
-1d0c   JC   5   1  1  0:   0x0000 
-1d0d  JNC   5   1  1  0:   0x0000 
-1d0e  HLT   5   1  1  0:   0x0000 
+1d09  HLT   5   1  1  0:   0x0000 
+1d0a  JMP   5   1  1  0:   0x0000 
+1d0b   JZ   5   1  1  0:   0x0000 
+1d0c  JNZ   5   1  1  0:   0x0000 
+1d0d   JC   5   1  1  0:   0x0000 
+1d0e  JNC   5   1  1  0:   0x0000 
+1d0f   JS   5   1  1  0:   0x0000 
+1d10  JNS   5   1  1  0:   0x0000 
 2000  NOP   0   0  0  1:   0x8080 MAI CO 
 2001  LDA   0   0  0  1:   0x8080 MAI CO 
 2002 LDAI   0   0  0  1:   0x8080 MAI CO 
@@ -368,12 +416,14 @@ addr instr tclk cf zf sf
 2006  SUB   0   0  0  1:   0x8080 MAI CO 
 2007 SUBI   0   0  0  1:   0x8080 MAI CO 
 2008  OUT   0   0  0  1:   0x8080 MAI CO 
-2009  JMP   0   0  0  1:   0x8080 MAI CO 
-200a   JZ   0   0  0  1:   0x8080 MAI CO 
-200b  JNZ   0   0  0  1:   0x8080 MAI CO 
-200c   JC   0   0  0  1:   0x8080 MAI CO 
-200d  JNC   0   0  0  1:   0x8080 MAI CO 
-200e  HLT   0   0  0  1:   0x8080 MAI CO 
+2009  HLT   0   0  0  1:   0x8080 MAI CO 
+200a  JMP   0   0  0  1:   0x8080 MAI CO 
+200b   JZ   0   0  0  1:   0x8080 MAI CO 
+200c  JNZ   0   0  0  1:   0x8080 MAI CO 
+200d   JC   0   0  0  1:   0x8080 MAI CO 
+200e  JNC   0   0  0  1:   0x8080 MAI CO 
+200f   JS   0   0  0  1:   0x8080 MAI CO 
+2010  JNS   0   0  0  1:   0x8080 MAI CO 
 2100  NOP   1   0  0  1:   0x4030 II RO CE 
 2101  LDA   1   0  0  1:   0x4030 II RO CE 
 2102 LDAI   1   0  0  1:   0x4030 II RO CE 
@@ -383,12 +433,14 @@ addr instr tclk cf zf sf
 2106  SUB   1   0  0  1:   0x4030 II RO CE 
 2107 SUBI   1   0  0  1:   0x4030 II RO CE 
 2108  OUT   1   0  0  1:   0x4030 II RO CE 
-2109  JMP   1   0  0  1:   0x4030 II RO CE 
-210a   JZ   1   0  0  1:   0x4030 II RO CE 
-210b  JNZ   1   0  0  1:   0x4030 II RO CE 
-210c   JC   1   0  0  1:   0x4030 II RO CE 
-210d  JNC   1   0  0  1:   0x4030 II RO CE 
-210e  HLT   1   0  0  1:   0x4030 II RO CE 
+2109  HLT   1   0  0  1:   0x4030 II RO CE 
+210a  JMP   1   0  0  1:   0x4030 II RO CE 
+210b   JZ   1   0  0  1:   0x4030 II RO CE 
+210c  JNZ   1   0  0  1:   0x4030 II RO CE 
+210d   JC   1   0  0  1:   0x4030 II RO CE 
+210e  JNC   1   0  0  1:   0x4030 II RO CE 
+210f   JS   1   0  0  1:   0x4030 II RO CE 
+2110  JNS   1   0  0  1:   0x4030 II RO CE 
 2200  NOP   2   0  0  1:   0x0000 
 2201  LDA   2   0  0  1:   0x8080 MAI CO 
 2202 LDAI   2   0  0  1:   0x8080 MAI CO 
@@ -398,12 +450,14 @@ addr instr tclk cf zf sf
 2206  SUB   2   0  0  1:   0x8080 MAI CO 
 2207 SUBI   2   0  0  1:   0x8080 MAI CO 
 2208  OUT   2   0  0  1:   0x0808 OI AO 
-2209  JMP   2   0  0  1:   0x8080 MAI CO 
-220a   JZ   2   0  0  1:   0x8080 MAI CO 
-220b  JNZ   2   0  0  1:   0x8080 MAI CO 
-220c   JC   2   0  0  1:   0x8080 MAI CO 
-220d  JNC   2   0  0  1:   0x8080 MAI CO 
-220e  HLT   2   0  0  1:   0x0004 HT 
+2209  HLT   2   0  0  1:   0x0004 HT 
+220a  JMP   2   0  0  1:   0x8080 MAI CO 
+220b   JZ   2   0  0  1:   0x8080 MAI CO 
+220c  JNZ   2   0  0  1:   0x8080 MAI CO 
+220d   JC   2   0  0  1:   0x8080 MAI CO 
+220e  JNC   2   0  0  1:   0x8080 MAI CO 
+220f   JS   2   0  0  1:   0x8080 MAI CO 
+2210  JNS   2   0  0  1:   0x8080 MAI CO 
 2300  NOP   3   0  0  1:   0x0000 
 2301  LDA   3   0  0  1:   0x40a0 RO MAI CE 
 2302 LDAI   3   0  0  1:   0x5020 RO AI CE 
@@ -413,12 +467,14 @@ addr instr tclk cf zf sf
 2306  SUB   3   0  0  1:   0x40a0 RO MAI CE 
 2307 SUBI   3   0  0  1:   0x4420 RO BI CE 
 2308  OUT   3   0  0  1:   0x0002 T0 
-2309  JMP   3   0  0  1:   0x2020 RO J 
-230a   JZ   3   0  0  1:   0x4002 T0 CE 
-230b  JNZ   3   0  0  1:   0x2020 RO J 
-230c   JC   3   0  0  1:   0x4002 T0 CE 
-230d  JNC   3   0  0  1:   0x2020 RO J 
-230e  HLT   3   0  0  1:   0x0000 
+2309  HLT   3   0  0  1:   0x0000 
+230a  JMP   3   0  0  1:   0x2020 RO J 
+230b   JZ   3   0  0  1:   0x4002 T0 CE 
+230c  JNZ   3   0  0  1:   0x2020 RO J 
+230d   JC   3   0  0  1:   0x4002 T0 CE 
+230e  JNC   3   0  0  1:   0x2020 RO J 
+230f   JS   3   0  0  1:   0x2020 RO J 
+2310  JNS   3   0  0  1:   0x4002 T0 CE 
 2400  NOP   4   0  0  1:   0x0000 
 2401  LDA   4   0  0  1:   0x1020 RO AI 
 2402 LDAI   4   0  0  1:   0x0002 T0 
@@ -428,12 +484,14 @@ addr instr tclk cf zf sf
 2406  SUB   4   0  0  1:   0x0420 RO BI 
 2407 SUBI   4   0  0  1:   0x1301 FI SU EO AI 
 2408  OUT   4   0  0  1:   0x0000 
-2409  JMP   4   0  0  1:   0x0002 T0 
-240a   JZ   4   0  0  1:   0x0000 
-240b  JNZ   4   0  0  1:   0x0002 T0 
-240c   JC   4   0  0  1:   0x0000 
-240d  JNC   4   0  0  1:   0x0002 T0 
-240e  HLT   4   0  0  1:   0x0000 
+2409  HLT   4   0  0  1:   0x0000 
+240a  JMP   4   0  0  1:   0x0002 T0 
+240b   JZ   4   0  0  1:   0x0000 
+240c  JNZ   4   0  0  1:   0x0002 T0 
+240d   JC   4   0  0  1:   0x0000 
+240e  JNC   4   0  0  1:   0x0002 T0 
+240f   JS   4   0  0  1:   0x0002 T0 
+2410  JNS   4   0  0  1:   0x0000 
 2500  NOP   5   0  0  1:   0x0000 
 2501  LDA   5   0  0  1:   0x0002 T0 
 2502 LDAI   5   0  0  1:   0x0000 
@@ -443,12 +501,14 @@ addr instr tclk cf zf sf
 2506  SUB   5   0  0  1:   0x1301 FI SU EO AI 
 2507 SUBI   5   0  0  1:   0x0002 T0 
 2508  OUT   5   0  0  1:   0x0000 
-2509  JMP   5   0  0  1:   0x0000 
-250a   JZ   5   0  0  1:   0x0000 
-250b  JNZ   5   0  0  1:   0x0000 
-250c   JC   5   0  0  1:   0x0000 
-250d  JNC   5   0  0  1:   0x0000 
-250e  HLT   5   0  0  1:   0x0000 
+2509  HLT   5   0  0  1:   0x0000 
+250a  JMP   5   0  0  1:   0x0000 
+250b   JZ   5   0  0  1:   0x0000 
+250c  JNZ   5   0  0  1:   0x0000 
+250d   JC   5   0  0  1:   0x0000 
+250e  JNC   5   0  0  1:   0x0000 
+250f   JS   5   0  0  1:   0x0000 
+2510  JNS   5   0  0  1:   0x0000 
 2800  NOP   0   1  0  1:   0x8080 MAI CO 
 2801  LDA   0   1  0  1:   0x8080 MAI CO 
 2802 LDAI   0   1  0  1:   0x8080 MAI CO 
@@ -458,12 +518,14 @@ addr instr tclk cf zf sf
 2806  SUB   0   1  0  1:   0x8080 MAI CO 
 2807 SUBI   0   1  0  1:   0x8080 MAI CO 
 2808  OUT   0   1  0  1:   0x8080 MAI CO 
-2809  JMP   0   1  0  1:   0x8080 MAI CO 
-280a   JZ   0   1  0  1:   0x8080 MAI CO 
-280b  JNZ   0   1  0  1:   0x8080 MAI CO 
-280c   JC   0   1  0  1:   0x8080 MAI CO 
-280d  JNC   0   1  0  1:   0x8080 MAI CO 
-280e  HLT   0   1  0  1:   0x8080 MAI CO 
+2809  HLT   0   1  0  1:   0x8080 MAI CO 
+280a  JMP   0   1  0  1:   0x8080 MAI CO 
+280b   JZ   0   1  0  1:   0x8080 MAI CO 
+280c  JNZ   0   1  0  1:   0x8080 MAI CO 
+280d   JC   0   1  0  1:   0x8080 MAI CO 
+280e  JNC   0   1  0  1:   0x8080 MAI CO 
+280f   JS   0   1  0  1:   0x8080 MAI CO 
+2810  JNS   0   1  0  1:   0x8080 MAI CO 
 2900  NOP   1   1  0  1:   0x4030 II RO CE 
 2901  LDA   1   1  0  1:   0x4030 II RO CE 
 2902 LDAI   1   1  0  1:   0x4030 II RO CE 
@@ -473,12 +535,14 @@ addr instr tclk cf zf sf
 2906  SUB   1   1  0  1:   0x4030 II RO CE 
 2907 SUBI   1   1  0  1:   0x4030 II RO CE 
 2908  OUT   1   1  0  1:   0x4030 II RO CE 
-2909  JMP   1   1  0  1:   0x4030 II RO CE 
-290a   JZ   1   1  0  1:   0x4030 II RO CE 
-290b  JNZ   1   1  0  1:   0x4030 II RO CE 
-290c   JC   1   1  0  1:   0x4030 II RO CE 
-290d  JNC   1   1  0  1:   0x4030 II RO CE 
-290e  HLT   1   1  0  1:   0x4030 II RO CE 
+2909  HLT   1   1  0  1:   0x4030 II RO CE 
+290a  JMP   1   1  0  1:   0x4030 II RO CE 
+290b   JZ   1   1  0  1:   0x4030 II RO CE 
+290c  JNZ   1   1  0  1:   0x4030 II RO CE 
+290d   JC   1   1  0  1:   0x4030 II RO CE 
+290e  JNC   1   1  0  1:   0x4030 II RO CE 
+290f   JS   1   1  0  1:   0x4030 II RO CE 
+2910  JNS   1   1  0  1:   0x4030 II RO CE 
 2a00  NOP   2   1  0  1:   0x0000 
 2a01  LDA   2   1  0  1:   0x8080 MAI CO 
 2a02 LDAI   2   1  0  1:   0x8080 MAI CO 
@@ -488,12 +552,14 @@ addr instr tclk cf zf sf
 2a06  SUB   2   1  0  1:   0x8080 MAI CO 
 2a07 SUBI   2   1  0  1:   0x8080 MAI CO 
 2a08  OUT   2   1  0  1:   0x0808 OI AO 
-2a09  JMP   2   1  0  1:   0x8080 MAI CO 
-2a0a   JZ   2   1  0  1:   0x8080 MAI CO 
-2a0b  JNZ   2   1  0  1:   0x8080 MAI CO 
-2a0c   JC   2   1  0  1:   0x8080 MAI CO 
-2a0d  JNC   2   1  0  1:   0x8080 MAI CO 
-2a0e  HLT   2   1  0  1:   0x0004 HT 
+2a09  HLT   2   1  0  1:   0x0004 HT 
+2a0a  JMP   2   1  0  1:   0x8080 MAI CO 
+2a0b   JZ   2   1  0  1:   0x8080 MAI CO 
+2a0c  JNZ   2   1  0  1:   0x8080 MAI CO 
+2a0d   JC   2   1  0  1:   0x8080 MAI CO 
+2a0e  JNC   2   1  0  1:   0x8080 MAI CO 
+2a0f   JS   2   1  0  1:   0x8080 MAI CO 
+2a10  JNS   2   1  0  1:   0x8080 MAI CO 
 2b00  NOP   3   1  0  1:   0x0000 
 2b01  LDA   3   1  0  1:   0x40a0 RO MAI CE 
 2b02 LDAI   3   1  0  1:   0x5020 RO AI CE 
@@ -503,12 +569,14 @@ addr instr tclk cf zf sf
 2b06  SUB   3   1  0  1:   0x40a0 RO MAI CE 
 2b07 SUBI   3   1  0  1:   0x4420 RO BI CE 
 2b08  OUT   3   1  0  1:   0x0002 T0 
-2b09  JMP   3   1  0  1:   0x2020 RO J 
-2b0a   JZ   3   1  0  1:   0x4002 T0 CE 
-2b0b  JNZ   3   1  0  1:   0x2020 RO J 
-2b0c   JC   3   1  0  1:   0x2020 RO J 
-2b0d  JNC   3   1  0  1:   0x4002 T0 CE 
-2b0e  HLT   3   1  0  1:   0x0000 
+2b09  HLT   3   1  0  1:   0x0000 
+2b0a  JMP   3   1  0  1:   0x2020 RO J 
+2b0b   JZ   3   1  0  1:   0x4002 T0 CE 
+2b0c  JNZ   3   1  0  1:   0x2020 RO J 
+2b0d   JC   3   1  0  1:   0x2020 RO J 
+2b0e  JNC   3   1  0  1:   0x4002 T0 CE 
+2b0f   JS   3   1  0  1:   0x2020 RO J 
+2b10  JNS   3   1  0  1:   0x4002 T0 CE 
 2c00  NOP   4   1  0  1:   0x0000 
 2c01  LDA   4   1  0  1:   0x1020 RO AI 
 2c02 LDAI   4   1  0  1:   0x0002 T0 
@@ -518,12 +586,14 @@ addr instr tclk cf zf sf
 2c06  SUB   4   1  0  1:   0x0420 RO BI 
 2c07 SUBI   4   1  0  1:   0x1301 FI SU EO AI 
 2c08  OUT   4   1  0  1:   0x0000 
-2c09  JMP   4   1  0  1:   0x0002 T0 
-2c0a   JZ   4   1  0  1:   0x0000 
-2c0b  JNZ   4   1  0  1:   0x0002 T0 
-2c0c   JC   4   1  0  1:   0x0002 T0 
-2c0d  JNC   4   1  0  1:   0x0000 
-2c0e  HLT   4   1  0  1:   0x0000 
+2c09  HLT   4   1  0  1:   0x0000 
+2c0a  JMP   4   1  0  1:   0x0002 T0 
+2c0b   JZ   4   1  0  1:   0x0000 
+2c0c  JNZ   4   1  0  1:   0x0002 T0 
+2c0d   JC   4   1  0  1:   0x0002 T0 
+2c0e  JNC   4   1  0  1:   0x0000 
+2c0f   JS   4   1  0  1:   0x0002 T0 
+2c10  JNS   4   1  0  1:   0x0000 
 2d00  NOP   5   1  0  1:   0x0000 
 2d01  LDA   5   1  0  1:   0x0002 T0 
 2d02 LDAI   5   1  0  1:   0x0000 
@@ -533,12 +603,14 @@ addr instr tclk cf zf sf
 2d06  SUB   5   1  0  1:   0x1301 FI SU EO AI 
 2d07 SUBI   5   1  0  1:   0x0002 T0 
 2d08  OUT   5   1  0  1:   0x0000 
-2d09  JMP   5   1  0  1:   0x0000 
-2d0a   JZ   5   1  0  1:   0x0000 
-2d0b  JNZ   5   1  0  1:   0x0000 
-2d0c   JC   5   1  0  1:   0x0000 
-2d0d  JNC   5   1  0  1:   0x0000 
-2d0e  HLT   5   1  0  1:   0x0000 
+2d09  HLT   5   1  0  1:   0x0000 
+2d0a  JMP   5   1  0  1:   0x0000 
+2d0b   JZ   5   1  0  1:   0x0000 
+2d0c  JNZ   5   1  0  1:   0x0000 
+2d0d   JC   5   1  0  1:   0x0000 
+2d0e  JNC   5   1  0  1:   0x0000 
+2d0f   JS   5   1  0  1:   0x0000 
+2d10  JNS   5   1  0  1:   0x0000 
 3000  NOP   0   0  1  1:   0x8080 MAI CO 
 3001  LDA   0   0  1  1:   0x8080 MAI CO 
 3002 LDAI   0   0  1  1:   0x8080 MAI CO 
@@ -548,12 +620,14 @@ addr instr tclk cf zf sf
 3006  SUB   0   0  1  1:   0x8080 MAI CO 
 3007 SUBI   0   0  1  1:   0x8080 MAI CO 
 3008  OUT   0   0  1  1:   0x8080 MAI CO 
-3009  JMP   0   0  1  1:   0x8080 MAI CO 
-300a   JZ   0   0  1  1:   0x8080 MAI CO 
-300b  JNZ   0   0  1  1:   0x8080 MAI CO 
-300c   JC   0   0  1  1:   0x8080 MAI CO 
-300d  JNC   0   0  1  1:   0x8080 MAI CO 
-300e  HLT   0   0  1  1:   0x8080 MAI CO 
+3009  HLT   0   0  1  1:   0x8080 MAI CO 
+300a  JMP   0   0  1  1:   0x8080 MAI CO 
+300b   JZ   0   0  1  1:   0x8080 MAI CO 
+300c  JNZ   0   0  1  1:   0x8080 MAI CO 
+300d   JC   0   0  1  1:   0x8080 MAI CO 
+300e  JNC   0   0  1  1:   0x8080 MAI CO 
+300f   JS   0   0  1  1:   0x8080 MAI CO 
+3010  JNS   0   0  1  1:   0x8080 MAI CO 
 3100  NOP   1   0  1  1:   0x4030 II RO CE 
 3101  LDA   1   0  1  1:   0x4030 II RO CE 
 3102 LDAI   1   0  1  1:   0x4030 II RO CE 
@@ -563,12 +637,14 @@ addr instr tclk cf zf sf
 3106  SUB   1   0  1  1:   0x4030 II RO CE 
 3107 SUBI   1   0  1  1:   0x4030 II RO CE 
 3108  OUT   1   0  1  1:   0x4030 II RO CE 
-3109  JMP   1   0  1  1:   0x4030 II RO CE 
-310a   JZ   1   0  1  1:   0x4030 II RO CE 
-310b  JNZ   1   0  1  1:   0x4030 II RO CE 
-310c   JC   1   0  1  1:   0x4030 II RO CE 
-310d  JNC   1   0  1  1:   0x4030 II RO CE 
-310e  HLT   1   0  1  1:   0x4030 II RO CE 
+3109  HLT   1   0  1  1:   0x4030 II RO CE 
+310a  JMP   1   0  1  1:   0x4030 II RO CE 
+310b   JZ   1   0  1  1:   0x4030 II RO CE 
+310c  JNZ   1   0  1  1:   0x4030 II RO CE 
+310d   JC   1   0  1  1:   0x4030 II RO CE 
+310e  JNC   1   0  1  1:   0x4030 II RO CE 
+310f   JS   1   0  1  1:   0x4030 II RO CE 
+3110  JNS   1   0  1  1:   0x4030 II RO CE 
 3200  NOP   2   0  1  1:   0x0000 
 3201  LDA   2   0  1  1:   0x8080 MAI CO 
 3202 LDAI   2   0  1  1:   0x8080 MAI CO 
@@ -578,12 +654,14 @@ addr instr tclk cf zf sf
 3206  SUB   2   0  1  1:   0x8080 MAI CO 
 3207 SUBI   2   0  1  1:   0x8080 MAI CO 
 3208  OUT   2   0  1  1:   0x0808 OI AO 
-3209  JMP   2   0  1  1:   0x8080 MAI CO 
-320a   JZ   2   0  1  1:   0x8080 MAI CO 
-320b  JNZ   2   0  1  1:   0x8080 MAI CO 
-320c   JC   2   0  1  1:   0x8080 MAI CO 
-320d  JNC   2   0  1  1:   0x8080 MAI CO 
-320e  HLT   2   0  1  1:   0x0004 HT 
+3209  HLT   2   0  1  1:   0x0004 HT 
+320a  JMP   2   0  1  1:   0x8080 MAI CO 
+320b   JZ   2   0  1  1:   0x8080 MAI CO 
+320c  JNZ   2   0  1  1:   0x8080 MAI CO 
+320d   JC   2   0  1  1:   0x8080 MAI CO 
+320e  JNC   2   0  1  1:   0x8080 MAI CO 
+320f   JS   2   0  1  1:   0x8080 MAI CO 
+3210  JNS   2   0  1  1:   0x8080 MAI CO 
 3300  NOP   3   0  1  1:   0x0000 
 3301  LDA   3   0  1  1:   0x40a0 RO MAI CE 
 3302 LDAI   3   0  1  1:   0x5020 RO AI CE 
@@ -593,12 +671,14 @@ addr instr tclk cf zf sf
 3306  SUB   3   0  1  1:   0x40a0 RO MAI CE 
 3307 SUBI   3   0  1  1:   0x4420 RO BI CE 
 3308  OUT   3   0  1  1:   0x0002 T0 
-3309  JMP   3   0  1  1:   0x2020 RO J 
-330a   JZ   3   0  1  1:   0x2020 RO J 
-330b  JNZ   3   0  1  1:   0x4002 T0 CE 
-330c   JC   3   0  1  1:   0x4002 T0 CE 
-330d  JNC   3   0  1  1:   0x2020 RO J 
-330e  HLT   3   0  1  1:   0x0000 
+3309  HLT   3   0  1  1:   0x0000 
+330a  JMP   3   0  1  1:   0x2020 RO J 
+330b   JZ   3   0  1  1:   0x2020 RO J 
+330c  JNZ   3   0  1  1:   0x4002 T0 CE 
+330d   JC   3   0  1  1:   0x4002 T0 CE 
+330e  JNC   3   0  1  1:   0x2020 RO J 
+330f   JS   3   0  1  1:   0x2020 RO J 
+3310  JNS   3   0  1  1:   0x4002 T0 CE 
 3400  NOP   4   0  1  1:   0x0000 
 3401  LDA   4   0  1  1:   0x1020 RO AI 
 3402 LDAI   4   0  1  1:   0x0002 T0 
@@ -608,12 +688,14 @@ addr instr tclk cf zf sf
 3406  SUB   4   0  1  1:   0x0420 RO BI 
 3407 SUBI   4   0  1  1:   0x1301 FI SU EO AI 
 3408  OUT   4   0  1  1:   0x0000 
-3409  JMP   4   0  1  1:   0x0002 T0 
-340a   JZ   4   0  1  1:   0x0002 T0 
-340b  JNZ   4   0  1  1:   0x0000 
-340c   JC   4   0  1  1:   0x0000 
-340d  JNC   4   0  1  1:   0x0002 T0 
-340e  HLT   4   0  1  1:   0x0000 
+3409  HLT   4   0  1  1:   0x0000 
+340a  JMP   4   0  1  1:   0x0002 T0 
+340b   JZ   4   0  1  1:   0x0002 T0 
+340c  JNZ   4   0  1  1:   0x0000 
+340d   JC   4   0  1  1:   0x0000 
+340e  JNC   4   0  1  1:   0x0002 T0 
+340f   JS   4   0  1  1:   0x0002 T0 
+3410  JNS   4   0  1  1:   0x0000 
 3500  NOP   5   0  1  1:   0x0000 
 3501  LDA   5   0  1  1:   0x0002 T0 
 3502 LDAI   5   0  1  1:   0x0000 
@@ -623,12 +705,14 @@ addr instr tclk cf zf sf
 3506  SUB   5   0  1  1:   0x1301 FI SU EO AI 
 3507 SUBI   5   0  1  1:   0x0002 T0 
 3508  OUT   5   0  1  1:   0x0000 
-3509  JMP   5   0  1  1:   0x0000 
-350a   JZ   5   0  1  1:   0x0000 
-350b  JNZ   5   0  1  1:   0x0000 
-350c   JC   5   0  1  1:   0x0000 
-350d  JNC   5   0  1  1:   0x0000 
-350e  HLT   5   0  1  1:   0x0000 
+3509  HLT   5   0  1  1:   0x0000 
+350a  JMP   5   0  1  1:   0x0000 
+350b   JZ   5   0  1  1:   0x0000 
+350c  JNZ   5   0  1  1:   0x0000 
+350d   JC   5   0  1  1:   0x0000 
+350e  JNC   5   0  1  1:   0x0000 
+350f   JS   5   0  1  1:   0x0000 
+3510  JNS   5   0  1  1:   0x0000 
 3800  NOP   0   1  1  1:   0x8080 MAI CO 
 3801  LDA   0   1  1  1:   0x8080 MAI CO 
 3802 LDAI   0   1  1  1:   0x8080 MAI CO 
@@ -638,12 +722,14 @@ addr instr tclk cf zf sf
 3806  SUB   0   1  1  1:   0x8080 MAI CO 
 3807 SUBI   0   1  1  1:   0x8080 MAI CO 
 3808  OUT   0   1  1  1:   0x8080 MAI CO 
-3809  JMP   0   1  1  1:   0x8080 MAI CO 
-380a   JZ   0   1  1  1:   0x8080 MAI CO 
-380b  JNZ   0   1  1  1:   0x8080 MAI CO 
-380c   JC   0   1  1  1:   0x8080 MAI CO 
-380d  JNC   0   1  1  1:   0x8080 MAI CO 
-380e  HLT   0   1  1  1:   0x8080 MAI CO 
+3809  HLT   0   1  1  1:   0x8080 MAI CO 
+380a  JMP   0   1  1  1:   0x8080 MAI CO 
+380b   JZ   0   1  1  1:   0x8080 MAI CO 
+380c  JNZ   0   1  1  1:   0x8080 MAI CO 
+380d   JC   0   1  1  1:   0x8080 MAI CO 
+380e  JNC   0   1  1  1:   0x8080 MAI CO 
+380f   JS   0   1  1  1:   0x8080 MAI CO 
+3810  JNS   0   1  1  1:   0x8080 MAI CO 
 3900  NOP   1   1  1  1:   0x4030 II RO CE 
 3901  LDA   1   1  1  1:   0x4030 II RO CE 
 3902 LDAI   1   1  1  1:   0x4030 II RO CE 
@@ -653,12 +739,14 @@ addr instr tclk cf zf sf
 3906  SUB   1   1  1  1:   0x4030 II RO CE 
 3907 SUBI   1   1  1  1:   0x4030 II RO CE 
 3908  OUT   1   1  1  1:   0x4030 II RO CE 
-3909  JMP   1   1  1  1:   0x4030 II RO CE 
-390a   JZ   1   1  1  1:   0x4030 II RO CE 
-390b  JNZ   1   1  1  1:   0x4030 II RO CE 
-390c   JC   1   1  1  1:   0x4030 II RO CE 
-390d  JNC   1   1  1  1:   0x4030 II RO CE 
-390e  HLT   1   1  1  1:   0x4030 II RO CE 
+3909  HLT   1   1  1  1:   0x4030 II RO CE 
+390a  JMP   1   1  1  1:   0x4030 II RO CE 
+390b   JZ   1   1  1  1:   0x4030 II RO CE 
+390c  JNZ   1   1  1  1:   0x4030 II RO CE 
+390d   JC   1   1  1  1:   0x4030 II RO CE 
+390e  JNC   1   1  1  1:   0x4030 II RO CE 
+390f   JS   1   1  1  1:   0x4030 II RO CE 
+3910  JNS   1   1  1  1:   0x4030 II RO CE 
 3a00  NOP   2   1  1  1:   0x0000 
 3a01  LDA   2   1  1  1:   0x8080 MAI CO 
 3a02 LDAI   2   1  1  1:   0x8080 MAI CO 
@@ -668,12 +756,14 @@ addr instr tclk cf zf sf
 3a06  SUB   2   1  1  1:   0x8080 MAI CO 
 3a07 SUBI   2   1  1  1:   0x8080 MAI CO 
 3a08  OUT   2   1  1  1:   0x0808 OI AO 
-3a09  JMP   2   1  1  1:   0x8080 MAI CO 
-3a0a   JZ   2   1  1  1:   0x8080 MAI CO 
-3a0b  JNZ   2   1  1  1:   0x8080 MAI CO 
-3a0c   JC   2   1  1  1:   0x8080 MAI CO 
-3a0d  JNC   2   1  1  1:   0x8080 MAI CO 
-3a0e  HLT   2   1  1  1:   0x0004 HT 
+3a09  HLT   2   1  1  1:   0x0004 HT 
+3a0a  JMP   2   1  1  1:   0x8080 MAI CO 
+3a0b   JZ   2   1  1  1:   0x8080 MAI CO 
+3a0c  JNZ   2   1  1  1:   0x8080 MAI CO 
+3a0d   JC   2   1  1  1:   0x8080 MAI CO 
+3a0e  JNC   2   1  1  1:   0x8080 MAI CO 
+3a0f   JS   2   1  1  1:   0x8080 MAI CO 
+3a10  JNS   2   1  1  1:   0x8080 MAI CO 
 3b00  NOP   3   1  1  1:   0x0000 
 3b01  LDA   3   1  1  1:   0x40a0 RO MAI CE 
 3b02 LDAI   3   1  1  1:   0x5020 RO AI CE 
@@ -683,12 +773,14 @@ addr instr tclk cf zf sf
 3b06  SUB   3   1  1  1:   0x40a0 RO MAI CE 
 3b07 SUBI   3   1  1  1:   0x4420 RO BI CE 
 3b08  OUT   3   1  1  1:   0x0002 T0 
-3b09  JMP   3   1  1  1:   0x2020 RO J 
-3b0a   JZ   3   1  1  1:   0x2020 RO J 
-3b0b  JNZ   3   1  1  1:   0x4002 T0 CE 
-3b0c   JC   3   1  1  1:   0x2020 RO J 
-3b0d  JNC   3   1  1  1:   0x4002 T0 CE 
-3b0e  HLT   3   1  1  1:   0x0000 
+3b09  HLT   3   1  1  1:   0x0000 
+3b0a  JMP   3   1  1  1:   0x2020 RO J 
+3b0b   JZ   3   1  1  1:   0x2020 RO J 
+3b0c  JNZ   3   1  1  1:   0x4002 T0 CE 
+3b0d   JC   3   1  1  1:   0x2020 RO J 
+3b0e  JNC   3   1  1  1:   0x4002 T0 CE 
+3b0f   JS   3   1  1  1:   0x2020 RO J 
+3b10  JNS   3   1  1  1:   0x4002 T0 CE 
 3c00  NOP   4   1  1  1:   0x0000 
 3c01  LDA   4   1  1  1:   0x1020 RO AI 
 3c02 LDAI   4   1  1  1:   0x0002 T0 
@@ -698,12 +790,14 @@ addr instr tclk cf zf sf
 3c06  SUB   4   1  1  1:   0x0420 RO BI 
 3c07 SUBI   4   1  1  1:   0x1301 FI SU EO AI 
 3c08  OUT   4   1  1  1:   0x0000 
-3c09  JMP   4   1  1  1:   0x0002 T0 
-3c0a   JZ   4   1  1  1:   0x0002 T0 
-3c0b  JNZ   4   1  1  1:   0x0000 
-3c0c   JC   4   1  1  1:   0x0002 T0 
-3c0d  JNC   4   1  1  1:   0x0000 
-3c0e  HLT   4   1  1  1:   0x0000 
+3c09  HLT   4   1  1  1:   0x0000 
+3c0a  JMP   4   1  1  1:   0x0002 T0 
+3c0b   JZ   4   1  1  1:   0x0002 T0 
+3c0c  JNZ   4   1  1  1:   0x0000 
+3c0d   JC   4   1  1  1:   0x0002 T0 
+3c0e  JNC   4   1  1  1:   0x0000 
+3c0f   JS   4   1  1  1:   0x0002 T0 
+3c10  JNS   4   1  1  1:   0x0000 
 3d00  NOP   5   1  1  1:   0x0000 
 3d01  LDA   5   1  1  1:   0x0002 T0 
 3d02 LDAI   5   1  1  1:   0x0000 
@@ -713,9 +807,11 @@ addr instr tclk cf zf sf
 3d06  SUB   5   1  1  1:   0x1301 FI SU EO AI 
 3d07 SUBI   5   1  1  1:   0x0002 T0 
 3d08  OUT   5   1  1  1:   0x0000 
-3d09  JMP   5   1  1  1:   0x0000 
-3d0a   JZ   5   1  1  1:   0x0000 
-3d0b  JNZ   5   1  1  1:   0x0000 
-3d0c   JC   5   1  1  1:   0x0000 
-3d0d  JNC   5   1  1  1:   0x0000 
-3d0e  HLT   5   1  1  1:   0x0000 
+3d09  HLT   5   1  1  1:   0x0000 
+3d0a  JMP   5   1  1  1:   0x0000 
+3d0b   JZ   5   1  1  1:   0x0000 
+3d0c  JNZ   5   1  1  1:   0x0000 
+3d0d   JC   5   1  1  1:   0x0000 
+3d0e  JNC   5   1  1  1:   0x0000 
+3d0f   JS   5   1  1  1:   0x0000 
+3d10  JNS   5   1  1  1:   0x0000 

@@ -7,7 +7,7 @@ ADDR_BITS = 14
 OUT_BITS  = 16
 
 Ctrl = IntFlag('Ctrl', 'FI T0 HT OI II RO RI MAI SU EO BI AO AI J CE CO')
-Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT JMP JZ JNZ JC JNC HLT', start=0)
+Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT HLT JMP JZ JNZ JC JNC JS JNS', start=0)
 
 class BitSlice:
 	def __init__(self, start: int, len: int):
@@ -35,7 +35,7 @@ def ctrl_line_str(data: int) -> str:
 
 	return out
 
-# assumes valid checksum
+# ucode prettyprinting
 def read_ucode(f):
 	print('addr instr tclk cf zf sf')
 	with open(f, 'r') as file:
@@ -73,12 +73,8 @@ ucode = [
 	[FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI], # SUB
 	[Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI, Ctrl.T0],                               # SUB imm
 	[Ctrl.T0,                     0,                                     0],                                     # OUT
-	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JMP
-	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JZ
-	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JNZ
-	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JC
-	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JNC
 	[0,                           0,                                     0],                                     # HLT
+	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JMP
 ]
 
 def get(addr: int) -> int:
@@ -86,6 +82,7 @@ def get(addr: int) -> int:
 	tclk  = TCLK_SLICE.get(addr)
 	zero  = ZFLAG_SLICE.get(addr)
 	carry = CFLAG_SLICE.get(addr)
+	sign  = SFLAG_SLICE.get(addr)
 
 	if tclk > 5 or instr >= len(Instr): return 0
 
@@ -102,15 +99,22 @@ def get(addr: int) -> int:
 		# get data in byte after instruction
 		return Ctrl.CO | Ctrl.MAI
 
-	# if jump condition is NOT satisfied
-	if ((instr == Instr.JZ and zero != 1)
-			or (instr == Instr.JC and carry != 1)
-			or (instr == Instr.JNZ and zero == 1)
-			or (instr == Instr.JNC and carry == 1)):
+	# microcode for jumps are all the same
+	if instr >= Instr.JMP:
+		# if jump condition is satisfied
+		if (instr == Instr.JMP
+				or (instr == Instr.JZ and zero == 1)
+				or (instr == Instr.JNZ and zero != 1)
+				or (instr == Instr.JC and carry == 1)
+				or (instr == Instr.JNC and carry != 1)
+				or (instr == Instr.JS and sign == 1)
+				or (instr == Instr.JNS and sign != 1)):
+			return ucode[Instr.JMP][tclk - 3]
+
 		if tclk == 3:
 			return Ctrl.CE | Ctrl.T0
-		else:
-			return 0
+
+		return 0
 
 	return ucode[instr][tclk - 3]
 
@@ -118,7 +122,7 @@ with open('ucode.hex', 'w') as file:
 	file.write('v2.0 raw\n')
 
 	for n in range(1 << ADDR_BITS):
-		file.write(f'{get(n):04X}')
+		file.write(f'{get(n):04x}')
 		file.write('\n')
 
 read_ucode('ucode.hex')

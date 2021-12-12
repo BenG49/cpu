@@ -1,5 +1,4 @@
-# a > 0 and b > 0
-def divide(a: int, b: int) -> int:
+def div(a: int, b: int) -> int:
 	out = 0
 	neg = (a < 0) != (b < 0)
 
@@ -13,7 +12,6 @@ def divide(a: int, b: int) -> int:
 
 	return out * (-1 if neg else 1)
 
-# multiply
 def mul(a: int, b: int) -> int:
 	if a == 0 or b == 0:
 		return 0
@@ -29,6 +27,28 @@ def mul(a: int, b: int) -> int:
 		a -= 1
 
 	return out * (-1 if neg else 1)
+
+def udiv(a: int, b: int) -> int:
+	out = 0
+
+	while a >= b:
+		out += 1
+
+		a -= b
+
+	return out
+
+def umul(a: int, b: int) -> int:
+	if a == 0 or b == 0:
+		return 0
+
+	out = 0
+
+	while a > 0:
+		out += b
+		a -= 1
+
+	return out
 
 def isqrt(n: int) -> int:
 	x = 1
