@@ -7,7 +7,7 @@ ADDR_BITS = 14
 OUT_BITS  = 16
 
 Ctrl = IntFlag('Ctrl', 'FI T0 HT OI II RO RI MAI SU EO BI AO AI J CE CO')
-Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT HLT JMP JZ JNZ JC JNC JS JNS', start=0)
+Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT HLT JMP JZ JNZ JC JNC JS JNS JMPI JZI JNZI JCI JNCI JSI JNSI', start=0)
 
 class BitSlice:
 	def __init__(self, start: int, len: int):
@@ -75,7 +75,21 @@ ucode = [
 	[Ctrl.T0,                     0,                                     0],                                     # OUT
 	[0,                           0,                                     0],                                     # HLT
 	[Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JMP
+	[FETCH_ADDR,                  Ctrl.RO | Ctrl.J,                      Ctrl.T0],                               # JMP indirect
 ]
+
+def valid_jmp(instr: int, zero: bool, carry: bool, sign: bool) -> bool:
+	# offset indirect jumps back to normal jumps, have same conditions
+	if instr >= Instr.JMPI:
+		instr = instr - Instr.JMPI + Instr.JMP
+
+	return (instr == Instr.JMP
+		or (instr == Instr.JZ  and zero)
+		or (instr == Instr.JNZ and not zero)
+		or (instr == Instr.JC  and carry)
+		or (instr == Instr.JNC and not carry)
+		or (instr == Instr.JS  and sign)
+		or (instr == Instr.JNS and not sign))
 
 def get(addr: int) -> int:
 	instr = INSTR_SLICE.get(addr)
@@ -99,17 +113,16 @@ def get(addr: int) -> int:
 		# get data in byte after instruction
 		return Ctrl.CO | Ctrl.MAI
 
-	# microcode for jumps are all the same
-	if instr >= Instr.JMP:
-		# if jump condition is satisfied
-		if (instr == Instr.JMP
-				or (instr == Instr.JZ and zero == 1)
-				or (instr == Instr.JNZ and zero != 1)
-				or (instr == Instr.JC and carry == 1)
-				or (instr == Instr.JNC and carry != 1)
-				or (instr == Instr.JS and sign == 1)
-				or (instr == Instr.JNS and sign != 1)):
-			return ucode[Instr.JMP][tclk - 3]
+	# jump instruction
+	if instr > Instr.JMP:
+		# jump condition is satisifed
+		if valid_jmp(instr, zero, carry, sign):
+			if instr >= Instr.JMP and instr < Instr.JMPI:
+				# microcode for imm jumps are all the same
+				return ucode[Instr.JMP][tclk - 3]
+			else:
+				# microcode for ind jumps are all the same
+				return ucode[Instr.JMP + 1][tclk - 3]
 
 		if tclk == 3:
 			return Ctrl.CE | Ctrl.T0

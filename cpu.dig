@@ -8,7 +8,7 @@
     </entry>
     <entry>
       <string>preloadProgramFile</string>
-      <file>C:\Users\Ben\Documents\Programming\cpu\prgm.hex</file>
+      <file>C:\Users\Ben\Documents\Programming\cpu\asm\prgm.hex</file>
     </entry>
   </attributes>
   <visualElements>
@@ -610,7 +610,7 @@
         </entry>
         <entry>
           <string>lastDataFile</string>
-          <file>C:\Users\Ben\Documents\Programming\cpu\ucode.hex</file>
+          <file>C:\Users\Ben\Documents\Programming\cpu\ucode\ucode.hex</file>
         </entry>
         <entry>
           <string>autoReload</string>
