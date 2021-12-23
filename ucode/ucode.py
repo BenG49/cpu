@@ -23,7 +23,7 @@ def read_ucode(f):
 
 			tclk = TCLK_SLICE.get(addr)
 
-			if tclk > 5 or instr >= len(Instr): continue
+			if tclk > TCLK_MAX or instr >= len(Instr): continue
 
 			cflag = CFLAG_SLICE.get(addr)
 			zflag = ZFLAG_SLICE.get(addr)
@@ -41,22 +41,24 @@ FETCH_ADDR = Ctrl.RO | Ctrl.MAI | Ctrl.CE
 # T0 = CO | MAI
 # T1 = CE | RO | II
 # T2 = CO | MAI (for non-implied instructions)
-# ucode for T2-5
+# ucode for T2-6
 ucode = [
-	[0,                   0,                           0,                                     0],                                     # NOP
-	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.AI,                     Ctrl.T0],                               # LDA
-	[FETCH_VAL,           Ctrl.RO | Ctrl.AI | Ctrl.CE, Ctrl.T0,                               0],                                     # LDA imm
-	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.AO | Ctrl.RI,                     Ctrl.T0],                               # STA
-	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.FI],           # ADD
-	[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.FI,           Ctrl.T0],                               # ADD imm
-	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI], # SUB
-	[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI, Ctrl.T0],                               # SUB imm
-	[Ctrl.AO | Ctrl.OI,   Ctrl.T0,                     0,                                     0],                                     # OUT
-	[Ctrl.HT,             0,                           0,                                     0],                                     # HLT
-	[Ctrl.SPO | Ctrl.MAI, Ctrl.AO | Ctrl.RI,           Ctrl.SPE | Ctrl.SPD,                   Ctrl.T0],                               # PHA
-	[Ctrl.SPE,            Ctrl.SPO | Ctrl.MAI,         Ctrl.RO | Ctrl.AI,                     Ctrl.T0],                               # PLA
-	[FETCH_VAL,           Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JMP
-	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.J,                      Ctrl.T0],                               # JMP indirect
+	[0,                   0,                                       0,                                     0,                                       0],                # NOP
+	[FETCH_VAL,           FETCH_ADDR,                              Ctrl.RO | Ctrl.AI,                     Ctrl.T0,                                 0],                # LDA
+	[FETCH_VAL,           Ctrl.RO | Ctrl.AI | Ctrl.CE,             Ctrl.T0,                               0,                                       0],                # LDA imm
+	[FETCH_VAL,           FETCH_ADDR,                              Ctrl.AO | Ctrl.RI,                     Ctrl.T0,                                 0],                # STA
+	[FETCH_VAL,           FETCH_ADDR,                              Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.FI,             0],                # ADD
+	[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE,             Ctrl.EO | Ctrl.AI | Ctrl.FI,           Ctrl.T0, 0,                              0],                # ADD imm
+	[FETCH_VAL,           FETCH_ADDR,                              Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI,   0],                # SUB
+	[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE,             Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI, Ctrl.T0, 0,                              0],                # SUB imm
+	[Ctrl.AO | Ctrl.OI,   Ctrl.T0,                                 0,                                     0,                                       0],                # OUT
+	[Ctrl.HT,             0,                                       0,                                     0,                                       0],                # HLT
+	[Ctrl.SPO | Ctrl.MAI, Ctrl.AO | Ctrl.RI | Ctrl.SPE | Ctrl.SPD, Ctrl.T0,                               0,                                       0],                # PHA
+	[Ctrl.SPE,            Ctrl.SPO | Ctrl.MAI,                     Ctrl.RO | Ctrl.AI,                     Ctrl.T0,                                 0],                # PLA
+	[FETCH_VAL,           Ctrl.RO | Ctrl.AI | Ctrl.CE,             Ctrl.SPO | Ctrl.MAI,                   Ctrl.CO | Ctrl.RI | Ctrl.SPE | Ctrl.SPD, Ctrl.AO | Ctrl.J], # CALL
+	[Ctrl.SPE,            Ctrl.SPO | Ctrl.MAI,                     Ctrl.RO | Ctrl.J,                      Ctrl.T0,                                 0],                # RET
+	[FETCH_VAL,           Ctrl.RO | Ctrl.J,                        Ctrl.T0,                               0,                                       0],                # JMP
+	[FETCH_VAL,           FETCH_ADDR,                              Ctrl.RO | Ctrl.J,                      Ctrl.T0,                                 0],                # JMP indirect
 ]
 
 def valid_jmp(instr: int, zero: bool, carry: bool, sign: bool) -> bool:
@@ -79,7 +81,7 @@ def get(addr: int) -> int:
 	carry = CFLAG_SLICE.get(addr)
 	sign  = SFLAG_SLICE.get(addr)
 
-	if tclk > 5 or instr >= len(Instr): return 0
+	if tclk > TCLK_MAX or instr >= len(Instr): return 0
 
 	# inc, set address
 	if tclk == 0: return Ctrl.CO | Ctrl.MAI

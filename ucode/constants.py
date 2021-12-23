@@ -5,13 +5,14 @@ CPU details
 '''
 ADDR_BITS = 14
 OUT_BITS  = 16
+TCLK_MAX  = 6
 
 class Ctrl(IntEnum):
 	# Using a decoder for mutually exclusive ctrl lines to save space
 	CO, AO, EO, RO, HT, T0, SPO = range(1, 8)
 	FI, OI, II, RI, MAI, SU, BI, AI, J, CE, SPE, SPD = [1 << i for i in range(3, 15)]
 
-Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT HLT PHA PLA JMP JZ JNZ JC JNC JS JNS JMPI JZI JNZI JCI JNCI JSI JNSI', start=0)
+Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT HLT PHA PHC PLA RET JMP JZ JNZ JC JNC JS JNS JMPI JZI JNZI JCI JNCI JSI JNSI', start=0)
 
 class BitSlice:
 	def __init__(self, start: int, len: int):
