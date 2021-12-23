@@ -1,1153 +1,1249 @@
 addr instr tclk cf zf sf
-0000  NOP   0   0  0  0:   0x8080 MAI CO 
-0001  LDA   0   0  0  0:   0x8080 MAI CO 
-0002 LDAI   0   0  0  0:   0x8080 MAI CO 
-0003  STA   0   0  0  0:   0x8080 MAI CO 
-0004  ADD   0   0  0  0:   0x8080 MAI CO 
-0005 ADDI   0   0  0  0:   0x8080 MAI CO 
-0006  SUB   0   0  0  0:   0x8080 MAI CO 
-0007 SUBI   0   0  0  0:   0x8080 MAI CO 
-0008  OUT   0   0  0  0:   0x8080 MAI CO 
-0009  HLT   0   0  0  0:   0x8080 MAI CO 
-000a  JMP   0   0  0  0:   0x8080 MAI CO 
-000b   JZ   0   0  0  0:   0x8080 MAI CO 
-000c  JNZ   0   0  0  0:   0x8080 MAI CO 
-000d   JC   0   0  0  0:   0x8080 MAI CO 
-000e  JNC   0   0  0  0:   0x8080 MAI CO 
-000f   JS   0   0  0  0:   0x8080 MAI CO 
-0010  JNS   0   0  0  0:   0x8080 MAI CO 
-0011 JMPI   0   0  0  0:   0x8080 MAI CO 
-0012  JZI   0   0  0  0:   0x8080 MAI CO 
-0013 JNZI   0   0  0  0:   0x8080 MAI CO 
-0014  JCI   0   0  0  0:   0x8080 MAI CO 
-0015 JNCI   0   0  0  0:   0x8080 MAI CO 
-0016  JSI   0   0  0  0:   0x8080 MAI CO 
-0017 JNSI   0   0  0  0:   0x8080 MAI CO 
-0100  NOP   1   0  0  0:   0x4030 II RO CE 
-0101  LDA   1   0  0  0:   0x4030 II RO CE 
-0102 LDAI   1   0  0  0:   0x4030 II RO CE 
-0103  STA   1   0  0  0:   0x4030 II RO CE 
-0104  ADD   1   0  0  0:   0x4030 II RO CE 
-0105 ADDI   1   0  0  0:   0x4030 II RO CE 
-0106  SUB   1   0  0  0:   0x4030 II RO CE 
-0107 SUBI   1   0  0  0:   0x4030 II RO CE 
-0108  OUT   1   0  0  0:   0x4030 II RO CE 
-0109  HLT   1   0  0  0:   0x4030 II RO CE 
-010a  JMP   1   0  0  0:   0x4030 II RO CE 
-010b   JZ   1   0  0  0:   0x4030 II RO CE 
-010c  JNZ   1   0  0  0:   0x4030 II RO CE 
-010d   JC   1   0  0  0:   0x4030 II RO CE 
-010e  JNC   1   0  0  0:   0x4030 II RO CE 
-010f   JS   1   0  0  0:   0x4030 II RO CE 
-0110  JNS   1   0  0  0:   0x4030 II RO CE 
-0111 JMPI   1   0  0  0:   0x4030 II RO CE 
-0112  JZI   1   0  0  0:   0x4030 II RO CE 
-0113 JNZI   1   0  0  0:   0x4030 II RO CE 
-0114  JCI   1   0  0  0:   0x4030 II RO CE 
-0115 JNCI   1   0  0  0:   0x4030 II RO CE 
-0116  JSI   1   0  0  0:   0x4030 II RO CE 
-0117 JNSI   1   0  0  0:   0x4030 II RO CE 
+0000  NOP   0   0  0  0:   0x0081 CO MAI 
+0001  LDA   0   0  0  0:   0x0081 CO MAI 
+0002 LDAI   0   0  0  0:   0x0081 CO MAI 
+0003  STA   0   0  0  0:   0x0081 CO MAI 
+0004  ADD   0   0  0  0:   0x0081 CO MAI 
+0005 ADDI   0   0  0  0:   0x0081 CO MAI 
+0006  SUB   0   0  0  0:   0x0081 CO MAI 
+0007 SUBI   0   0  0  0:   0x0081 CO MAI 
+0008  OUT   0   0  0  0:   0x0081 CO MAI 
+0009  HLT   0   0  0  0:   0x0081 CO MAI 
+000a  PHA   0   0  0  0:   0x0081 CO MAI 
+000b  PLA   0   0  0  0:   0x0081 CO MAI 
+000c  JMP   0   0  0  0:   0x0081 CO MAI 
+000d   JZ   0   0  0  0:   0x0081 CO MAI 
+000e  JNZ   0   0  0  0:   0x0081 CO MAI 
+000f   JC   0   0  0  0:   0x0081 CO MAI 
+0010  JNC   0   0  0  0:   0x0081 CO MAI 
+0011   JS   0   0  0  0:   0x0081 CO MAI 
+0012  JNS   0   0  0  0:   0x0081 CO MAI 
+0013 JMPI   0   0  0  0:   0x0081 CO MAI 
+0014  JZI   0   0  0  0:   0x0081 CO MAI 
+0015 JNZI   0   0  0  0:   0x0081 CO MAI 
+0016  JCI   0   0  0  0:   0x0081 CO MAI 
+0017 JNCI   0   0  0  0:   0x0081 CO MAI 
+0018  JSI   0   0  0  0:   0x0081 CO MAI 
+0019 JNSI   0   0  0  0:   0x0081 CO MAI 
+0100  NOP   1   0  0  0:   0x1024 RO II CE 
+0101  LDA   1   0  0  0:   0x1024 RO II CE 
+0102 LDAI   1   0  0  0:   0x1024 RO II CE 
+0103  STA   1   0  0  0:   0x1024 RO II CE 
+0104  ADD   1   0  0  0:   0x1024 RO II CE 
+0105 ADDI   1   0  0  0:   0x1024 RO II CE 
+0106  SUB   1   0  0  0:   0x1024 RO II CE 
+0107 SUBI   1   0  0  0:   0x1024 RO II CE 
+0108  OUT   1   0  0  0:   0x1024 RO II CE 
+0109  HLT   1   0  0  0:   0x1024 RO II CE 
+010a  PHA   1   0  0  0:   0x1024 RO II CE 
+010b  PLA   1   0  0  0:   0x1024 RO II CE 
+010c  JMP   1   0  0  0:   0x1024 RO II CE 
+010d   JZ   1   0  0  0:   0x1024 RO II CE 
+010e  JNZ   1   0  0  0:   0x1024 RO II CE 
+010f   JC   1   0  0  0:   0x1024 RO II CE 
+0110  JNC   1   0  0  0:   0x1024 RO II CE 
+0111   JS   1   0  0  0:   0x1024 RO II CE 
+0112  JNS   1   0  0  0:   0x1024 RO II CE 
+0113 JMPI   1   0  0  0:   0x1024 RO II CE 
+0114  JZI   1   0  0  0:   0x1024 RO II CE 
+0115 JNZI   1   0  0  0:   0x1024 RO II CE 
+0116  JCI   1   0  0  0:   0x1024 RO II CE 
+0117 JNCI   1   0  0  0:   0x1024 RO II CE 
+0118  JSI   1   0  0  0:   0x1024 RO II CE 
+0119 JNSI   1   0  0  0:   0x1024 RO II CE 
 0200  NOP   2   0  0  0:   0x0000 
-0201  LDA   2   0  0  0:   0x8080 MAI CO 
-0202 LDAI   2   0  0  0:   0x8080 MAI CO 
-0203  STA   2   0  0  0:   0x8080 MAI CO 
-0204  ADD   2   0  0  0:   0x8080 MAI CO 
-0205 ADDI   2   0  0  0:   0x8080 MAI CO 
-0206  SUB   2   0  0  0:   0x8080 MAI CO 
-0207 SUBI   2   0  0  0:   0x8080 MAI CO 
-0208  OUT   2   0  0  0:   0x0808 OI AO 
-0209  HLT   2   0  0  0:   0x0004 HT 
-020a  JMP   2   0  0  0:   0x8080 MAI CO 
-020b   JZ   2   0  0  0:   0x8080 MAI CO 
-020c  JNZ   2   0  0  0:   0x8080 MAI CO 
-020d   JC   2   0  0  0:   0x8080 MAI CO 
-020e  JNC   2   0  0  0:   0x8080 MAI CO 
-020f   JS   2   0  0  0:   0x8080 MAI CO 
-0210  JNS   2   0  0  0:   0x8080 MAI CO 
-0211 JMPI   2   0  0  0:   0x8080 MAI CO 
-0212  JZI   2   0  0  0:   0x8080 MAI CO 
-0213 JNZI   2   0  0  0:   0x8080 MAI CO 
-0214  JCI   2   0  0  0:   0x8080 MAI CO 
-0215 JNCI   2   0  0  0:   0x8080 MAI CO 
-0216  JSI   2   0  0  0:   0x8080 MAI CO 
-0217 JNSI   2   0  0  0:   0x8080 MAI CO 
+0201  LDA   2   0  0  0:   0x0081 CO MAI 
+0202 LDAI   2   0  0  0:   0x0081 CO MAI 
+0203  STA   2   0  0  0:   0x0081 CO MAI 
+0204  ADD   2   0  0  0:   0x0081 CO MAI 
+0205 ADDI   2   0  0  0:   0x0081 CO MAI 
+0206  SUB   2   0  0  0:   0x0081 CO MAI 
+0207 SUBI   2   0  0  0:   0x0081 CO MAI 
+0208  OUT   2   0  0  0:   0x0012 AO OI 
+0209  HLT   2   0  0  0:   0x0005 HT 
+020a  PHA   2   0  0  0:   0x0087 SPO MAI 
+020b  PLA   2   0  0  0:   0x2000 SPE 
+020c  JMP   2   0  0  0:   0x0081 CO MAI 
+020d   JZ   2   0  0  0:   0x0000 
+020e  JNZ   2   0  0  0:   0x0081 CO MAI 
+020f   JC   2   0  0  0:   0x0000 
+0210  JNC   2   0  0  0:   0x0081 CO MAI 
+0211   JS   2   0  0  0:   0x0000 
+0212  JNS   2   0  0  0:   0x0081 CO MAI 
+0213 JMPI   2   0  0  0:   0x0081 CO MAI 
+0214  JZI   2   0  0  0:   0x0000 
+0215 JNZI   2   0  0  0:   0x0081 CO MAI 
+0216  JCI   2   0  0  0:   0x0000 
+0217 JNCI   2   0  0  0:   0x0081 CO MAI 
+0218  JSI   2   0  0  0:   0x0000 
+0219 JNSI   2   0  0  0:   0x0081 CO MAI 
 0300  NOP   3   0  0  0:   0x0000 
-0301  LDA   3   0  0  0:   0x40a0 RO MAI CE 
-0302 LDAI   3   0  0  0:   0x5020 RO AI CE 
-0303  STA   3   0  0  0:   0x40a0 RO MAI CE 
-0304  ADD   3   0  0  0:   0x40a0 RO MAI CE 
-0305 ADDI   3   0  0  0:   0x4420 RO BI CE 
-0306  SUB   3   0  0  0:   0x40a0 RO MAI CE 
-0307 SUBI   3   0  0  0:   0x4420 RO BI CE 
-0308  OUT   3   0  0  0:   0x0002 T0 
+0301  LDA   3   0  0  0:   0x1084 RO MAI CE 
+0302 LDAI   3   0  0  0:   0x1404 RO AI CE 
+0303  STA   3   0  0  0:   0x1084 RO MAI CE 
+0304  ADD   3   0  0  0:   0x1084 RO MAI CE 
+0305 ADDI   3   0  0  0:   0x1204 RO BI CE 
+0306  SUB   3   0  0  0:   0x1084 RO MAI CE 
+0307 SUBI   3   0  0  0:   0x1204 RO BI CE 
+0308  OUT   3   0  0  0:   0x0006 T0 
 0309  HLT   3   0  0  0:   0x0000 
-030a  JMP   3   0  0  0:   0x2020 RO J 
-030b   JZ   3   0  0  0:   0x4002 T0 CE 
-030c  JNZ   3   0  0  0:   0x2020 RO J 
-030d   JC   3   0  0  0:   0x4002 T0 CE 
-030e  JNC   3   0  0  0:   0x2020 RO J 
-030f   JS   3   0  0  0:   0x4002 T0 CE 
-0310  JNS   3   0  0  0:   0x2020 RO J 
-0311 JMPI   3   0  0  0:   0x40a0 RO MAI CE 
-0312  JZI   3   0  0  0:   0x4002 T0 CE 
-0313 JNZI   3   0  0  0:   0x40a0 RO MAI CE 
-0314  JCI   3   0  0  0:   0x4002 T0 CE 
-0315 JNCI   3   0  0  0:   0x40a0 RO MAI CE 
-0316  JSI   3   0  0  0:   0x4002 T0 CE 
-0317 JNSI   3   0  0  0:   0x40a0 RO MAI CE 
+030a  PHA   3   0  0  0:   0x0042 AO RI 
+030b  PLA   3   0  0  0:   0x0087 SPO MAI 
+030c  JMP   3   0  0  0:   0x0804 RO J 
+030d   JZ   3   0  0  0:   0x1006 T0 CE 
+030e  JNZ   3   0  0  0:   0x0804 RO J 
+030f   JC   3   0  0  0:   0x1006 T0 CE 
+0310  JNC   3   0  0  0:   0x0804 RO J 
+0311   JS   3   0  0  0:   0x1006 T0 CE 
+0312  JNS   3   0  0  0:   0x0804 RO J 
+0313 JMPI   3   0  0  0:   0x1084 RO MAI CE 
+0314  JZI   3   0  0  0:   0x1006 T0 CE 
+0315 JNZI   3   0  0  0:   0x1084 RO MAI CE 
+0316  JCI   3   0  0  0:   0x1006 T0 CE 
+0317 JNCI   3   0  0  0:   0x1084 RO MAI CE 
+0318  JSI   3   0  0  0:   0x1006 T0 CE 
+0319 JNSI   3   0  0  0:   0x1084 RO MAI CE 
 0400  NOP   4   0  0  0:   0x0000 
-0401  LDA   4   0  0  0:   0x1020 RO AI 
-0402 LDAI   4   0  0  0:   0x0002 T0 
-0403  STA   4   0  0  0:   0x0840 RI AO 
-0404  ADD   4   0  0  0:   0x0420 RO BI 
-0405 ADDI   4   0  0  0:   0x1201 FI EO AI 
-0406  SUB   4   0  0  0:   0x0420 RO BI 
-0407 SUBI   4   0  0  0:   0x1301 FI SU EO AI 
+0401  LDA   4   0  0  0:   0x0404 RO AI 
+0402 LDAI   4   0  0  0:   0x0006 T0 
+0403  STA   4   0  0  0:   0x0042 AO RI 
+0404  ADD   4   0  0  0:   0x0204 RO BI 
+0405 ADDI   4   0  0  0:   0x040b EO FI AI 
+0406  SUB   4   0  0  0:   0x0204 RO BI 
+0407 SUBI   4   0  0  0:   0x050b EO FI SU AI 
 0408  OUT   4   0  0  0:   0x0000 
 0409  HLT   4   0  0  0:   0x0000 
-040a  JMP   4   0  0  0:   0x0002 T0 
-040b   JZ   4   0  0  0:   0x0000 
-040c  JNZ   4   0  0  0:   0x0002 T0 
-040d   JC   4   0  0  0:   0x0000 
-040e  JNC   4   0  0  0:   0x0002 T0 
-040f   JS   4   0  0  0:   0x0000 
-0410  JNS   4   0  0  0:   0x0002 T0 
-0411 JMPI   4   0  0  0:   0x2020 RO J 
-0412  JZI   4   0  0  0:   0x0000 
-0413 JNZI   4   0  0  0:   0x2020 RO J 
-0414  JCI   4   0  0  0:   0x0000 
-0415 JNCI   4   0  0  0:   0x2020 RO J 
-0416  JSI   4   0  0  0:   0x0000 
-0417 JNSI   4   0  0  0:   0x2020 RO J 
+040a  PHA   4   0  0  0:   0x6000 SPE SPD 
+040b  PLA   4   0  0  0:   0x0404 RO AI 
+040c  JMP   4   0  0  0:   0x0006 T0 
+040d   JZ   4   0  0  0:   0x0000 
+040e  JNZ   4   0  0  0:   0x0006 T0 
+040f   JC   4   0  0  0:   0x0000 
+0410  JNC   4   0  0  0:   0x0006 T0 
+0411   JS   4   0  0  0:   0x0000 
+0412  JNS   4   0  0  0:   0x0006 T0 
+0413 JMPI   4   0  0  0:   0x0804 RO J 
+0414  JZI   4   0  0  0:   0x0000 
+0415 JNZI   4   0  0  0:   0x0804 RO J 
+0416  JCI   4   0  0  0:   0x0000 
+0417 JNCI   4   0  0  0:   0x0804 RO J 
+0418  JSI   4   0  0  0:   0x0000 
+0419 JNSI   4   0  0  0:   0x0804 RO J 
 0500  NOP   5   0  0  0:   0x0000 
-0501  LDA   5   0  0  0:   0x0002 T0 
+0501  LDA   5   0  0  0:   0x0006 T0 
 0502 LDAI   5   0  0  0:   0x0000 
-0503  STA   5   0  0  0:   0x0002 T0 
-0504  ADD   5   0  0  0:   0x1201 FI EO AI 
-0505 ADDI   5   0  0  0:   0x0002 T0 
-0506  SUB   5   0  0  0:   0x1301 FI SU EO AI 
-0507 SUBI   5   0  0  0:   0x0002 T0 
+0503  STA   5   0  0  0:   0x0006 T0 
+0504  ADD   5   0  0  0:   0x040b EO FI AI 
+0505 ADDI   5   0  0  0:   0x0006 T0 
+0506  SUB   5   0  0  0:   0x050b EO FI SU AI 
+0507 SUBI   5   0  0  0:   0x0006 T0 
 0508  OUT   5   0  0  0:   0x0000 
 0509  HLT   5   0  0  0:   0x0000 
-050a  JMP   5   0  0  0:   0x0000 
-050b   JZ   5   0  0  0:   0x0000 
-050c  JNZ   5   0  0  0:   0x0000 
-050d   JC   5   0  0  0:   0x0000 
-050e  JNC   5   0  0  0:   0x0000 
-050f   JS   5   0  0  0:   0x0000 
-0510  JNS   5   0  0  0:   0x0000 
-0511 JMPI   5   0  0  0:   0x0002 T0 
-0512  JZI   5   0  0  0:   0x0000 
-0513 JNZI   5   0  0  0:   0x0002 T0 
-0514  JCI   5   0  0  0:   0x0000 
-0515 JNCI   5   0  0  0:   0x0002 T0 
-0516  JSI   5   0  0  0:   0x0000 
-0517 JNSI   5   0  0  0:   0x0002 T0 
-0800  NOP   0   1  0  0:   0x8080 MAI CO 
-0801  LDA   0   1  0  0:   0x8080 MAI CO 
-0802 LDAI   0   1  0  0:   0x8080 MAI CO 
-0803  STA   0   1  0  0:   0x8080 MAI CO 
-0804  ADD   0   1  0  0:   0x8080 MAI CO 
-0805 ADDI   0   1  0  0:   0x8080 MAI CO 
-0806  SUB   0   1  0  0:   0x8080 MAI CO 
-0807 SUBI   0   1  0  0:   0x8080 MAI CO 
-0808  OUT   0   1  0  0:   0x8080 MAI CO 
-0809  HLT   0   1  0  0:   0x8080 MAI CO 
-080a  JMP   0   1  0  0:   0x8080 MAI CO 
-080b   JZ   0   1  0  0:   0x8080 MAI CO 
-080c  JNZ   0   1  0  0:   0x8080 MAI CO 
-080d   JC   0   1  0  0:   0x8080 MAI CO 
-080e  JNC   0   1  0  0:   0x8080 MAI CO 
-080f   JS   0   1  0  0:   0x8080 MAI CO 
-0810  JNS   0   1  0  0:   0x8080 MAI CO 
-0811 JMPI   0   1  0  0:   0x8080 MAI CO 
-0812  JZI   0   1  0  0:   0x8080 MAI CO 
-0813 JNZI   0   1  0  0:   0x8080 MAI CO 
-0814  JCI   0   1  0  0:   0x8080 MAI CO 
-0815 JNCI   0   1  0  0:   0x8080 MAI CO 
-0816  JSI   0   1  0  0:   0x8080 MAI CO 
-0817 JNSI   0   1  0  0:   0x8080 MAI CO 
-0900  NOP   1   1  0  0:   0x4030 II RO CE 
-0901  LDA   1   1  0  0:   0x4030 II RO CE 
-0902 LDAI   1   1  0  0:   0x4030 II RO CE 
-0903  STA   1   1  0  0:   0x4030 II RO CE 
-0904  ADD   1   1  0  0:   0x4030 II RO CE 
-0905 ADDI   1   1  0  0:   0x4030 II RO CE 
-0906  SUB   1   1  0  0:   0x4030 II RO CE 
-0907 SUBI   1   1  0  0:   0x4030 II RO CE 
-0908  OUT   1   1  0  0:   0x4030 II RO CE 
-0909  HLT   1   1  0  0:   0x4030 II RO CE 
-090a  JMP   1   1  0  0:   0x4030 II RO CE 
-090b   JZ   1   1  0  0:   0x4030 II RO CE 
-090c  JNZ   1   1  0  0:   0x4030 II RO CE 
-090d   JC   1   1  0  0:   0x4030 II RO CE 
-090e  JNC   1   1  0  0:   0x4030 II RO CE 
-090f   JS   1   1  0  0:   0x4030 II RO CE 
-0910  JNS   1   1  0  0:   0x4030 II RO CE 
-0911 JMPI   1   1  0  0:   0x4030 II RO CE 
-0912  JZI   1   1  0  0:   0x4030 II RO CE 
-0913 JNZI   1   1  0  0:   0x4030 II RO CE 
-0914  JCI   1   1  0  0:   0x4030 II RO CE 
-0915 JNCI   1   1  0  0:   0x4030 II RO CE 
-0916  JSI   1   1  0  0:   0x4030 II RO CE 
-0917 JNSI   1   1  0  0:   0x4030 II RO CE 
+050a  PHA   5   0  0  0:   0x0006 T0 
+050b  PLA   5   0  0  0:   0x0006 T0 
+050c  JMP   5   0  0  0:   0x0000 
+050d   JZ   5   0  0  0:   0x0000 
+050e  JNZ   5   0  0  0:   0x0000 
+050f   JC   5   0  0  0:   0x0000 
+0510  JNC   5   0  0  0:   0x0000 
+0511   JS   5   0  0  0:   0x0000 
+0512  JNS   5   0  0  0:   0x0000 
+0513 JMPI   5   0  0  0:   0x0006 T0 
+0514  JZI   5   0  0  0:   0x0000 
+0515 JNZI   5   0  0  0:   0x0006 T0 
+0516  JCI   5   0  0  0:   0x0000 
+0517 JNCI   5   0  0  0:   0x0006 T0 
+0518  JSI   5   0  0  0:   0x0000 
+0519 JNSI   5   0  0  0:   0x0006 T0 
+0800  NOP   0   1  0  0:   0x0081 CO MAI 
+0801  LDA   0   1  0  0:   0x0081 CO MAI 
+0802 LDAI   0   1  0  0:   0x0081 CO MAI 
+0803  STA   0   1  0  0:   0x0081 CO MAI 
+0804  ADD   0   1  0  0:   0x0081 CO MAI 
+0805 ADDI   0   1  0  0:   0x0081 CO MAI 
+0806  SUB   0   1  0  0:   0x0081 CO MAI 
+0807 SUBI   0   1  0  0:   0x0081 CO MAI 
+0808  OUT   0   1  0  0:   0x0081 CO MAI 
+0809  HLT   0   1  0  0:   0x0081 CO MAI 
+080a  PHA   0   1  0  0:   0x0081 CO MAI 
+080b  PLA   0   1  0  0:   0x0081 CO MAI 
+080c  JMP   0   1  0  0:   0x0081 CO MAI 
+080d   JZ   0   1  0  0:   0x0081 CO MAI 
+080e  JNZ   0   1  0  0:   0x0081 CO MAI 
+080f   JC   0   1  0  0:   0x0081 CO MAI 
+0810  JNC   0   1  0  0:   0x0081 CO MAI 
+0811   JS   0   1  0  0:   0x0081 CO MAI 
+0812  JNS   0   1  0  0:   0x0081 CO MAI 
+0813 JMPI   0   1  0  0:   0x0081 CO MAI 
+0814  JZI   0   1  0  0:   0x0081 CO MAI 
+0815 JNZI   0   1  0  0:   0x0081 CO MAI 
+0816  JCI   0   1  0  0:   0x0081 CO MAI 
+0817 JNCI   0   1  0  0:   0x0081 CO MAI 
+0818  JSI   0   1  0  0:   0x0081 CO MAI 
+0819 JNSI   0   1  0  0:   0x0081 CO MAI 
+0900  NOP   1   1  0  0:   0x1024 RO II CE 
+0901  LDA   1   1  0  0:   0x1024 RO II CE 
+0902 LDAI   1   1  0  0:   0x1024 RO II CE 
+0903  STA   1   1  0  0:   0x1024 RO II CE 
+0904  ADD   1   1  0  0:   0x1024 RO II CE 
+0905 ADDI   1   1  0  0:   0x1024 RO II CE 
+0906  SUB   1   1  0  0:   0x1024 RO II CE 
+0907 SUBI   1   1  0  0:   0x1024 RO II CE 
+0908  OUT   1   1  0  0:   0x1024 RO II CE 
+0909  HLT   1   1  0  0:   0x1024 RO II CE 
+090a  PHA   1   1  0  0:   0x1024 RO II CE 
+090b  PLA   1   1  0  0:   0x1024 RO II CE 
+090c  JMP   1   1  0  0:   0x1024 RO II CE 
+090d   JZ   1   1  0  0:   0x1024 RO II CE 
+090e  JNZ   1   1  0  0:   0x1024 RO II CE 
+090f   JC   1   1  0  0:   0x1024 RO II CE 
+0910  JNC   1   1  0  0:   0x1024 RO II CE 
+0911   JS   1   1  0  0:   0x1024 RO II CE 
+0912  JNS   1   1  0  0:   0x1024 RO II CE 
+0913 JMPI   1   1  0  0:   0x1024 RO II CE 
+0914  JZI   1   1  0  0:   0x1024 RO II CE 
+0915 JNZI   1   1  0  0:   0x1024 RO II CE 
+0916  JCI   1   1  0  0:   0x1024 RO II CE 
+0917 JNCI   1   1  0  0:   0x1024 RO II CE 
+0918  JSI   1   1  0  0:   0x1024 RO II CE 
+0919 JNSI   1   1  0  0:   0x1024 RO II CE 
 0a00  NOP   2   1  0  0:   0x0000 
-0a01  LDA   2   1  0  0:   0x8080 MAI CO 
-0a02 LDAI   2   1  0  0:   0x8080 MAI CO 
-0a03  STA   2   1  0  0:   0x8080 MAI CO 
-0a04  ADD   2   1  0  0:   0x8080 MAI CO 
-0a05 ADDI   2   1  0  0:   0x8080 MAI CO 
-0a06  SUB   2   1  0  0:   0x8080 MAI CO 
-0a07 SUBI   2   1  0  0:   0x8080 MAI CO 
-0a08  OUT   2   1  0  0:   0x0808 OI AO 
-0a09  HLT   2   1  0  0:   0x0004 HT 
-0a0a  JMP   2   1  0  0:   0x8080 MAI CO 
-0a0b   JZ   2   1  0  0:   0x8080 MAI CO 
-0a0c  JNZ   2   1  0  0:   0x8080 MAI CO 
-0a0d   JC   2   1  0  0:   0x8080 MAI CO 
-0a0e  JNC   2   1  0  0:   0x8080 MAI CO 
-0a0f   JS   2   1  0  0:   0x8080 MAI CO 
-0a10  JNS   2   1  0  0:   0x8080 MAI CO 
-0a11 JMPI   2   1  0  0:   0x8080 MAI CO 
-0a12  JZI   2   1  0  0:   0x8080 MAI CO 
-0a13 JNZI   2   1  0  0:   0x8080 MAI CO 
-0a14  JCI   2   1  0  0:   0x8080 MAI CO 
-0a15 JNCI   2   1  0  0:   0x8080 MAI CO 
-0a16  JSI   2   1  0  0:   0x8080 MAI CO 
-0a17 JNSI   2   1  0  0:   0x8080 MAI CO 
+0a01  LDA   2   1  0  0:   0x0081 CO MAI 
+0a02 LDAI   2   1  0  0:   0x0081 CO MAI 
+0a03  STA   2   1  0  0:   0x0081 CO MAI 
+0a04  ADD   2   1  0  0:   0x0081 CO MAI 
+0a05 ADDI   2   1  0  0:   0x0081 CO MAI 
+0a06  SUB   2   1  0  0:   0x0081 CO MAI 
+0a07 SUBI   2   1  0  0:   0x0081 CO MAI 
+0a08  OUT   2   1  0  0:   0x0012 AO OI 
+0a09  HLT   2   1  0  0:   0x0005 HT 
+0a0a  PHA   2   1  0  0:   0x0087 SPO MAI 
+0a0b  PLA   2   1  0  0:   0x2000 SPE 
+0a0c  JMP   2   1  0  0:   0x0081 CO MAI 
+0a0d   JZ   2   1  0  0:   0x0000 
+0a0e  JNZ   2   1  0  0:   0x0081 CO MAI 
+0a0f   JC   2   1  0  0:   0x0081 CO MAI 
+0a10  JNC   2   1  0  0:   0x0000 
+0a11   JS   2   1  0  0:   0x0000 
+0a12  JNS   2   1  0  0:   0x0081 CO MAI 
+0a13 JMPI   2   1  0  0:   0x0081 CO MAI 
+0a14  JZI   2   1  0  0:   0x0000 
+0a15 JNZI   2   1  0  0:   0x0081 CO MAI 
+0a16  JCI   2   1  0  0:   0x0081 CO MAI 
+0a17 JNCI   2   1  0  0:   0x0000 
+0a18  JSI   2   1  0  0:   0x0000 
+0a19 JNSI   2   1  0  0:   0x0081 CO MAI 
 0b00  NOP   3   1  0  0:   0x0000 
-0b01  LDA   3   1  0  0:   0x40a0 RO MAI CE 
-0b02 LDAI   3   1  0  0:   0x5020 RO AI CE 
-0b03  STA   3   1  0  0:   0x40a0 RO MAI CE 
-0b04  ADD   3   1  0  0:   0x40a0 RO MAI CE 
-0b05 ADDI   3   1  0  0:   0x4420 RO BI CE 
-0b06  SUB   3   1  0  0:   0x40a0 RO MAI CE 
-0b07 SUBI   3   1  0  0:   0x4420 RO BI CE 
-0b08  OUT   3   1  0  0:   0x0002 T0 
+0b01  LDA   3   1  0  0:   0x1084 RO MAI CE 
+0b02 LDAI   3   1  0  0:   0x1404 RO AI CE 
+0b03  STA   3   1  0  0:   0x1084 RO MAI CE 
+0b04  ADD   3   1  0  0:   0x1084 RO MAI CE 
+0b05 ADDI   3   1  0  0:   0x1204 RO BI CE 
+0b06  SUB   3   1  0  0:   0x1084 RO MAI CE 
+0b07 SUBI   3   1  0  0:   0x1204 RO BI CE 
+0b08  OUT   3   1  0  0:   0x0006 T0 
 0b09  HLT   3   1  0  0:   0x0000 
-0b0a  JMP   3   1  0  0:   0x2020 RO J 
-0b0b   JZ   3   1  0  0:   0x4002 T0 CE 
-0b0c  JNZ   3   1  0  0:   0x2020 RO J 
-0b0d   JC   3   1  0  0:   0x2020 RO J 
-0b0e  JNC   3   1  0  0:   0x4002 T0 CE 
-0b0f   JS   3   1  0  0:   0x4002 T0 CE 
-0b10  JNS   3   1  0  0:   0x2020 RO J 
-0b11 JMPI   3   1  0  0:   0x40a0 RO MAI CE 
-0b12  JZI   3   1  0  0:   0x4002 T0 CE 
-0b13 JNZI   3   1  0  0:   0x40a0 RO MAI CE 
-0b14  JCI   3   1  0  0:   0x40a0 RO MAI CE 
-0b15 JNCI   3   1  0  0:   0x4002 T0 CE 
-0b16  JSI   3   1  0  0:   0x4002 T0 CE 
-0b17 JNSI   3   1  0  0:   0x40a0 RO MAI CE 
+0b0a  PHA   3   1  0  0:   0x0042 AO RI 
+0b0b  PLA   3   1  0  0:   0x0087 SPO MAI 
+0b0c  JMP   3   1  0  0:   0x0804 RO J 
+0b0d   JZ   3   1  0  0:   0x1006 T0 CE 
+0b0e  JNZ   3   1  0  0:   0x0804 RO J 
+0b0f   JC   3   1  0  0:   0x0804 RO J 
+0b10  JNC   3   1  0  0:   0x1006 T0 CE 
+0b11   JS   3   1  0  0:   0x1006 T0 CE 
+0b12  JNS   3   1  0  0:   0x0804 RO J 
+0b13 JMPI   3   1  0  0:   0x1084 RO MAI CE 
+0b14  JZI   3   1  0  0:   0x1006 T0 CE 
+0b15 JNZI   3   1  0  0:   0x1084 RO MAI CE 
+0b16  JCI   3   1  0  0:   0x1084 RO MAI CE 
+0b17 JNCI   3   1  0  0:   0x1006 T0 CE 
+0b18  JSI   3   1  0  0:   0x1006 T0 CE 
+0b19 JNSI   3   1  0  0:   0x1084 RO MAI CE 
 0c00  NOP   4   1  0  0:   0x0000 
-0c01  LDA   4   1  0  0:   0x1020 RO AI 
-0c02 LDAI   4   1  0  0:   0x0002 T0 
-0c03  STA   4   1  0  0:   0x0840 RI AO 
-0c04  ADD   4   1  0  0:   0x0420 RO BI 
-0c05 ADDI   4   1  0  0:   0x1201 FI EO AI 
-0c06  SUB   4   1  0  0:   0x0420 RO BI 
-0c07 SUBI   4   1  0  0:   0x1301 FI SU EO AI 
+0c01  LDA   4   1  0  0:   0x0404 RO AI 
+0c02 LDAI   4   1  0  0:   0x0006 T0 
+0c03  STA   4   1  0  0:   0x0042 AO RI 
+0c04  ADD   4   1  0  0:   0x0204 RO BI 
+0c05 ADDI   4   1  0  0:   0x040b EO FI AI 
+0c06  SUB   4   1  0  0:   0x0204 RO BI 
+0c07 SUBI   4   1  0  0:   0x050b EO FI SU AI 
 0c08  OUT   4   1  0  0:   0x0000 
 0c09  HLT   4   1  0  0:   0x0000 
-0c0a  JMP   4   1  0  0:   0x0002 T0 
-0c0b   JZ   4   1  0  0:   0x0000 
-0c0c  JNZ   4   1  0  0:   0x0002 T0 
-0c0d   JC   4   1  0  0:   0x0002 T0 
-0c0e  JNC   4   1  0  0:   0x0000 
-0c0f   JS   4   1  0  0:   0x0000 
-0c10  JNS   4   1  0  0:   0x0002 T0 
-0c11 JMPI   4   1  0  0:   0x2020 RO J 
-0c12  JZI   4   1  0  0:   0x0000 
-0c13 JNZI   4   1  0  0:   0x2020 RO J 
-0c14  JCI   4   1  0  0:   0x2020 RO J 
-0c15 JNCI   4   1  0  0:   0x0000 
-0c16  JSI   4   1  0  0:   0x0000 
-0c17 JNSI   4   1  0  0:   0x2020 RO J 
+0c0a  PHA   4   1  0  0:   0x6000 SPE SPD 
+0c0b  PLA   4   1  0  0:   0x0404 RO AI 
+0c0c  JMP   4   1  0  0:   0x0006 T0 
+0c0d   JZ   4   1  0  0:   0x0000 
+0c0e  JNZ   4   1  0  0:   0x0006 T0 
+0c0f   JC   4   1  0  0:   0x0006 T0 
+0c10  JNC   4   1  0  0:   0x0000 
+0c11   JS   4   1  0  0:   0x0000 
+0c12  JNS   4   1  0  0:   0x0006 T0 
+0c13 JMPI   4   1  0  0:   0x0804 RO J 
+0c14  JZI   4   1  0  0:   0x0000 
+0c15 JNZI   4   1  0  0:   0x0804 RO J 
+0c16  JCI   4   1  0  0:   0x0804 RO J 
+0c17 JNCI   4   1  0  0:   0x0000 
+0c18  JSI   4   1  0  0:   0x0000 
+0c19 JNSI   4   1  0  0:   0x0804 RO J 
 0d00  NOP   5   1  0  0:   0x0000 
-0d01  LDA   5   1  0  0:   0x0002 T0 
+0d01  LDA   5   1  0  0:   0x0006 T0 
 0d02 LDAI   5   1  0  0:   0x0000 
-0d03  STA   5   1  0  0:   0x0002 T0 
-0d04  ADD   5   1  0  0:   0x1201 FI EO AI 
-0d05 ADDI   5   1  0  0:   0x0002 T0 
-0d06  SUB   5   1  0  0:   0x1301 FI SU EO AI 
-0d07 SUBI   5   1  0  0:   0x0002 T0 
+0d03  STA   5   1  0  0:   0x0006 T0 
+0d04  ADD   5   1  0  0:   0x040b EO FI AI 
+0d05 ADDI   5   1  0  0:   0x0006 T0 
+0d06  SUB   5   1  0  0:   0x050b EO FI SU AI 
+0d07 SUBI   5   1  0  0:   0x0006 T0 
 0d08  OUT   5   1  0  0:   0x0000 
 0d09  HLT   5   1  0  0:   0x0000 
-0d0a  JMP   5   1  0  0:   0x0000 
-0d0b   JZ   5   1  0  0:   0x0000 
-0d0c  JNZ   5   1  0  0:   0x0000 
-0d0d   JC   5   1  0  0:   0x0000 
-0d0e  JNC   5   1  0  0:   0x0000 
-0d0f   JS   5   1  0  0:   0x0000 
-0d10  JNS   5   1  0  0:   0x0000 
-0d11 JMPI   5   1  0  0:   0x0002 T0 
-0d12  JZI   5   1  0  0:   0x0000 
-0d13 JNZI   5   1  0  0:   0x0002 T0 
-0d14  JCI   5   1  0  0:   0x0002 T0 
-0d15 JNCI   5   1  0  0:   0x0000 
-0d16  JSI   5   1  0  0:   0x0000 
-0d17 JNSI   5   1  0  0:   0x0002 T0 
-1000  NOP   0   0  1  0:   0x8080 MAI CO 
-1001  LDA   0   0  1  0:   0x8080 MAI CO 
-1002 LDAI   0   0  1  0:   0x8080 MAI CO 
-1003  STA   0   0  1  0:   0x8080 MAI CO 
-1004  ADD   0   0  1  0:   0x8080 MAI CO 
-1005 ADDI   0   0  1  0:   0x8080 MAI CO 
-1006  SUB   0   0  1  0:   0x8080 MAI CO 
-1007 SUBI   0   0  1  0:   0x8080 MAI CO 
-1008  OUT   0   0  1  0:   0x8080 MAI CO 
-1009  HLT   0   0  1  0:   0x8080 MAI CO 
-100a  JMP   0   0  1  0:   0x8080 MAI CO 
-100b   JZ   0   0  1  0:   0x8080 MAI CO 
-100c  JNZ   0   0  1  0:   0x8080 MAI CO 
-100d   JC   0   0  1  0:   0x8080 MAI CO 
-100e  JNC   0   0  1  0:   0x8080 MAI CO 
-100f   JS   0   0  1  0:   0x8080 MAI CO 
-1010  JNS   0   0  1  0:   0x8080 MAI CO 
-1011 JMPI   0   0  1  0:   0x8080 MAI CO 
-1012  JZI   0   0  1  0:   0x8080 MAI CO 
-1013 JNZI   0   0  1  0:   0x8080 MAI CO 
-1014  JCI   0   0  1  0:   0x8080 MAI CO 
-1015 JNCI   0   0  1  0:   0x8080 MAI CO 
-1016  JSI   0   0  1  0:   0x8080 MAI CO 
-1017 JNSI   0   0  1  0:   0x8080 MAI CO 
-1100  NOP   1   0  1  0:   0x4030 II RO CE 
-1101  LDA   1   0  1  0:   0x4030 II RO CE 
-1102 LDAI   1   0  1  0:   0x4030 II RO CE 
-1103  STA   1   0  1  0:   0x4030 II RO CE 
-1104  ADD   1   0  1  0:   0x4030 II RO CE 
-1105 ADDI   1   0  1  0:   0x4030 II RO CE 
-1106  SUB   1   0  1  0:   0x4030 II RO CE 
-1107 SUBI   1   0  1  0:   0x4030 II RO CE 
-1108  OUT   1   0  1  0:   0x4030 II RO CE 
-1109  HLT   1   0  1  0:   0x4030 II RO CE 
-110a  JMP   1   0  1  0:   0x4030 II RO CE 
-110b   JZ   1   0  1  0:   0x4030 II RO CE 
-110c  JNZ   1   0  1  0:   0x4030 II RO CE 
-110d   JC   1   0  1  0:   0x4030 II RO CE 
-110e  JNC   1   0  1  0:   0x4030 II RO CE 
-110f   JS   1   0  1  0:   0x4030 II RO CE 
-1110  JNS   1   0  1  0:   0x4030 II RO CE 
-1111 JMPI   1   0  1  0:   0x4030 II RO CE 
-1112  JZI   1   0  1  0:   0x4030 II RO CE 
-1113 JNZI   1   0  1  0:   0x4030 II RO CE 
-1114  JCI   1   0  1  0:   0x4030 II RO CE 
-1115 JNCI   1   0  1  0:   0x4030 II RO CE 
-1116  JSI   1   0  1  0:   0x4030 II RO CE 
-1117 JNSI   1   0  1  0:   0x4030 II RO CE 
+0d0a  PHA   5   1  0  0:   0x0006 T0 
+0d0b  PLA   5   1  0  0:   0x0006 T0 
+0d0c  JMP   5   1  0  0:   0x0000 
+0d0d   JZ   5   1  0  0:   0x0000 
+0d0e  JNZ   5   1  0  0:   0x0000 
+0d0f   JC   5   1  0  0:   0x0000 
+0d10  JNC   5   1  0  0:   0x0000 
+0d11   JS   5   1  0  0:   0x0000 
+0d12  JNS   5   1  0  0:   0x0000 
+0d13 JMPI   5   1  0  0:   0x0006 T0 
+0d14  JZI   5   1  0  0:   0x0000 
+0d15 JNZI   5   1  0  0:   0x0006 T0 
+0d16  JCI   5   1  0  0:   0x0006 T0 
+0d17 JNCI   5   1  0  0:   0x0000 
+0d18  JSI   5   1  0  0:   0x0000 
+0d19 JNSI   5   1  0  0:   0x0006 T0 
+1000  NOP   0   0  1  0:   0x0081 CO MAI 
+1001  LDA   0   0  1  0:   0x0081 CO MAI 
+1002 LDAI   0   0  1  0:   0x0081 CO MAI 
+1003  STA   0   0  1  0:   0x0081 CO MAI 
+1004  ADD   0   0  1  0:   0x0081 CO MAI 
+1005 ADDI   0   0  1  0:   0x0081 CO MAI 
+1006  SUB   0   0  1  0:   0x0081 CO MAI 
+1007 SUBI   0   0  1  0:   0x0081 CO MAI 
+1008  OUT   0   0  1  0:   0x0081 CO MAI 
+1009  HLT   0   0  1  0:   0x0081 CO MAI 
+100a  PHA   0   0  1  0:   0x0081 CO MAI 
+100b  PLA   0   0  1  0:   0x0081 CO MAI 
+100c  JMP   0   0  1  0:   0x0081 CO MAI 
+100d   JZ   0   0  1  0:   0x0081 CO MAI 
+100e  JNZ   0   0  1  0:   0x0081 CO MAI 
+100f   JC   0   0  1  0:   0x0081 CO MAI 
+1010  JNC   0   0  1  0:   0x0081 CO MAI 
+1011   JS   0   0  1  0:   0x0081 CO MAI 
+1012  JNS   0   0  1  0:   0x0081 CO MAI 
+1013 JMPI   0   0  1  0:   0x0081 CO MAI 
+1014  JZI   0   0  1  0:   0x0081 CO MAI 
+1015 JNZI   0   0  1  0:   0x0081 CO MAI 
+1016  JCI   0   0  1  0:   0x0081 CO MAI 
+1017 JNCI   0   0  1  0:   0x0081 CO MAI 
+1018  JSI   0   0  1  0:   0x0081 CO MAI 
+1019 JNSI   0   0  1  0:   0x0081 CO MAI 
+1100  NOP   1   0  1  0:   0x1024 RO II CE 
+1101  LDA   1   0  1  0:   0x1024 RO II CE 
+1102 LDAI   1   0  1  0:   0x1024 RO II CE 
+1103  STA   1   0  1  0:   0x1024 RO II CE 
+1104  ADD   1   0  1  0:   0x1024 RO II CE 
+1105 ADDI   1   0  1  0:   0x1024 RO II CE 
+1106  SUB   1   0  1  0:   0x1024 RO II CE 
+1107 SUBI   1   0  1  0:   0x1024 RO II CE 
+1108  OUT   1   0  1  0:   0x1024 RO II CE 
+1109  HLT   1   0  1  0:   0x1024 RO II CE 
+110a  PHA   1   0  1  0:   0x1024 RO II CE 
+110b  PLA   1   0  1  0:   0x1024 RO II CE 
+110c  JMP   1   0  1  0:   0x1024 RO II CE 
+110d   JZ   1   0  1  0:   0x1024 RO II CE 
+110e  JNZ   1   0  1  0:   0x1024 RO II CE 
+110f   JC   1   0  1  0:   0x1024 RO II CE 
+1110  JNC   1   0  1  0:   0x1024 RO II CE 
+1111   JS   1   0  1  0:   0x1024 RO II CE 
+1112  JNS   1   0  1  0:   0x1024 RO II CE 
+1113 JMPI   1   0  1  0:   0x1024 RO II CE 
+1114  JZI   1   0  1  0:   0x1024 RO II CE 
+1115 JNZI   1   0  1  0:   0x1024 RO II CE 
+1116  JCI   1   0  1  0:   0x1024 RO II CE 
+1117 JNCI   1   0  1  0:   0x1024 RO II CE 
+1118  JSI   1   0  1  0:   0x1024 RO II CE 
+1119 JNSI   1   0  1  0:   0x1024 RO II CE 
 1200  NOP   2   0  1  0:   0x0000 
-1201  LDA   2   0  1  0:   0x8080 MAI CO 
-1202 LDAI   2   0  1  0:   0x8080 MAI CO 
-1203  STA   2   0  1  0:   0x8080 MAI CO 
-1204  ADD   2   0  1  0:   0x8080 MAI CO 
-1205 ADDI   2   0  1  0:   0x8080 MAI CO 
-1206  SUB   2   0  1  0:   0x8080 MAI CO 
-1207 SUBI   2   0  1  0:   0x8080 MAI CO 
-1208  OUT   2   0  1  0:   0x0808 OI AO 
-1209  HLT   2   0  1  0:   0x0004 HT 
-120a  JMP   2   0  1  0:   0x8080 MAI CO 
-120b   JZ   2   0  1  0:   0x8080 MAI CO 
-120c  JNZ   2   0  1  0:   0x8080 MAI CO 
-120d   JC   2   0  1  0:   0x8080 MAI CO 
-120e  JNC   2   0  1  0:   0x8080 MAI CO 
-120f   JS   2   0  1  0:   0x8080 MAI CO 
-1210  JNS   2   0  1  0:   0x8080 MAI CO 
-1211 JMPI   2   0  1  0:   0x8080 MAI CO 
-1212  JZI   2   0  1  0:   0x8080 MAI CO 
-1213 JNZI   2   0  1  0:   0x8080 MAI CO 
-1214  JCI   2   0  1  0:   0x8080 MAI CO 
-1215 JNCI   2   0  1  0:   0x8080 MAI CO 
-1216  JSI   2   0  1  0:   0x8080 MAI CO 
-1217 JNSI   2   0  1  0:   0x8080 MAI CO 
+1201  LDA   2   0  1  0:   0x0081 CO MAI 
+1202 LDAI   2   0  1  0:   0x0081 CO MAI 
+1203  STA   2   0  1  0:   0x0081 CO MAI 
+1204  ADD   2   0  1  0:   0x0081 CO MAI 
+1205 ADDI   2   0  1  0:   0x0081 CO MAI 
+1206  SUB   2   0  1  0:   0x0081 CO MAI 
+1207 SUBI   2   0  1  0:   0x0081 CO MAI 
+1208  OUT   2   0  1  0:   0x0012 AO OI 
+1209  HLT   2   0  1  0:   0x0005 HT 
+120a  PHA   2   0  1  0:   0x0087 SPO MAI 
+120b  PLA   2   0  1  0:   0x2000 SPE 
+120c  JMP   2   0  1  0:   0x0081 CO MAI 
+120d   JZ   2   0  1  0:   0x0081 CO MAI 
+120e  JNZ   2   0  1  0:   0x0000 
+120f   JC   2   0  1  0:   0x0000 
+1210  JNC   2   0  1  0:   0x0081 CO MAI 
+1211   JS   2   0  1  0:   0x0000 
+1212  JNS   2   0  1  0:   0x0081 CO MAI 
+1213 JMPI   2   0  1  0:   0x0081 CO MAI 
+1214  JZI   2   0  1  0:   0x0081 CO MAI 
+1215 JNZI   2   0  1  0:   0x0000 
+1216  JCI   2   0  1  0:   0x0000 
+1217 JNCI   2   0  1  0:   0x0081 CO MAI 
+1218  JSI   2   0  1  0:   0x0000 
+1219 JNSI   2   0  1  0:   0x0081 CO MAI 
 1300  NOP   3   0  1  0:   0x0000 
-1301  LDA   3   0  1  0:   0x40a0 RO MAI CE 
-1302 LDAI   3   0  1  0:   0x5020 RO AI CE 
-1303  STA   3   0  1  0:   0x40a0 RO MAI CE 
-1304  ADD   3   0  1  0:   0x40a0 RO MAI CE 
-1305 ADDI   3   0  1  0:   0x4420 RO BI CE 
-1306  SUB   3   0  1  0:   0x40a0 RO MAI CE 
-1307 SUBI   3   0  1  0:   0x4420 RO BI CE 
-1308  OUT   3   0  1  0:   0x0002 T0 
+1301  LDA   3   0  1  0:   0x1084 RO MAI CE 
+1302 LDAI   3   0  1  0:   0x1404 RO AI CE 
+1303  STA   3   0  1  0:   0x1084 RO MAI CE 
+1304  ADD   3   0  1  0:   0x1084 RO MAI CE 
+1305 ADDI   3   0  1  0:   0x1204 RO BI CE 
+1306  SUB   3   0  1  0:   0x1084 RO MAI CE 
+1307 SUBI   3   0  1  0:   0x1204 RO BI CE 
+1308  OUT   3   0  1  0:   0x0006 T0 
 1309  HLT   3   0  1  0:   0x0000 
-130a  JMP   3   0  1  0:   0x2020 RO J 
-130b   JZ   3   0  1  0:   0x2020 RO J 
-130c  JNZ   3   0  1  0:   0x4002 T0 CE 
-130d   JC   3   0  1  0:   0x4002 T0 CE 
-130e  JNC   3   0  1  0:   0x2020 RO J 
-130f   JS   3   0  1  0:   0x4002 T0 CE 
-1310  JNS   3   0  1  0:   0x2020 RO J 
-1311 JMPI   3   0  1  0:   0x40a0 RO MAI CE 
-1312  JZI   3   0  1  0:   0x40a0 RO MAI CE 
-1313 JNZI   3   0  1  0:   0x4002 T0 CE 
-1314  JCI   3   0  1  0:   0x4002 T0 CE 
-1315 JNCI   3   0  1  0:   0x40a0 RO MAI CE 
-1316  JSI   3   0  1  0:   0x4002 T0 CE 
-1317 JNSI   3   0  1  0:   0x40a0 RO MAI CE 
+130a  PHA   3   0  1  0:   0x0042 AO RI 
+130b  PLA   3   0  1  0:   0x0087 SPO MAI 
+130c  JMP   3   0  1  0:   0x0804 RO J 
+130d   JZ   3   0  1  0:   0x0804 RO J 
+130e  JNZ   3   0  1  0:   0x1006 T0 CE 
+130f   JC   3   0  1  0:   0x1006 T0 CE 
+1310  JNC   3   0  1  0:   0x0804 RO J 
+1311   JS   3   0  1  0:   0x1006 T0 CE 
+1312  JNS   3   0  1  0:   0x0804 RO J 
+1313 JMPI   3   0  1  0:   0x1084 RO MAI CE 
+1314  JZI   3   0  1  0:   0x1084 RO MAI CE 
+1315 JNZI   3   0  1  0:   0x1006 T0 CE 
+1316  JCI   3   0  1  0:   0x1006 T0 CE 
+1317 JNCI   3   0  1  0:   0x1084 RO MAI CE 
+1318  JSI   3   0  1  0:   0x1006 T0 CE 
+1319 JNSI   3   0  1  0:   0x1084 RO MAI CE 
 1400  NOP   4   0  1  0:   0x0000 
-1401  LDA   4   0  1  0:   0x1020 RO AI 
-1402 LDAI   4   0  1  0:   0x0002 T0 
-1403  STA   4   0  1  0:   0x0840 RI AO 
-1404  ADD   4   0  1  0:   0x0420 RO BI 
-1405 ADDI   4   0  1  0:   0x1201 FI EO AI 
-1406  SUB   4   0  1  0:   0x0420 RO BI 
-1407 SUBI   4   0  1  0:   0x1301 FI SU EO AI 
+1401  LDA   4   0  1  0:   0x0404 RO AI 
+1402 LDAI   4   0  1  0:   0x0006 T0 
+1403  STA   4   0  1  0:   0x0042 AO RI 
+1404  ADD   4   0  1  0:   0x0204 RO BI 
+1405 ADDI   4   0  1  0:   0x040b EO FI AI 
+1406  SUB   4   0  1  0:   0x0204 RO BI 
+1407 SUBI   4   0  1  0:   0x050b EO FI SU AI 
 1408  OUT   4   0  1  0:   0x0000 
 1409  HLT   4   0  1  0:   0x0000 
-140a  JMP   4   0  1  0:   0x0002 T0 
-140b   JZ   4   0  1  0:   0x0002 T0 
-140c  JNZ   4   0  1  0:   0x0000 
-140d   JC   4   0  1  0:   0x0000 
-140e  JNC   4   0  1  0:   0x0002 T0 
-140f   JS   4   0  1  0:   0x0000 
-1410  JNS   4   0  1  0:   0x0002 T0 
-1411 JMPI   4   0  1  0:   0x2020 RO J 
-1412  JZI   4   0  1  0:   0x2020 RO J 
-1413 JNZI   4   0  1  0:   0x0000 
-1414  JCI   4   0  1  0:   0x0000 
-1415 JNCI   4   0  1  0:   0x2020 RO J 
-1416  JSI   4   0  1  0:   0x0000 
-1417 JNSI   4   0  1  0:   0x2020 RO J 
+140a  PHA   4   0  1  0:   0x6000 SPE SPD 
+140b  PLA   4   0  1  0:   0x0404 RO AI 
+140c  JMP   4   0  1  0:   0x0006 T0 
+140d   JZ   4   0  1  0:   0x0006 T0 
+140e  JNZ   4   0  1  0:   0x0000 
+140f   JC   4   0  1  0:   0x0000 
+1410  JNC   4   0  1  0:   0x0006 T0 
+1411   JS   4   0  1  0:   0x0000 
+1412  JNS   4   0  1  0:   0x0006 T0 
+1413 JMPI   4   0  1  0:   0x0804 RO J 
+1414  JZI   4   0  1  0:   0x0804 RO J 
+1415 JNZI   4   0  1  0:   0x0000 
+1416  JCI   4   0  1  0:   0x0000 
+1417 JNCI   4   0  1  0:   0x0804 RO J 
+1418  JSI   4   0  1  0:   0x0000 
+1419 JNSI   4   0  1  0:   0x0804 RO J 
 1500  NOP   5   0  1  0:   0x0000 
-1501  LDA   5   0  1  0:   0x0002 T0 
+1501  LDA   5   0  1  0:   0x0006 T0 
 1502 LDAI   5   0  1  0:   0x0000 
-1503  STA   5   0  1  0:   0x0002 T0 
-1504  ADD   5   0  1  0:   0x1201 FI EO AI 
-1505 ADDI   5   0  1  0:   0x0002 T0 
-1506  SUB   5   0  1  0:   0x1301 FI SU EO AI 
-1507 SUBI   5   0  1  0:   0x0002 T0 
+1503  STA   5   0  1  0:   0x0006 T0 
+1504  ADD   5   0  1  0:   0x040b EO FI AI 
+1505 ADDI   5   0  1  0:   0x0006 T0 
+1506  SUB   5   0  1  0:   0x050b EO FI SU AI 
+1507 SUBI   5   0  1  0:   0x0006 T0 
 1508  OUT   5   0  1  0:   0x0000 
 1509  HLT   5   0  1  0:   0x0000 
-150a  JMP   5   0  1  0:   0x0000 
-150b   JZ   5   0  1  0:   0x0000 
-150c  JNZ   5   0  1  0:   0x0000 
-150d   JC   5   0  1  0:   0x0000 
-150e  JNC   5   0  1  0:   0x0000 
-150f   JS   5   0  1  0:   0x0000 
-1510  JNS   5   0  1  0:   0x0000 
-1511 JMPI   5   0  1  0:   0x0002 T0 
-1512  JZI   5   0  1  0:   0x0002 T0 
-1513 JNZI   5   0  1  0:   0x0000 
-1514  JCI   5   0  1  0:   0x0000 
-1515 JNCI   5   0  1  0:   0x0002 T0 
-1516  JSI   5   0  1  0:   0x0000 
-1517 JNSI   5   0  1  0:   0x0002 T0 
-1800  NOP   0   1  1  0:   0x8080 MAI CO 
-1801  LDA   0   1  1  0:   0x8080 MAI CO 
-1802 LDAI   0   1  1  0:   0x8080 MAI CO 
-1803  STA   0   1  1  0:   0x8080 MAI CO 
-1804  ADD   0   1  1  0:   0x8080 MAI CO 
-1805 ADDI   0   1  1  0:   0x8080 MAI CO 
-1806  SUB   0   1  1  0:   0x8080 MAI CO 
-1807 SUBI   0   1  1  0:   0x8080 MAI CO 
-1808  OUT   0   1  1  0:   0x8080 MAI CO 
-1809  HLT   0   1  1  0:   0x8080 MAI CO 
-180a  JMP   0   1  1  0:   0x8080 MAI CO 
-180b   JZ   0   1  1  0:   0x8080 MAI CO 
-180c  JNZ   0   1  1  0:   0x8080 MAI CO 
-180d   JC   0   1  1  0:   0x8080 MAI CO 
-180e  JNC   0   1  1  0:   0x8080 MAI CO 
-180f   JS   0   1  1  0:   0x8080 MAI CO 
-1810  JNS   0   1  1  0:   0x8080 MAI CO 
-1811 JMPI   0   1  1  0:   0x8080 MAI CO 
-1812  JZI   0   1  1  0:   0x8080 MAI CO 
-1813 JNZI   0   1  1  0:   0x8080 MAI CO 
-1814  JCI   0   1  1  0:   0x8080 MAI CO 
-1815 JNCI   0   1  1  0:   0x8080 MAI CO 
-1816  JSI   0   1  1  0:   0x8080 MAI CO 
-1817 JNSI   0   1  1  0:   0x8080 MAI CO 
-1900  NOP   1   1  1  0:   0x4030 II RO CE 
-1901  LDA   1   1  1  0:   0x4030 II RO CE 
-1902 LDAI   1   1  1  0:   0x4030 II RO CE 
-1903  STA   1   1  1  0:   0x4030 II RO CE 
-1904  ADD   1   1  1  0:   0x4030 II RO CE 
-1905 ADDI   1   1  1  0:   0x4030 II RO CE 
-1906  SUB   1   1  1  0:   0x4030 II RO CE 
-1907 SUBI   1   1  1  0:   0x4030 II RO CE 
-1908  OUT   1   1  1  0:   0x4030 II RO CE 
-1909  HLT   1   1  1  0:   0x4030 II RO CE 
-190a  JMP   1   1  1  0:   0x4030 II RO CE 
-190b   JZ   1   1  1  0:   0x4030 II RO CE 
-190c  JNZ   1   1  1  0:   0x4030 II RO CE 
-190d   JC   1   1  1  0:   0x4030 II RO CE 
-190e  JNC   1   1  1  0:   0x4030 II RO CE 
-190f   JS   1   1  1  0:   0x4030 II RO CE 
-1910  JNS   1   1  1  0:   0x4030 II RO CE 
-1911 JMPI   1   1  1  0:   0x4030 II RO CE 
-1912  JZI   1   1  1  0:   0x4030 II RO CE 
-1913 JNZI   1   1  1  0:   0x4030 II RO CE 
-1914  JCI   1   1  1  0:   0x4030 II RO CE 
-1915 JNCI   1   1  1  0:   0x4030 II RO CE 
-1916  JSI   1   1  1  0:   0x4030 II RO CE 
-1917 JNSI   1   1  1  0:   0x4030 II RO CE 
+150a  PHA   5   0  1  0:   0x0006 T0 
+150b  PLA   5   0  1  0:   0x0006 T0 
+150c  JMP   5   0  1  0:   0x0000 
+150d   JZ   5   0  1  0:   0x0000 
+150e  JNZ   5   0  1  0:   0x0000 
+150f   JC   5   0  1  0:   0x0000 
+1510  JNC   5   0  1  0:   0x0000 
+1511   JS   5   0  1  0:   0x0000 
+1512  JNS   5   0  1  0:   0x0000 
+1513 JMPI   5   0  1  0:   0x0006 T0 
+1514  JZI   5   0  1  0:   0x0006 T0 
+1515 JNZI   5   0  1  0:   0x0000 
+1516  JCI   5   0  1  0:   0x0000 
+1517 JNCI   5   0  1  0:   0x0006 T0 
+1518  JSI   5   0  1  0:   0x0000 
+1519 JNSI   5   0  1  0:   0x0006 T0 
+1800  NOP   0   1  1  0:   0x0081 CO MAI 
+1801  LDA   0   1  1  0:   0x0081 CO MAI 
+1802 LDAI   0   1  1  0:   0x0081 CO MAI 
+1803  STA   0   1  1  0:   0x0081 CO MAI 
+1804  ADD   0   1  1  0:   0x0081 CO MAI 
+1805 ADDI   0   1  1  0:   0x0081 CO MAI 
+1806  SUB   0   1  1  0:   0x0081 CO MAI 
+1807 SUBI   0   1  1  0:   0x0081 CO MAI 
+1808  OUT   0   1  1  0:   0x0081 CO MAI 
+1809  HLT   0   1  1  0:   0x0081 CO MAI 
+180a  PHA   0   1  1  0:   0x0081 CO MAI 
+180b  PLA   0   1  1  0:   0x0081 CO MAI 
+180c  JMP   0   1  1  0:   0x0081 CO MAI 
+180d   JZ   0   1  1  0:   0x0081 CO MAI 
+180e  JNZ   0   1  1  0:   0x0081 CO MAI 
+180f   JC   0   1  1  0:   0x0081 CO MAI 
+1810  JNC   0   1  1  0:   0x0081 CO MAI 
+1811   JS   0   1  1  0:   0x0081 CO MAI 
+1812  JNS   0   1  1  0:   0x0081 CO MAI 
+1813 JMPI   0   1  1  0:   0x0081 CO MAI 
+1814  JZI   0   1  1  0:   0x0081 CO MAI 
+1815 JNZI   0   1  1  0:   0x0081 CO MAI 
+1816  JCI   0   1  1  0:   0x0081 CO MAI 
+1817 JNCI   0   1  1  0:   0x0081 CO MAI 
+1818  JSI   0   1  1  0:   0x0081 CO MAI 
+1819 JNSI   0   1  1  0:   0x0081 CO MAI 
+1900  NOP   1   1  1  0:   0x1024 RO II CE 
+1901  LDA   1   1  1  0:   0x1024 RO II CE 
+1902 LDAI   1   1  1  0:   0x1024 RO II CE 
+1903  STA   1   1  1  0:   0x1024 RO II CE 
+1904  ADD   1   1  1  0:   0x1024 RO II CE 
+1905 ADDI   1   1  1  0:   0x1024 RO II CE 
+1906  SUB   1   1  1  0:   0x1024 RO II CE 
+1907 SUBI   1   1  1  0:   0x1024 RO II CE 
+1908  OUT   1   1  1  0:   0x1024 RO II CE 
+1909  HLT   1   1  1  0:   0x1024 RO II CE 
+190a  PHA   1   1  1  0:   0x1024 RO II CE 
+190b  PLA   1   1  1  0:   0x1024 RO II CE 
+190c  JMP   1   1  1  0:   0x1024 RO II CE 
+190d   JZ   1   1  1  0:   0x1024 RO II CE 
+190e  JNZ   1   1  1  0:   0x1024 RO II CE 
+190f   JC   1   1  1  0:   0x1024 RO II CE 
+1910  JNC   1   1  1  0:   0x1024 RO II CE 
+1911   JS   1   1  1  0:   0x1024 RO II CE 
+1912  JNS   1   1  1  0:   0x1024 RO II CE 
+1913 JMPI   1   1  1  0:   0x1024 RO II CE 
+1914  JZI   1   1  1  0:   0x1024 RO II CE 
+1915 JNZI   1   1  1  0:   0x1024 RO II CE 
+1916  JCI   1   1  1  0:   0x1024 RO II CE 
+1917 JNCI   1   1  1  0:   0x1024 RO II CE 
+1918  JSI   1   1  1  0:   0x1024 RO II CE 
+1919 JNSI   1   1  1  0:   0x1024 RO II CE 
 1a00  NOP   2   1  1  0:   0x0000 
-1a01  LDA   2   1  1  0:   0x8080 MAI CO 
-1a02 LDAI   2   1  1  0:   0x8080 MAI CO 
-1a03  STA   2   1  1  0:   0x8080 MAI CO 
-1a04  ADD   2   1  1  0:   0x8080 MAI CO 
-1a05 ADDI   2   1  1  0:   0x8080 MAI CO 
-1a06  SUB   2   1  1  0:   0x8080 MAI CO 
-1a07 SUBI   2   1  1  0:   0x8080 MAI CO 
-1a08  OUT   2   1  1  0:   0x0808 OI AO 
-1a09  HLT   2   1  1  0:   0x0004 HT 
-1a0a  JMP   2   1  1  0:   0x8080 MAI CO 
-1a0b   JZ   2   1  1  0:   0x8080 MAI CO 
-1a0c  JNZ   2   1  1  0:   0x8080 MAI CO 
-1a0d   JC   2   1  1  0:   0x8080 MAI CO 
-1a0e  JNC   2   1  1  0:   0x8080 MAI CO 
-1a0f   JS   2   1  1  0:   0x8080 MAI CO 
-1a10  JNS   2   1  1  0:   0x8080 MAI CO 
-1a11 JMPI   2   1  1  0:   0x8080 MAI CO 
-1a12  JZI   2   1  1  0:   0x8080 MAI CO 
-1a13 JNZI   2   1  1  0:   0x8080 MAI CO 
-1a14  JCI   2   1  1  0:   0x8080 MAI CO 
-1a15 JNCI   2   1  1  0:   0x8080 MAI CO 
-1a16  JSI   2   1  1  0:   0x8080 MAI CO 
-1a17 JNSI   2   1  1  0:   0x8080 MAI CO 
+1a01  LDA   2   1  1  0:   0x0081 CO MAI 
+1a02 LDAI   2   1  1  0:   0x0081 CO MAI 
+1a03  STA   2   1  1  0:   0x0081 CO MAI 
+1a04  ADD   2   1  1  0:   0x0081 CO MAI 
+1a05 ADDI   2   1  1  0:   0x0081 CO MAI 
+1a06  SUB   2   1  1  0:   0x0081 CO MAI 
+1a07 SUBI   2   1  1  0:   0x0081 CO MAI 
+1a08  OUT   2   1  1  0:   0x0012 AO OI 
+1a09  HLT   2   1  1  0:   0x0005 HT 
+1a0a  PHA   2   1  1  0:   0x0087 SPO MAI 
+1a0b  PLA   2   1  1  0:   0x2000 SPE 
+1a0c  JMP   2   1  1  0:   0x0081 CO MAI 
+1a0d   JZ   2   1  1  0:   0x0081 CO MAI 
+1a0e  JNZ   2   1  1  0:   0x0000 
+1a0f   JC   2   1  1  0:   0x0081 CO MAI 
+1a10  JNC   2   1  1  0:   0x0000 
+1a11   JS   2   1  1  0:   0x0000 
+1a12  JNS   2   1  1  0:   0x0081 CO MAI 
+1a13 JMPI   2   1  1  0:   0x0081 CO MAI 
+1a14  JZI   2   1  1  0:   0x0081 CO MAI 
+1a15 JNZI   2   1  1  0:   0x0000 
+1a16  JCI   2   1  1  0:   0x0081 CO MAI 
+1a17 JNCI   2   1  1  0:   0x0000 
+1a18  JSI   2   1  1  0:   0x0000 
+1a19 JNSI   2   1  1  0:   0x0081 CO MAI 
 1b00  NOP   3   1  1  0:   0x0000 
-1b01  LDA   3   1  1  0:   0x40a0 RO MAI CE 
-1b02 LDAI   3   1  1  0:   0x5020 RO AI CE 
-1b03  STA   3   1  1  0:   0x40a0 RO MAI CE 
-1b04  ADD   3   1  1  0:   0x40a0 RO MAI CE 
-1b05 ADDI   3   1  1  0:   0x4420 RO BI CE 
-1b06  SUB   3   1  1  0:   0x40a0 RO MAI CE 
-1b07 SUBI   3   1  1  0:   0x4420 RO BI CE 
-1b08  OUT   3   1  1  0:   0x0002 T0 
+1b01  LDA   3   1  1  0:   0x1084 RO MAI CE 
+1b02 LDAI   3   1  1  0:   0x1404 RO AI CE 
+1b03  STA   3   1  1  0:   0x1084 RO MAI CE 
+1b04  ADD   3   1  1  0:   0x1084 RO MAI CE 
+1b05 ADDI   3   1  1  0:   0x1204 RO BI CE 
+1b06  SUB   3   1  1  0:   0x1084 RO MAI CE 
+1b07 SUBI   3   1  1  0:   0x1204 RO BI CE 
+1b08  OUT   3   1  1  0:   0x0006 T0 
 1b09  HLT   3   1  1  0:   0x0000 
-1b0a  JMP   3   1  1  0:   0x2020 RO J 
-1b0b   JZ   3   1  1  0:   0x2020 RO J 
-1b0c  JNZ   3   1  1  0:   0x4002 T0 CE 
-1b0d   JC   3   1  1  0:   0x2020 RO J 
-1b0e  JNC   3   1  1  0:   0x4002 T0 CE 
-1b0f   JS   3   1  1  0:   0x4002 T0 CE 
-1b10  JNS   3   1  1  0:   0x2020 RO J 
-1b11 JMPI   3   1  1  0:   0x40a0 RO MAI CE 
-1b12  JZI   3   1  1  0:   0x40a0 RO MAI CE 
-1b13 JNZI   3   1  1  0:   0x4002 T0 CE 
-1b14  JCI   3   1  1  0:   0x40a0 RO MAI CE 
-1b15 JNCI   3   1  1  0:   0x4002 T0 CE 
-1b16  JSI   3   1  1  0:   0x4002 T0 CE 
-1b17 JNSI   3   1  1  0:   0x40a0 RO MAI CE 
+1b0a  PHA   3   1  1  0:   0x0042 AO RI 
+1b0b  PLA   3   1  1  0:   0x0087 SPO MAI 
+1b0c  JMP   3   1  1  0:   0x0804 RO J 
+1b0d   JZ   3   1  1  0:   0x0804 RO J 
+1b0e  JNZ   3   1  1  0:   0x1006 T0 CE 
+1b0f   JC   3   1  1  0:   0x0804 RO J 
+1b10  JNC   3   1  1  0:   0x1006 T0 CE 
+1b11   JS   3   1  1  0:   0x1006 T0 CE 
+1b12  JNS   3   1  1  0:   0x0804 RO J 
+1b13 JMPI   3   1  1  0:   0x1084 RO MAI CE 
+1b14  JZI   3   1  1  0:   0x1084 RO MAI CE 
+1b15 JNZI   3   1  1  0:   0x1006 T0 CE 
+1b16  JCI   3   1  1  0:   0x1084 RO MAI CE 
+1b17 JNCI   3   1  1  0:   0x1006 T0 CE 
+1b18  JSI   3   1  1  0:   0x1006 T0 CE 
+1b19 JNSI   3   1  1  0:   0x1084 RO MAI CE 
 1c00  NOP   4   1  1  0:   0x0000 
-1c01  LDA   4   1  1  0:   0x1020 RO AI 
-1c02 LDAI   4   1  1  0:   0x0002 T0 
-1c03  STA   4   1  1  0:   0x0840 RI AO 
-1c04  ADD   4   1  1  0:   0x0420 RO BI 
-1c05 ADDI   4   1  1  0:   0x1201 FI EO AI 
-1c06  SUB   4   1  1  0:   0x0420 RO BI 
-1c07 SUBI   4   1  1  0:   0x1301 FI SU EO AI 
+1c01  LDA   4   1  1  0:   0x0404 RO AI 
+1c02 LDAI   4   1  1  0:   0x0006 T0 
+1c03  STA   4   1  1  0:   0x0042 AO RI 
+1c04  ADD   4   1  1  0:   0x0204 RO BI 
+1c05 ADDI   4   1  1  0:   0x040b EO FI AI 
+1c06  SUB   4   1  1  0:   0x0204 RO BI 
+1c07 SUBI   4   1  1  0:   0x050b EO FI SU AI 
 1c08  OUT   4   1  1  0:   0x0000 
 1c09  HLT   4   1  1  0:   0x0000 
-1c0a  JMP   4   1  1  0:   0x0002 T0 
-1c0b   JZ   4   1  1  0:   0x0002 T0 
-1c0c  JNZ   4   1  1  0:   0x0000 
-1c0d   JC   4   1  1  0:   0x0002 T0 
-1c0e  JNC   4   1  1  0:   0x0000 
-1c0f   JS   4   1  1  0:   0x0000 
-1c10  JNS   4   1  1  0:   0x0002 T0 
-1c11 JMPI   4   1  1  0:   0x2020 RO J 
-1c12  JZI   4   1  1  0:   0x2020 RO J 
-1c13 JNZI   4   1  1  0:   0x0000 
-1c14  JCI   4   1  1  0:   0x2020 RO J 
-1c15 JNCI   4   1  1  0:   0x0000 
-1c16  JSI   4   1  1  0:   0x0000 
-1c17 JNSI   4   1  1  0:   0x2020 RO J 
+1c0a  PHA   4   1  1  0:   0x6000 SPE SPD 
+1c0b  PLA   4   1  1  0:   0x0404 RO AI 
+1c0c  JMP   4   1  1  0:   0x0006 T0 
+1c0d   JZ   4   1  1  0:   0x0006 T0 
+1c0e  JNZ   4   1  1  0:   0x0000 
+1c0f   JC   4   1  1  0:   0x0006 T0 
+1c10  JNC   4   1  1  0:   0x0000 
+1c11   JS   4   1  1  0:   0x0000 
+1c12  JNS   4   1  1  0:   0x0006 T0 
+1c13 JMPI   4   1  1  0:   0x0804 RO J 
+1c14  JZI   4   1  1  0:   0x0804 RO J 
+1c15 JNZI   4   1  1  0:   0x0000 
+1c16  JCI   4   1  1  0:   0x0804 RO J 
+1c17 JNCI   4   1  1  0:   0x0000 
+1c18  JSI   4   1  1  0:   0x0000 
+1c19 JNSI   4   1  1  0:   0x0804 RO J 
 1d00  NOP   5   1  1  0:   0x0000 
-1d01  LDA   5   1  1  0:   0x0002 T0 
+1d01  LDA   5   1  1  0:   0x0006 T0 
 1d02 LDAI   5   1  1  0:   0x0000 
-1d03  STA   5   1  1  0:   0x0002 T0 
-1d04  ADD   5   1  1  0:   0x1201 FI EO AI 
-1d05 ADDI   5   1  1  0:   0x0002 T0 
-1d06  SUB   5   1  1  0:   0x1301 FI SU EO AI 
-1d07 SUBI   5   1  1  0:   0x0002 T0 
+1d03  STA   5   1  1  0:   0x0006 T0 
+1d04  ADD   5   1  1  0:   0x040b EO FI AI 
+1d05 ADDI   5   1  1  0:   0x0006 T0 
+1d06  SUB   5   1  1  0:   0x050b EO FI SU AI 
+1d07 SUBI   5   1  1  0:   0x0006 T0 
 1d08  OUT   5   1  1  0:   0x0000 
 1d09  HLT   5   1  1  0:   0x0000 
-1d0a  JMP   5   1  1  0:   0x0000 
-1d0b   JZ   5   1  1  0:   0x0000 
-1d0c  JNZ   5   1  1  0:   0x0000 
-1d0d   JC   5   1  1  0:   0x0000 
-1d0e  JNC   5   1  1  0:   0x0000 
-1d0f   JS   5   1  1  0:   0x0000 
-1d10  JNS   5   1  1  0:   0x0000 
-1d11 JMPI   5   1  1  0:   0x0002 T0 
-1d12  JZI   5   1  1  0:   0x0002 T0 
-1d13 JNZI   5   1  1  0:   0x0000 
-1d14  JCI   5   1  1  0:   0x0002 T0 
-1d15 JNCI   5   1  1  0:   0x0000 
-1d16  JSI   5   1  1  0:   0x0000 
-1d17 JNSI   5   1  1  0:   0x0002 T0 
-2000  NOP   0   0  0  1:   0x8080 MAI CO 
-2001  LDA   0   0  0  1:   0x8080 MAI CO 
-2002 LDAI   0   0  0  1:   0x8080 MAI CO 
-2003  STA   0   0  0  1:   0x8080 MAI CO 
-2004  ADD   0   0  0  1:   0x8080 MAI CO 
-2005 ADDI   0   0  0  1:   0x8080 MAI CO 
-2006  SUB   0   0  0  1:   0x8080 MAI CO 
-2007 SUBI   0   0  0  1:   0x8080 MAI CO 
-2008  OUT   0   0  0  1:   0x8080 MAI CO 
-2009  HLT   0   0  0  1:   0x8080 MAI CO 
-200a  JMP   0   0  0  1:   0x8080 MAI CO 
-200b   JZ   0   0  0  1:   0x8080 MAI CO 
-200c  JNZ   0   0  0  1:   0x8080 MAI CO 
-200d   JC   0   0  0  1:   0x8080 MAI CO 
-200e  JNC   0   0  0  1:   0x8080 MAI CO 
-200f   JS   0   0  0  1:   0x8080 MAI CO 
-2010  JNS   0   0  0  1:   0x8080 MAI CO 
-2011 JMPI   0   0  0  1:   0x8080 MAI CO 
-2012  JZI   0   0  0  1:   0x8080 MAI CO 
-2013 JNZI   0   0  0  1:   0x8080 MAI CO 
-2014  JCI   0   0  0  1:   0x8080 MAI CO 
-2015 JNCI   0   0  0  1:   0x8080 MAI CO 
-2016  JSI   0   0  0  1:   0x8080 MAI CO 
-2017 JNSI   0   0  0  1:   0x8080 MAI CO 
-2100  NOP   1   0  0  1:   0x4030 II RO CE 
-2101  LDA   1   0  0  1:   0x4030 II RO CE 
-2102 LDAI   1   0  0  1:   0x4030 II RO CE 
-2103  STA   1   0  0  1:   0x4030 II RO CE 
-2104  ADD   1   0  0  1:   0x4030 II RO CE 
-2105 ADDI   1   0  0  1:   0x4030 II RO CE 
-2106  SUB   1   0  0  1:   0x4030 II RO CE 
-2107 SUBI   1   0  0  1:   0x4030 II RO CE 
-2108  OUT   1   0  0  1:   0x4030 II RO CE 
-2109  HLT   1   0  0  1:   0x4030 II RO CE 
-210a  JMP   1   0  0  1:   0x4030 II RO CE 
-210b   JZ   1   0  0  1:   0x4030 II RO CE 
-210c  JNZ   1   0  0  1:   0x4030 II RO CE 
-210d   JC   1   0  0  1:   0x4030 II RO CE 
-210e  JNC   1   0  0  1:   0x4030 II RO CE 
-210f   JS   1   0  0  1:   0x4030 II RO CE 
-2110  JNS   1   0  0  1:   0x4030 II RO CE 
-2111 JMPI   1   0  0  1:   0x4030 II RO CE 
-2112  JZI   1   0  0  1:   0x4030 II RO CE 
-2113 JNZI   1   0  0  1:   0x4030 II RO CE 
-2114  JCI   1   0  0  1:   0x4030 II RO CE 
-2115 JNCI   1   0  0  1:   0x4030 II RO CE 
-2116  JSI   1   0  0  1:   0x4030 II RO CE 
-2117 JNSI   1   0  0  1:   0x4030 II RO CE 
+1d0a  PHA   5   1  1  0:   0x0006 T0 
+1d0b  PLA   5   1  1  0:   0x0006 T0 
+1d0c  JMP   5   1  1  0:   0x0000 
+1d0d   JZ   5   1  1  0:   0x0000 
+1d0e  JNZ   5   1  1  0:   0x0000 
+1d0f   JC   5   1  1  0:   0x0000 
+1d10  JNC   5   1  1  0:   0x0000 
+1d11   JS   5   1  1  0:   0x0000 
+1d12  JNS   5   1  1  0:   0x0000 
+1d13 JMPI   5   1  1  0:   0x0006 T0 
+1d14  JZI   5   1  1  0:   0x0006 T0 
+1d15 JNZI   5   1  1  0:   0x0000 
+1d16  JCI   5   1  1  0:   0x0006 T0 
+1d17 JNCI   5   1  1  0:   0x0000 
+1d18  JSI   5   1  1  0:   0x0000 
+1d19 JNSI   5   1  1  0:   0x0006 T0 
+2000  NOP   0   0  0  1:   0x0081 CO MAI 
+2001  LDA   0   0  0  1:   0x0081 CO MAI 
+2002 LDAI   0   0  0  1:   0x0081 CO MAI 
+2003  STA   0   0  0  1:   0x0081 CO MAI 
+2004  ADD   0   0  0  1:   0x0081 CO MAI 
+2005 ADDI   0   0  0  1:   0x0081 CO MAI 
+2006  SUB   0   0  0  1:   0x0081 CO MAI 
+2007 SUBI   0   0  0  1:   0x0081 CO MAI 
+2008  OUT   0   0  0  1:   0x0081 CO MAI 
+2009  HLT   0   0  0  1:   0x0081 CO MAI 
+200a  PHA   0   0  0  1:   0x0081 CO MAI 
+200b  PLA   0   0  0  1:   0x0081 CO MAI 
+200c  JMP   0   0  0  1:   0x0081 CO MAI 
+200d   JZ   0   0  0  1:   0x0081 CO MAI 
+200e  JNZ   0   0  0  1:   0x0081 CO MAI 
+200f   JC   0   0  0  1:   0x0081 CO MAI 
+2010  JNC   0   0  0  1:   0x0081 CO MAI 
+2011   JS   0   0  0  1:   0x0081 CO MAI 
+2012  JNS   0   0  0  1:   0x0081 CO MAI 
+2013 JMPI   0   0  0  1:   0x0081 CO MAI 
+2014  JZI   0   0  0  1:   0x0081 CO MAI 
+2015 JNZI   0   0  0  1:   0x0081 CO MAI 
+2016  JCI   0   0  0  1:   0x0081 CO MAI 
+2017 JNCI   0   0  0  1:   0x0081 CO MAI 
+2018  JSI   0   0  0  1:   0x0081 CO MAI 
+2019 JNSI   0   0  0  1:   0x0081 CO MAI 
+2100  NOP   1   0  0  1:   0x1024 RO II CE 
+2101  LDA   1   0  0  1:   0x1024 RO II CE 
+2102 LDAI   1   0  0  1:   0x1024 RO II CE 
+2103  STA   1   0  0  1:   0x1024 RO II CE 
+2104  ADD   1   0  0  1:   0x1024 RO II CE 
+2105 ADDI   1   0  0  1:   0x1024 RO II CE 
+2106  SUB   1   0  0  1:   0x1024 RO II CE 
+2107 SUBI   1   0  0  1:   0x1024 RO II CE 
+2108  OUT   1   0  0  1:   0x1024 RO II CE 
+2109  HLT   1   0  0  1:   0x1024 RO II CE 
+210a  PHA   1   0  0  1:   0x1024 RO II CE 
+210b  PLA   1   0  0  1:   0x1024 RO II CE 
+210c  JMP   1   0  0  1:   0x1024 RO II CE 
+210d   JZ   1   0  0  1:   0x1024 RO II CE 
+210e  JNZ   1   0  0  1:   0x1024 RO II CE 
+210f   JC   1   0  0  1:   0x1024 RO II CE 
+2110  JNC   1   0  0  1:   0x1024 RO II CE 
+2111   JS   1   0  0  1:   0x1024 RO II CE 
+2112  JNS   1   0  0  1:   0x1024 RO II CE 
+2113 JMPI   1   0  0  1:   0x1024 RO II CE 
+2114  JZI   1   0  0  1:   0x1024 RO II CE 
+2115 JNZI   1   0  0  1:   0x1024 RO II CE 
+2116  JCI   1   0  0  1:   0x1024 RO II CE 
+2117 JNCI   1   0  0  1:   0x1024 RO II CE 
+2118  JSI   1   0  0  1:   0x1024 RO II CE 
+2119 JNSI   1   0  0  1:   0x1024 RO II CE 
 2200  NOP   2   0  0  1:   0x0000 
-2201  LDA   2   0  0  1:   0x8080 MAI CO 
-2202 LDAI   2   0  0  1:   0x8080 MAI CO 
-2203  STA   2   0  0  1:   0x8080 MAI CO 
-2204  ADD   2   0  0  1:   0x8080 MAI CO 
-2205 ADDI   2   0  0  1:   0x8080 MAI CO 
-2206  SUB   2   0  0  1:   0x8080 MAI CO 
-2207 SUBI   2   0  0  1:   0x8080 MAI CO 
-2208  OUT   2   0  0  1:   0x0808 OI AO 
-2209  HLT   2   0  0  1:   0x0004 HT 
-220a  JMP   2   0  0  1:   0x8080 MAI CO 
-220b   JZ   2   0  0  1:   0x8080 MAI CO 
-220c  JNZ   2   0  0  1:   0x8080 MAI CO 
-220d   JC   2   0  0  1:   0x8080 MAI CO 
-220e  JNC   2   0  0  1:   0x8080 MAI CO 
-220f   JS   2   0  0  1:   0x8080 MAI CO 
-2210  JNS   2   0  0  1:   0x8080 MAI CO 
-2211 JMPI   2   0  0  1:   0x8080 MAI CO 
-2212  JZI   2   0  0  1:   0x8080 MAI CO 
-2213 JNZI   2   0  0  1:   0x8080 MAI CO 
-2214  JCI   2   0  0  1:   0x8080 MAI CO 
-2215 JNCI   2   0  0  1:   0x8080 MAI CO 
-2216  JSI   2   0  0  1:   0x8080 MAI CO 
-2217 JNSI   2   0  0  1:   0x8080 MAI CO 
+2201  LDA   2   0  0  1:   0x0081 CO MAI 
+2202 LDAI   2   0  0  1:   0x0081 CO MAI 
+2203  STA   2   0  0  1:   0x0081 CO MAI 
+2204  ADD   2   0  0  1:   0x0081 CO MAI 
+2205 ADDI   2   0  0  1:   0x0081 CO MAI 
+2206  SUB   2   0  0  1:   0x0081 CO MAI 
+2207 SUBI   2   0  0  1:   0x0081 CO MAI 
+2208  OUT   2   0  0  1:   0x0012 AO OI 
+2209  HLT   2   0  0  1:   0x0005 HT 
+220a  PHA   2   0  0  1:   0x0087 SPO MAI 
+220b  PLA   2   0  0  1:   0x2000 SPE 
+220c  JMP   2   0  0  1:   0x0081 CO MAI 
+220d   JZ   2   0  0  1:   0x0000 
+220e  JNZ   2   0  0  1:   0x0081 CO MAI 
+220f   JC   2   0  0  1:   0x0000 
+2210  JNC   2   0  0  1:   0x0081 CO MAI 
+2211   JS   2   0  0  1:   0x0081 CO MAI 
+2212  JNS   2   0  0  1:   0x0000 
+2213 JMPI   2   0  0  1:   0x0081 CO MAI 
+2214  JZI   2   0  0  1:   0x0000 
+2215 JNZI   2   0  0  1:   0x0081 CO MAI 
+2216  JCI   2   0  0  1:   0x0000 
+2217 JNCI   2   0  0  1:   0x0081 CO MAI 
+2218  JSI   2   0  0  1:   0x0081 CO MAI 
+2219 JNSI   2   0  0  1:   0x0000 
 2300  NOP   3   0  0  1:   0x0000 
-2301  LDA   3   0  0  1:   0x40a0 RO MAI CE 
-2302 LDAI   3   0  0  1:   0x5020 RO AI CE 
-2303  STA   3   0  0  1:   0x40a0 RO MAI CE 
-2304  ADD   3   0  0  1:   0x40a0 RO MAI CE 
-2305 ADDI   3   0  0  1:   0x4420 RO BI CE 
-2306  SUB   3   0  0  1:   0x40a0 RO MAI CE 
-2307 SUBI   3   0  0  1:   0x4420 RO BI CE 
-2308  OUT   3   0  0  1:   0x0002 T0 
+2301  LDA   3   0  0  1:   0x1084 RO MAI CE 
+2302 LDAI   3   0  0  1:   0x1404 RO AI CE 
+2303  STA   3   0  0  1:   0x1084 RO MAI CE 
+2304  ADD   3   0  0  1:   0x1084 RO MAI CE 
+2305 ADDI   3   0  0  1:   0x1204 RO BI CE 
+2306  SUB   3   0  0  1:   0x1084 RO MAI CE 
+2307 SUBI   3   0  0  1:   0x1204 RO BI CE 
+2308  OUT   3   0  0  1:   0x0006 T0 
 2309  HLT   3   0  0  1:   0x0000 
-230a  JMP   3   0  0  1:   0x2020 RO J 
-230b   JZ   3   0  0  1:   0x4002 T0 CE 
-230c  JNZ   3   0  0  1:   0x2020 RO J 
-230d   JC   3   0  0  1:   0x4002 T0 CE 
-230e  JNC   3   0  0  1:   0x2020 RO J 
-230f   JS   3   0  0  1:   0x2020 RO J 
-2310  JNS   3   0  0  1:   0x4002 T0 CE 
-2311 JMPI   3   0  0  1:   0x40a0 RO MAI CE 
-2312  JZI   3   0  0  1:   0x4002 T0 CE 
-2313 JNZI   3   0  0  1:   0x40a0 RO MAI CE 
-2314  JCI   3   0  0  1:   0x4002 T0 CE 
-2315 JNCI   3   0  0  1:   0x40a0 RO MAI CE 
-2316  JSI   3   0  0  1:   0x40a0 RO MAI CE 
-2317 JNSI   3   0  0  1:   0x4002 T0 CE 
+230a  PHA   3   0  0  1:   0x0042 AO RI 
+230b  PLA   3   0  0  1:   0x0087 SPO MAI 
+230c  JMP   3   0  0  1:   0x0804 RO J 
+230d   JZ   3   0  0  1:   0x1006 T0 CE 
+230e  JNZ   3   0  0  1:   0x0804 RO J 
+230f   JC   3   0  0  1:   0x1006 T0 CE 
+2310  JNC   3   0  0  1:   0x0804 RO J 
+2311   JS   3   0  0  1:   0x0804 RO J 
+2312  JNS   3   0  0  1:   0x1006 T0 CE 
+2313 JMPI   3   0  0  1:   0x1084 RO MAI CE 
+2314  JZI   3   0  0  1:   0x1006 T0 CE 
+2315 JNZI   3   0  0  1:   0x1084 RO MAI CE 
+2316  JCI   3   0  0  1:   0x1006 T0 CE 
+2317 JNCI   3   0  0  1:   0x1084 RO MAI CE 
+2318  JSI   3   0  0  1:   0x1084 RO MAI CE 
+2319 JNSI   3   0  0  1:   0x1006 T0 CE 
 2400  NOP   4   0  0  1:   0x0000 
-2401  LDA   4   0  0  1:   0x1020 RO AI 
-2402 LDAI   4   0  0  1:   0x0002 T0 
-2403  STA   4   0  0  1:   0x0840 RI AO 
-2404  ADD   4   0  0  1:   0x0420 RO BI 
-2405 ADDI   4   0  0  1:   0x1201 FI EO AI 
-2406  SUB   4   0  0  1:   0x0420 RO BI 
-2407 SUBI   4   0  0  1:   0x1301 FI SU EO AI 
+2401  LDA   4   0  0  1:   0x0404 RO AI 
+2402 LDAI   4   0  0  1:   0x0006 T0 
+2403  STA   4   0  0  1:   0x0042 AO RI 
+2404  ADD   4   0  0  1:   0x0204 RO BI 
+2405 ADDI   4   0  0  1:   0x040b EO FI AI 
+2406  SUB   4   0  0  1:   0x0204 RO BI 
+2407 SUBI   4   0  0  1:   0x050b EO FI SU AI 
 2408  OUT   4   0  0  1:   0x0000 
 2409  HLT   4   0  0  1:   0x0000 
-240a  JMP   4   0  0  1:   0x0002 T0 
-240b   JZ   4   0  0  1:   0x0000 
-240c  JNZ   4   0  0  1:   0x0002 T0 
-240d   JC   4   0  0  1:   0x0000 
-240e  JNC   4   0  0  1:   0x0002 T0 
-240f   JS   4   0  0  1:   0x0002 T0 
-2410  JNS   4   0  0  1:   0x0000 
-2411 JMPI   4   0  0  1:   0x2020 RO J 
-2412  JZI   4   0  0  1:   0x0000 
-2413 JNZI   4   0  0  1:   0x2020 RO J 
-2414  JCI   4   0  0  1:   0x0000 
-2415 JNCI   4   0  0  1:   0x2020 RO J 
-2416  JSI   4   0  0  1:   0x2020 RO J 
-2417 JNSI   4   0  0  1:   0x0000 
+240a  PHA   4   0  0  1:   0x6000 SPE SPD 
+240b  PLA   4   0  0  1:   0x0404 RO AI 
+240c  JMP   4   0  0  1:   0x0006 T0 
+240d   JZ   4   0  0  1:   0x0000 
+240e  JNZ   4   0  0  1:   0x0006 T0 
+240f   JC   4   0  0  1:   0x0000 
+2410  JNC   4   0  0  1:   0x0006 T0 
+2411   JS   4   0  0  1:   0x0006 T0 
+2412  JNS   4   0  0  1:   0x0000 
+2413 JMPI   4   0  0  1:   0x0804 RO J 
+2414  JZI   4   0  0  1:   0x0000 
+2415 JNZI   4   0  0  1:   0x0804 RO J 
+2416  JCI   4   0  0  1:   0x0000 
+2417 JNCI   4   0  0  1:   0x0804 RO J 
+2418  JSI   4   0  0  1:   0x0804 RO J 
+2419 JNSI   4   0  0  1:   0x0000 
 2500  NOP   5   0  0  1:   0x0000 
-2501  LDA   5   0  0  1:   0x0002 T0 
+2501  LDA   5   0  0  1:   0x0006 T0 
 2502 LDAI   5   0  0  1:   0x0000 
-2503  STA   5   0  0  1:   0x0002 T0 
-2504  ADD   5   0  0  1:   0x1201 FI EO AI 
-2505 ADDI   5   0  0  1:   0x0002 T0 
-2506  SUB   5   0  0  1:   0x1301 FI SU EO AI 
-2507 SUBI   5   0  0  1:   0x0002 T0 
+2503  STA   5   0  0  1:   0x0006 T0 
+2504  ADD   5   0  0  1:   0x040b EO FI AI 
+2505 ADDI   5   0  0  1:   0x0006 T0 
+2506  SUB   5   0  0  1:   0x050b EO FI SU AI 
+2507 SUBI   5   0  0  1:   0x0006 T0 
 2508  OUT   5   0  0  1:   0x0000 
 2509  HLT   5   0  0  1:   0x0000 
-250a  JMP   5   0  0  1:   0x0000 
-250b   JZ   5   0  0  1:   0x0000 
-250c  JNZ   5   0  0  1:   0x0000 
-250d   JC   5   0  0  1:   0x0000 
-250e  JNC   5   0  0  1:   0x0000 
-250f   JS   5   0  0  1:   0x0000 
-2510  JNS   5   0  0  1:   0x0000 
-2511 JMPI   5   0  0  1:   0x0002 T0 
-2512  JZI   5   0  0  1:   0x0000 
-2513 JNZI   5   0  0  1:   0x0002 T0 
-2514  JCI   5   0  0  1:   0x0000 
-2515 JNCI   5   0  0  1:   0x0002 T0 
-2516  JSI   5   0  0  1:   0x0002 T0 
-2517 JNSI   5   0  0  1:   0x0000 
-2800  NOP   0   1  0  1:   0x8080 MAI CO 
-2801  LDA   0   1  0  1:   0x8080 MAI CO 
-2802 LDAI   0   1  0  1:   0x8080 MAI CO 
-2803  STA   0   1  0  1:   0x8080 MAI CO 
-2804  ADD   0   1  0  1:   0x8080 MAI CO 
-2805 ADDI   0   1  0  1:   0x8080 MAI CO 
-2806  SUB   0   1  0  1:   0x8080 MAI CO 
-2807 SUBI   0   1  0  1:   0x8080 MAI CO 
-2808  OUT   0   1  0  1:   0x8080 MAI CO 
-2809  HLT   0   1  0  1:   0x8080 MAI CO 
-280a  JMP   0   1  0  1:   0x8080 MAI CO 
-280b   JZ   0   1  0  1:   0x8080 MAI CO 
-280c  JNZ   0   1  0  1:   0x8080 MAI CO 
-280d   JC   0   1  0  1:   0x8080 MAI CO 
-280e  JNC   0   1  0  1:   0x8080 MAI CO 
-280f   JS   0   1  0  1:   0x8080 MAI CO 
-2810  JNS   0   1  0  1:   0x8080 MAI CO 
-2811 JMPI   0   1  0  1:   0x8080 MAI CO 
-2812  JZI   0   1  0  1:   0x8080 MAI CO 
-2813 JNZI   0   1  0  1:   0x8080 MAI CO 
-2814  JCI   0   1  0  1:   0x8080 MAI CO 
-2815 JNCI   0   1  0  1:   0x8080 MAI CO 
-2816  JSI   0   1  0  1:   0x8080 MAI CO 
-2817 JNSI   0   1  0  1:   0x8080 MAI CO 
-2900  NOP   1   1  0  1:   0x4030 II RO CE 
-2901  LDA   1   1  0  1:   0x4030 II RO CE 
-2902 LDAI   1   1  0  1:   0x4030 II RO CE 
-2903  STA   1   1  0  1:   0x4030 II RO CE 
-2904  ADD   1   1  0  1:   0x4030 II RO CE 
-2905 ADDI   1   1  0  1:   0x4030 II RO CE 
-2906  SUB   1   1  0  1:   0x4030 II RO CE 
-2907 SUBI   1   1  0  1:   0x4030 II RO CE 
-2908  OUT   1   1  0  1:   0x4030 II RO CE 
-2909  HLT   1   1  0  1:   0x4030 II RO CE 
-290a  JMP   1   1  0  1:   0x4030 II RO CE 
-290b   JZ   1   1  0  1:   0x4030 II RO CE 
-290c  JNZ   1   1  0  1:   0x4030 II RO CE 
-290d   JC   1   1  0  1:   0x4030 II RO CE 
-290e  JNC   1   1  0  1:   0x4030 II RO CE 
-290f   JS   1   1  0  1:   0x4030 II RO CE 
-2910  JNS   1   1  0  1:   0x4030 II RO CE 
-2911 JMPI   1   1  0  1:   0x4030 II RO CE 
-2912  JZI   1   1  0  1:   0x4030 II RO CE 
-2913 JNZI   1   1  0  1:   0x4030 II RO CE 
-2914  JCI   1   1  0  1:   0x4030 II RO CE 
-2915 JNCI   1   1  0  1:   0x4030 II RO CE 
-2916  JSI   1   1  0  1:   0x4030 II RO CE 
-2917 JNSI   1   1  0  1:   0x4030 II RO CE 
+250a  PHA   5   0  0  1:   0x0006 T0 
+250b  PLA   5   0  0  1:   0x0006 T0 
+250c  JMP   5   0  0  1:   0x0000 
+250d   JZ   5   0  0  1:   0x0000 
+250e  JNZ   5   0  0  1:   0x0000 
+250f   JC   5   0  0  1:   0x0000 
+2510  JNC   5   0  0  1:   0x0000 
+2511   JS   5   0  0  1:   0x0000 
+2512  JNS   5   0  0  1:   0x0000 
+2513 JMPI   5   0  0  1:   0x0006 T0 
+2514  JZI   5   0  0  1:   0x0000 
+2515 JNZI   5   0  0  1:   0x0006 T0 
+2516  JCI   5   0  0  1:   0x0000 
+2517 JNCI   5   0  0  1:   0x0006 T0 
+2518  JSI   5   0  0  1:   0x0006 T0 
+2519 JNSI   5   0  0  1:   0x0000 
+2800  NOP   0   1  0  1:   0x0081 CO MAI 
+2801  LDA   0   1  0  1:   0x0081 CO MAI 
+2802 LDAI   0   1  0  1:   0x0081 CO MAI 
+2803  STA   0   1  0  1:   0x0081 CO MAI 
+2804  ADD   0   1  0  1:   0x0081 CO MAI 
+2805 ADDI   0   1  0  1:   0x0081 CO MAI 
+2806  SUB   0   1  0  1:   0x0081 CO MAI 
+2807 SUBI   0   1  0  1:   0x0081 CO MAI 
+2808  OUT   0   1  0  1:   0x0081 CO MAI 
+2809  HLT   0   1  0  1:   0x0081 CO MAI 
+280a  PHA   0   1  0  1:   0x0081 CO MAI 
+280b  PLA   0   1  0  1:   0x0081 CO MAI 
+280c  JMP   0   1  0  1:   0x0081 CO MAI 
+280d   JZ   0   1  0  1:   0x0081 CO MAI 
+280e  JNZ   0   1  0  1:   0x0081 CO MAI 
+280f   JC   0   1  0  1:   0x0081 CO MAI 
+2810  JNC   0   1  0  1:   0x0081 CO MAI 
+2811   JS   0   1  0  1:   0x0081 CO MAI 
+2812  JNS   0   1  0  1:   0x0081 CO MAI 
+2813 JMPI   0   1  0  1:   0x0081 CO MAI 
+2814  JZI   0   1  0  1:   0x0081 CO MAI 
+2815 JNZI   0   1  0  1:   0x0081 CO MAI 
+2816  JCI   0   1  0  1:   0x0081 CO MAI 
+2817 JNCI   0   1  0  1:   0x0081 CO MAI 
+2818  JSI   0   1  0  1:   0x0081 CO MAI 
+2819 JNSI   0   1  0  1:   0x0081 CO MAI 
+2900  NOP   1   1  0  1:   0x1024 RO II CE 
+2901  LDA   1   1  0  1:   0x1024 RO II CE 
+2902 LDAI   1   1  0  1:   0x1024 RO II CE 
+2903  STA   1   1  0  1:   0x1024 RO II CE 
+2904  ADD   1   1  0  1:   0x1024 RO II CE 
+2905 ADDI   1   1  0  1:   0x1024 RO II CE 
+2906  SUB   1   1  0  1:   0x1024 RO II CE 
+2907 SUBI   1   1  0  1:   0x1024 RO II CE 
+2908  OUT   1   1  0  1:   0x1024 RO II CE 
+2909  HLT   1   1  0  1:   0x1024 RO II CE 
+290a  PHA   1   1  0  1:   0x1024 RO II CE 
+290b  PLA   1   1  0  1:   0x1024 RO II CE 
+290c  JMP   1   1  0  1:   0x1024 RO II CE 
+290d   JZ   1   1  0  1:   0x1024 RO II CE 
+290e  JNZ   1   1  0  1:   0x1024 RO II CE 
+290f   JC   1   1  0  1:   0x1024 RO II CE 
+2910  JNC   1   1  0  1:   0x1024 RO II CE 
+2911   JS   1   1  0  1:   0x1024 RO II CE 
+2912  JNS   1   1  0  1:   0x1024 RO II CE 
+2913 JMPI   1   1  0  1:   0x1024 RO II CE 
+2914  JZI   1   1  0  1:   0x1024 RO II CE 
+2915 JNZI   1   1  0  1:   0x1024 RO II CE 
+2916  JCI   1   1  0  1:   0x1024 RO II CE 
+2917 JNCI   1   1  0  1:   0x1024 RO II CE 
+2918  JSI   1   1  0  1:   0x1024 RO II CE 
+2919 JNSI   1   1  0  1:   0x1024 RO II CE 
 2a00  NOP   2   1  0  1:   0x0000 
-2a01  LDA   2   1  0  1:   0x8080 MAI CO 
-2a02 LDAI   2   1  0  1:   0x8080 MAI CO 
-2a03  STA   2   1  0  1:   0x8080 MAI CO 
-2a04  ADD   2   1  0  1:   0x8080 MAI CO 
-2a05 ADDI   2   1  0  1:   0x8080 MAI CO 
-2a06  SUB   2   1  0  1:   0x8080 MAI CO 
-2a07 SUBI   2   1  0  1:   0x8080 MAI CO 
-2a08  OUT   2   1  0  1:   0x0808 OI AO 
-2a09  HLT   2   1  0  1:   0x0004 HT 
-2a0a  JMP   2   1  0  1:   0x8080 MAI CO 
-2a0b   JZ   2   1  0  1:   0x8080 MAI CO 
-2a0c  JNZ   2   1  0  1:   0x8080 MAI CO 
-2a0d   JC   2   1  0  1:   0x8080 MAI CO 
-2a0e  JNC   2   1  0  1:   0x8080 MAI CO 
-2a0f   JS   2   1  0  1:   0x8080 MAI CO 
-2a10  JNS   2   1  0  1:   0x8080 MAI CO 
-2a11 JMPI   2   1  0  1:   0x8080 MAI CO 
-2a12  JZI   2   1  0  1:   0x8080 MAI CO 
-2a13 JNZI   2   1  0  1:   0x8080 MAI CO 
-2a14  JCI   2   1  0  1:   0x8080 MAI CO 
-2a15 JNCI   2   1  0  1:   0x8080 MAI CO 
-2a16  JSI   2   1  0  1:   0x8080 MAI CO 
-2a17 JNSI   2   1  0  1:   0x8080 MAI CO 
+2a01  LDA   2   1  0  1:   0x0081 CO MAI 
+2a02 LDAI   2   1  0  1:   0x0081 CO MAI 
+2a03  STA   2   1  0  1:   0x0081 CO MAI 
+2a04  ADD   2   1  0  1:   0x0081 CO MAI 
+2a05 ADDI   2   1  0  1:   0x0081 CO MAI 
+2a06  SUB   2   1  0  1:   0x0081 CO MAI 
+2a07 SUBI   2   1  0  1:   0x0081 CO MAI 
+2a08  OUT   2   1  0  1:   0x0012 AO OI 
+2a09  HLT   2   1  0  1:   0x0005 HT 
+2a0a  PHA   2   1  0  1:   0x0087 SPO MAI 
+2a0b  PLA   2   1  0  1:   0x2000 SPE 
+2a0c  JMP   2   1  0  1:   0x0081 CO MAI 
+2a0d   JZ   2   1  0  1:   0x0000 
+2a0e  JNZ   2   1  0  1:   0x0081 CO MAI 
+2a0f   JC   2   1  0  1:   0x0081 CO MAI 
+2a10  JNC   2   1  0  1:   0x0000 
+2a11   JS   2   1  0  1:   0x0081 CO MAI 
+2a12  JNS   2   1  0  1:   0x0000 
+2a13 JMPI   2   1  0  1:   0x0081 CO MAI 
+2a14  JZI   2   1  0  1:   0x0000 
+2a15 JNZI   2   1  0  1:   0x0081 CO MAI 
+2a16  JCI   2   1  0  1:   0x0081 CO MAI 
+2a17 JNCI   2   1  0  1:   0x0000 
+2a18  JSI   2   1  0  1:   0x0081 CO MAI 
+2a19 JNSI   2   1  0  1:   0x0000 
 2b00  NOP   3   1  0  1:   0x0000 
-2b01  LDA   3   1  0  1:   0x40a0 RO MAI CE 
-2b02 LDAI   3   1  0  1:   0x5020 RO AI CE 
-2b03  STA   3   1  0  1:   0x40a0 RO MAI CE 
-2b04  ADD   3   1  0  1:   0x40a0 RO MAI CE 
-2b05 ADDI   3   1  0  1:   0x4420 RO BI CE 
-2b06  SUB   3   1  0  1:   0x40a0 RO MAI CE 
-2b07 SUBI   3   1  0  1:   0x4420 RO BI CE 
-2b08  OUT   3   1  0  1:   0x0002 T0 
+2b01  LDA   3   1  0  1:   0x1084 RO MAI CE 
+2b02 LDAI   3   1  0  1:   0x1404 RO AI CE 
+2b03  STA   3   1  0  1:   0x1084 RO MAI CE 
+2b04  ADD   3   1  0  1:   0x1084 RO MAI CE 
+2b05 ADDI   3   1  0  1:   0x1204 RO BI CE 
+2b06  SUB   3   1  0  1:   0x1084 RO MAI CE 
+2b07 SUBI   3   1  0  1:   0x1204 RO BI CE 
+2b08  OUT   3   1  0  1:   0x0006 T0 
 2b09  HLT   3   1  0  1:   0x0000 
-2b0a  JMP   3   1  0  1:   0x2020 RO J 
-2b0b   JZ   3   1  0  1:   0x4002 T0 CE 
-2b0c  JNZ   3   1  0  1:   0x2020 RO J 
-2b0d   JC   3   1  0  1:   0x2020 RO J 
-2b0e  JNC   3   1  0  1:   0x4002 T0 CE 
-2b0f   JS   3   1  0  1:   0x2020 RO J 
-2b10  JNS   3   1  0  1:   0x4002 T0 CE 
-2b11 JMPI   3   1  0  1:   0x40a0 RO MAI CE 
-2b12  JZI   3   1  0  1:   0x4002 T0 CE 
-2b13 JNZI   3   1  0  1:   0x40a0 RO MAI CE 
-2b14  JCI   3   1  0  1:   0x40a0 RO MAI CE 
-2b15 JNCI   3   1  0  1:   0x4002 T0 CE 
-2b16  JSI   3   1  0  1:   0x40a0 RO MAI CE 
-2b17 JNSI   3   1  0  1:   0x4002 T0 CE 
+2b0a  PHA   3   1  0  1:   0x0042 AO RI 
+2b0b  PLA   3   1  0  1:   0x0087 SPO MAI 
+2b0c  JMP   3   1  0  1:   0x0804 RO J 
+2b0d   JZ   3   1  0  1:   0x1006 T0 CE 
+2b0e  JNZ   3   1  0  1:   0x0804 RO J 
+2b0f   JC   3   1  0  1:   0x0804 RO J 
+2b10  JNC   3   1  0  1:   0x1006 T0 CE 
+2b11   JS   3   1  0  1:   0x0804 RO J 
+2b12  JNS   3   1  0  1:   0x1006 T0 CE 
+2b13 JMPI   3   1  0  1:   0x1084 RO MAI CE 
+2b14  JZI   3   1  0  1:   0x1006 T0 CE 
+2b15 JNZI   3   1  0  1:   0x1084 RO MAI CE 
+2b16  JCI   3   1  0  1:   0x1084 RO MAI CE 
+2b17 JNCI   3   1  0  1:   0x1006 T0 CE 
+2b18  JSI   3   1  0  1:   0x1084 RO MAI CE 
+2b19 JNSI   3   1  0  1:   0x1006 T0 CE 
 2c00  NOP   4   1  0  1:   0x0000 
-2c01  LDA   4   1  0  1:   0x1020 RO AI 
-2c02 LDAI   4   1  0  1:   0x0002 T0 
-2c03  STA   4   1  0  1:   0x0840 RI AO 
-2c04  ADD   4   1  0  1:   0x0420 RO BI 
-2c05 ADDI   4   1  0  1:   0x1201 FI EO AI 
-2c06  SUB   4   1  0  1:   0x0420 RO BI 
-2c07 SUBI   4   1  0  1:   0x1301 FI SU EO AI 
+2c01  LDA   4   1  0  1:   0x0404 RO AI 
+2c02 LDAI   4   1  0  1:   0x0006 T0 
+2c03  STA   4   1  0  1:   0x0042 AO RI 
+2c04  ADD   4   1  0  1:   0x0204 RO BI 
+2c05 ADDI   4   1  0  1:   0x040b EO FI AI 
+2c06  SUB   4   1  0  1:   0x0204 RO BI 
+2c07 SUBI   4   1  0  1:   0x050b EO FI SU AI 
 2c08  OUT   4   1  0  1:   0x0000 
 2c09  HLT   4   1  0  1:   0x0000 
-2c0a  JMP   4   1  0  1:   0x0002 T0 
-2c0b   JZ   4   1  0  1:   0x0000 
-2c0c  JNZ   4   1  0  1:   0x0002 T0 
-2c0d   JC   4   1  0  1:   0x0002 T0 
-2c0e  JNC   4   1  0  1:   0x0000 
-2c0f   JS   4   1  0  1:   0x0002 T0 
-2c10  JNS   4   1  0  1:   0x0000 
-2c11 JMPI   4   1  0  1:   0x2020 RO J 
-2c12  JZI   4   1  0  1:   0x0000 
-2c13 JNZI   4   1  0  1:   0x2020 RO J 
-2c14  JCI   4   1  0  1:   0x2020 RO J 
-2c15 JNCI   4   1  0  1:   0x0000 
-2c16  JSI   4   1  0  1:   0x2020 RO J 
-2c17 JNSI   4   1  0  1:   0x0000 
+2c0a  PHA   4   1  0  1:   0x6000 SPE SPD 
+2c0b  PLA   4   1  0  1:   0x0404 RO AI 
+2c0c  JMP   4   1  0  1:   0x0006 T0 
+2c0d   JZ   4   1  0  1:   0x0000 
+2c0e  JNZ   4   1  0  1:   0x0006 T0 
+2c0f   JC   4   1  0  1:   0x0006 T0 
+2c10  JNC   4   1  0  1:   0x0000 
+2c11   JS   4   1  0  1:   0x0006 T0 
+2c12  JNS   4   1  0  1:   0x0000 
+2c13 JMPI   4   1  0  1:   0x0804 RO J 
+2c14  JZI   4   1  0  1:   0x0000 
+2c15 JNZI   4   1  0  1:   0x0804 RO J 
+2c16  JCI   4   1  0  1:   0x0804 RO J 
+2c17 JNCI   4   1  0  1:   0x0000 
+2c18  JSI   4   1  0  1:   0x0804 RO J 
+2c19 JNSI   4   1  0  1:   0x0000 
 2d00  NOP   5   1  0  1:   0x0000 
-2d01  LDA   5   1  0  1:   0x0002 T0 
+2d01  LDA   5   1  0  1:   0x0006 T0 
 2d02 LDAI   5   1  0  1:   0x0000 
-2d03  STA   5   1  0  1:   0x0002 T0 
-2d04  ADD   5   1  0  1:   0x1201 FI EO AI 
-2d05 ADDI   5   1  0  1:   0x0002 T0 
-2d06  SUB   5   1  0  1:   0x1301 FI SU EO AI 
-2d07 SUBI   5   1  0  1:   0x0002 T0 
+2d03  STA   5   1  0  1:   0x0006 T0 
+2d04  ADD   5   1  0  1:   0x040b EO FI AI 
+2d05 ADDI   5   1  0  1:   0x0006 T0 
+2d06  SUB   5   1  0  1:   0x050b EO FI SU AI 
+2d07 SUBI   5   1  0  1:   0x0006 T0 
 2d08  OUT   5   1  0  1:   0x0000 
 2d09  HLT   5   1  0  1:   0x0000 
-2d0a  JMP   5   1  0  1:   0x0000 
-2d0b   JZ   5   1  0  1:   0x0000 
-2d0c  JNZ   5   1  0  1:   0x0000 
-2d0d   JC   5   1  0  1:   0x0000 
-2d0e  JNC   5   1  0  1:   0x0000 
-2d0f   JS   5   1  0  1:   0x0000 
-2d10  JNS   5   1  0  1:   0x0000 
-2d11 JMPI   5   1  0  1:   0x0002 T0 
-2d12  JZI   5   1  0  1:   0x0000 
-2d13 JNZI   5   1  0  1:   0x0002 T0 
-2d14  JCI   5   1  0  1:   0x0002 T0 
-2d15 JNCI   5   1  0  1:   0x0000 
-2d16  JSI   5   1  0  1:   0x0002 T0 
-2d17 JNSI   5   1  0  1:   0x0000 
-3000  NOP   0   0  1  1:   0x8080 MAI CO 
-3001  LDA   0   0  1  1:   0x8080 MAI CO 
-3002 LDAI   0   0  1  1:   0x8080 MAI CO 
-3003  STA   0   0  1  1:   0x8080 MAI CO 
-3004  ADD   0   0  1  1:   0x8080 MAI CO 
-3005 ADDI   0   0  1  1:   0x8080 MAI CO 
-3006  SUB   0   0  1  1:   0x8080 MAI CO 
-3007 SUBI   0   0  1  1:   0x8080 MAI CO 
-3008  OUT   0   0  1  1:   0x8080 MAI CO 
-3009  HLT   0   0  1  1:   0x8080 MAI CO 
-300a  JMP   0   0  1  1:   0x8080 MAI CO 
-300b   JZ   0   0  1  1:   0x8080 MAI CO 
-300c  JNZ   0   0  1  1:   0x8080 MAI CO 
-300d   JC   0   0  1  1:   0x8080 MAI CO 
-300e  JNC   0   0  1  1:   0x8080 MAI CO 
-300f   JS   0   0  1  1:   0x8080 MAI CO 
-3010  JNS   0   0  1  1:   0x8080 MAI CO 
-3011 JMPI   0   0  1  1:   0x8080 MAI CO 
-3012  JZI   0   0  1  1:   0x8080 MAI CO 
-3013 JNZI   0   0  1  1:   0x8080 MAI CO 
-3014  JCI   0   0  1  1:   0x8080 MAI CO 
-3015 JNCI   0   0  1  1:   0x8080 MAI CO 
-3016  JSI   0   0  1  1:   0x8080 MAI CO 
-3017 JNSI   0   0  1  1:   0x8080 MAI CO 
-3100  NOP   1   0  1  1:   0x4030 II RO CE 
-3101  LDA   1   0  1  1:   0x4030 II RO CE 
-3102 LDAI   1   0  1  1:   0x4030 II RO CE 
-3103  STA   1   0  1  1:   0x4030 II RO CE 
-3104  ADD   1   0  1  1:   0x4030 II RO CE 
-3105 ADDI   1   0  1  1:   0x4030 II RO CE 
-3106  SUB   1   0  1  1:   0x4030 II RO CE 
-3107 SUBI   1   0  1  1:   0x4030 II RO CE 
-3108  OUT   1   0  1  1:   0x4030 II RO CE 
-3109  HLT   1   0  1  1:   0x4030 II RO CE 
-310a  JMP   1   0  1  1:   0x4030 II RO CE 
-310b   JZ   1   0  1  1:   0x4030 II RO CE 
-310c  JNZ   1   0  1  1:   0x4030 II RO CE 
-310d   JC   1   0  1  1:   0x4030 II RO CE 
-310e  JNC   1   0  1  1:   0x4030 II RO CE 
-310f   JS   1   0  1  1:   0x4030 II RO CE 
-3110  JNS   1   0  1  1:   0x4030 II RO CE 
-3111 JMPI   1   0  1  1:   0x4030 II RO CE 
-3112  JZI   1   0  1  1:   0x4030 II RO CE 
-3113 JNZI   1   0  1  1:   0x4030 II RO CE 
-3114  JCI   1   0  1  1:   0x4030 II RO CE 
-3115 JNCI   1   0  1  1:   0x4030 II RO CE 
-3116  JSI   1   0  1  1:   0x4030 II RO CE 
-3117 JNSI   1   0  1  1:   0x4030 II RO CE 
+2d0a  PHA   5   1  0  1:   0x0006 T0 
+2d0b  PLA   5   1  0  1:   0x0006 T0 
+2d0c  JMP   5   1  0  1:   0x0000 
+2d0d   JZ   5   1  0  1:   0x0000 
+2d0e  JNZ   5   1  0  1:   0x0000 
+2d0f   JC   5   1  0  1:   0x0000 
+2d10  JNC   5   1  0  1:   0x0000 
+2d11   JS   5   1  0  1:   0x0000 
+2d12  JNS   5   1  0  1:   0x0000 
+2d13 JMPI   5   1  0  1:   0x0006 T0 
+2d14  JZI   5   1  0  1:   0x0000 
+2d15 JNZI   5   1  0  1:   0x0006 T0 
+2d16  JCI   5   1  0  1:   0x0006 T0 
+2d17 JNCI   5   1  0  1:   0x0000 
+2d18  JSI   5   1  0  1:   0x0006 T0 
+2d19 JNSI   5   1  0  1:   0x0000 
+3000  NOP   0   0  1  1:   0x0081 CO MAI 
+3001  LDA   0   0  1  1:   0x0081 CO MAI 
+3002 LDAI   0   0  1  1:   0x0081 CO MAI 
+3003  STA   0   0  1  1:   0x0081 CO MAI 
+3004  ADD   0   0  1  1:   0x0081 CO MAI 
+3005 ADDI   0   0  1  1:   0x0081 CO MAI 
+3006  SUB   0   0  1  1:   0x0081 CO MAI 
+3007 SUBI   0   0  1  1:   0x0081 CO MAI 
+3008  OUT   0   0  1  1:   0x0081 CO MAI 
+3009  HLT   0   0  1  1:   0x0081 CO MAI 
+300a  PHA   0   0  1  1:   0x0081 CO MAI 
+300b  PLA   0   0  1  1:   0x0081 CO MAI 
+300c  JMP   0   0  1  1:   0x0081 CO MAI 
+300d   JZ   0   0  1  1:   0x0081 CO MAI 
+300e  JNZ   0   0  1  1:   0x0081 CO MAI 
+300f   JC   0   0  1  1:   0x0081 CO MAI 
+3010  JNC   0   0  1  1:   0x0081 CO MAI 
+3011   JS   0   0  1  1:   0x0081 CO MAI 
+3012  JNS   0   0  1  1:   0x0081 CO MAI 
+3013 JMPI   0   0  1  1:   0x0081 CO MAI 
+3014  JZI   0   0  1  1:   0x0081 CO MAI 
+3015 JNZI   0   0  1  1:   0x0081 CO MAI 
+3016  JCI   0   0  1  1:   0x0081 CO MAI 
+3017 JNCI   0   0  1  1:   0x0081 CO MAI 
+3018  JSI   0   0  1  1:   0x0081 CO MAI 
+3019 JNSI   0   0  1  1:   0x0081 CO MAI 
+3100  NOP   1   0  1  1:   0x1024 RO II CE 
+3101  LDA   1   0  1  1:   0x1024 RO II CE 
+3102 LDAI   1   0  1  1:   0x1024 RO II CE 
+3103  STA   1   0  1  1:   0x1024 RO II CE 
+3104  ADD   1   0  1  1:   0x1024 RO II CE 
+3105 ADDI   1   0  1  1:   0x1024 RO II CE 
+3106  SUB   1   0  1  1:   0x1024 RO II CE 
+3107 SUBI   1   0  1  1:   0x1024 RO II CE 
+3108  OUT   1   0  1  1:   0x1024 RO II CE 
+3109  HLT   1   0  1  1:   0x1024 RO II CE 
+310a  PHA   1   0  1  1:   0x1024 RO II CE 
+310b  PLA   1   0  1  1:   0x1024 RO II CE 
+310c  JMP   1   0  1  1:   0x1024 RO II CE 
+310d   JZ   1   0  1  1:   0x1024 RO II CE 
+310e  JNZ   1   0  1  1:   0x1024 RO II CE 
+310f   JC   1   0  1  1:   0x1024 RO II CE 
+3110  JNC   1   0  1  1:   0x1024 RO II CE 
+3111   JS   1   0  1  1:   0x1024 RO II CE 
+3112  JNS   1   0  1  1:   0x1024 RO II CE 
+3113 JMPI   1   0  1  1:   0x1024 RO II CE 
+3114  JZI   1   0  1  1:   0x1024 RO II CE 
+3115 JNZI   1   0  1  1:   0x1024 RO II CE 
+3116  JCI   1   0  1  1:   0x1024 RO II CE 
+3117 JNCI   1   0  1  1:   0x1024 RO II CE 
+3118  JSI   1   0  1  1:   0x1024 RO II CE 
+3119 JNSI   1   0  1  1:   0x1024 RO II CE 
 3200  NOP   2   0  1  1:   0x0000 
-3201  LDA   2   0  1  1:   0x8080 MAI CO 
-3202 LDAI   2   0  1  1:   0x8080 MAI CO 
-3203  STA   2   0  1  1:   0x8080 MAI CO 
-3204  ADD   2   0  1  1:   0x8080 MAI CO 
-3205 ADDI   2   0  1  1:   0x8080 MAI CO 
-3206  SUB   2   0  1  1:   0x8080 MAI CO 
-3207 SUBI   2   0  1  1:   0x8080 MAI CO 
-3208  OUT   2   0  1  1:   0x0808 OI AO 
-3209  HLT   2   0  1  1:   0x0004 HT 
-320a  JMP   2   0  1  1:   0x8080 MAI CO 
-320b   JZ   2   0  1  1:   0x8080 MAI CO 
-320c  JNZ   2   0  1  1:   0x8080 MAI CO 
-320d   JC   2   0  1  1:   0x8080 MAI CO 
-320e  JNC   2   0  1  1:   0x8080 MAI CO 
-320f   JS   2   0  1  1:   0x8080 MAI CO 
-3210  JNS   2   0  1  1:   0x8080 MAI CO 
-3211 JMPI   2   0  1  1:   0x8080 MAI CO 
-3212  JZI   2   0  1  1:   0x8080 MAI CO 
-3213 JNZI   2   0  1  1:   0x8080 MAI CO 
-3214  JCI   2   0  1  1:   0x8080 MAI CO 
-3215 JNCI   2   0  1  1:   0x8080 MAI CO 
-3216  JSI   2   0  1  1:   0x8080 MAI CO 
-3217 JNSI   2   0  1  1:   0x8080 MAI CO 
+3201  LDA   2   0  1  1:   0x0081 CO MAI 
+3202 LDAI   2   0  1  1:   0x0081 CO MAI 
+3203  STA   2   0  1  1:   0x0081 CO MAI 
+3204  ADD   2   0  1  1:   0x0081 CO MAI 
+3205 ADDI   2   0  1  1:   0x0081 CO MAI 
+3206  SUB   2   0  1  1:   0x0081 CO MAI 
+3207 SUBI   2   0  1  1:   0x0081 CO MAI 
+3208  OUT   2   0  1  1:   0x0012 AO OI 
+3209  HLT   2   0  1  1:   0x0005 HT 
+320a  PHA   2   0  1  1:   0x0087 SPO MAI 
+320b  PLA   2   0  1  1:   0x2000 SPE 
+320c  JMP   2   0  1  1:   0x0081 CO MAI 
+320d   JZ   2   0  1  1:   0x0081 CO MAI 
+320e  JNZ   2   0  1  1:   0x0000 
+320f   JC   2   0  1  1:   0x0000 
+3210  JNC   2   0  1  1:   0x0081 CO MAI 
+3211   JS   2   0  1  1:   0x0081 CO MAI 
+3212  JNS   2   0  1  1:   0x0000 
+3213 JMPI   2   0  1  1:   0x0081 CO MAI 
+3214  JZI   2   0  1  1:   0x0081 CO MAI 
+3215 JNZI   2   0  1  1:   0x0000 
+3216  JCI   2   0  1  1:   0x0000 
+3217 JNCI   2   0  1  1:   0x0081 CO MAI 
+3218  JSI   2   0  1  1:   0x0081 CO MAI 
+3219 JNSI   2   0  1  1:   0x0000 
 3300  NOP   3   0  1  1:   0x0000 
-3301  LDA   3   0  1  1:   0x40a0 RO MAI CE 
-3302 LDAI   3   0  1  1:   0x5020 RO AI CE 
-3303  STA   3   0  1  1:   0x40a0 RO MAI CE 
-3304  ADD   3   0  1  1:   0x40a0 RO MAI CE 
-3305 ADDI   3   0  1  1:   0x4420 RO BI CE 
-3306  SUB   3   0  1  1:   0x40a0 RO MAI CE 
-3307 SUBI   3   0  1  1:   0x4420 RO BI CE 
-3308  OUT   3   0  1  1:   0x0002 T0 
+3301  LDA   3   0  1  1:   0x1084 RO MAI CE 
+3302 LDAI   3   0  1  1:   0x1404 RO AI CE 
+3303  STA   3   0  1  1:   0x1084 RO MAI CE 
+3304  ADD   3   0  1  1:   0x1084 RO MAI CE 
+3305 ADDI   3   0  1  1:   0x1204 RO BI CE 
+3306  SUB   3   0  1  1:   0x1084 RO MAI CE 
+3307 SUBI   3   0  1  1:   0x1204 RO BI CE 
+3308  OUT   3   0  1  1:   0x0006 T0 
 3309  HLT   3   0  1  1:   0x0000 
-330a  JMP   3   0  1  1:   0x2020 RO J 
-330b   JZ   3   0  1  1:   0x2020 RO J 
-330c  JNZ   3   0  1  1:   0x4002 T0 CE 
-330d   JC   3   0  1  1:   0x4002 T0 CE 
-330e  JNC   3   0  1  1:   0x2020 RO J 
-330f   JS   3   0  1  1:   0x2020 RO J 
-3310  JNS   3   0  1  1:   0x4002 T0 CE 
-3311 JMPI   3   0  1  1:   0x40a0 RO MAI CE 
-3312  JZI   3   0  1  1:   0x40a0 RO MAI CE 
-3313 JNZI   3   0  1  1:   0x4002 T0 CE 
-3314  JCI   3   0  1  1:   0x4002 T0 CE 
-3315 JNCI   3   0  1  1:   0x40a0 RO MAI CE 
-3316  JSI   3   0  1  1:   0x40a0 RO MAI CE 
-3317 JNSI   3   0  1  1:   0x4002 T0 CE 
+330a  PHA   3   0  1  1:   0x0042 AO RI 
+330b  PLA   3   0  1  1:   0x0087 SPO MAI 
+330c  JMP   3   0  1  1:   0x0804 RO J 
+330d   JZ   3   0  1  1:   0x0804 RO J 
+330e  JNZ   3   0  1  1:   0x1006 T0 CE 
+330f   JC   3   0  1  1:   0x1006 T0 CE 
+3310  JNC   3   0  1  1:   0x0804 RO J 
+3311   JS   3   0  1  1:   0x0804 RO J 
+3312  JNS   3   0  1  1:   0x1006 T0 CE 
+3313 JMPI   3   0  1  1:   0x1084 RO MAI CE 
+3314  JZI   3   0  1  1:   0x1084 RO MAI CE 
+3315 JNZI   3   0  1  1:   0x1006 T0 CE 
+3316  JCI   3   0  1  1:   0x1006 T0 CE 
+3317 JNCI   3   0  1  1:   0x1084 RO MAI CE 
+3318  JSI   3   0  1  1:   0x1084 RO MAI CE 
+3319 JNSI   3   0  1  1:   0x1006 T0 CE 
 3400  NOP   4   0  1  1:   0x0000 
-3401  LDA   4   0  1  1:   0x1020 RO AI 
-3402 LDAI   4   0  1  1:   0x0002 T0 
-3403  STA   4   0  1  1:   0x0840 RI AO 
-3404  ADD   4   0  1  1:   0x0420 RO BI 
-3405 ADDI   4   0  1  1:   0x1201 FI EO AI 
-3406  SUB   4   0  1  1:   0x0420 RO BI 
-3407 SUBI   4   0  1  1:   0x1301 FI SU EO AI 
+3401  LDA   4   0  1  1:   0x0404 RO AI 
+3402 LDAI   4   0  1  1:   0x0006 T0 
+3403  STA   4   0  1  1:   0x0042 AO RI 
+3404  ADD   4   0  1  1:   0x0204 RO BI 
+3405 ADDI   4   0  1  1:   0x040b EO FI AI 
+3406  SUB   4   0  1  1:   0x0204 RO BI 
+3407 SUBI   4   0  1  1:   0x050b EO FI SU AI 
 3408  OUT   4   0  1  1:   0x0000 
 3409  HLT   4   0  1  1:   0x0000 
-340a  JMP   4   0  1  1:   0x0002 T0 
-340b   JZ   4   0  1  1:   0x0002 T0 
-340c  JNZ   4   0  1  1:   0x0000 
-340d   JC   4   0  1  1:   0x0000 
-340e  JNC   4   0  1  1:   0x0002 T0 
-340f   JS   4   0  1  1:   0x0002 T0 
-3410  JNS   4   0  1  1:   0x0000 
-3411 JMPI   4   0  1  1:   0x2020 RO J 
-3412  JZI   4   0  1  1:   0x2020 RO J 
-3413 JNZI   4   0  1  1:   0x0000 
-3414  JCI   4   0  1  1:   0x0000 
-3415 JNCI   4   0  1  1:   0x2020 RO J 
-3416  JSI   4   0  1  1:   0x2020 RO J 
-3417 JNSI   4   0  1  1:   0x0000 
+340a  PHA   4   0  1  1:   0x6000 SPE SPD 
+340b  PLA   4   0  1  1:   0x0404 RO AI 
+340c  JMP   4   0  1  1:   0x0006 T0 
+340d   JZ   4   0  1  1:   0x0006 T0 
+340e  JNZ   4   0  1  1:   0x0000 
+340f   JC   4   0  1  1:   0x0000 
+3410  JNC   4   0  1  1:   0x0006 T0 
+3411   JS   4   0  1  1:   0x0006 T0 
+3412  JNS   4   0  1  1:   0x0000 
+3413 JMPI   4   0  1  1:   0x0804 RO J 
+3414  JZI   4   0  1  1:   0x0804 RO J 
+3415 JNZI   4   0  1  1:   0x0000 
+3416  JCI   4   0  1  1:   0x0000 
+3417 JNCI   4   0  1  1:   0x0804 RO J 
+3418  JSI   4   0  1  1:   0x0804 RO J 
+3419 JNSI   4   0  1  1:   0x0000 
 3500  NOP   5   0  1  1:   0x0000 
-3501  LDA   5   0  1  1:   0x0002 T0 
+3501  LDA   5   0  1  1:   0x0006 T0 
 3502 LDAI   5   0  1  1:   0x0000 
-3503  STA   5   0  1  1:   0x0002 T0 
-3504  ADD   5   0  1  1:   0x1201 FI EO AI 
-3505 ADDI   5   0  1  1:   0x0002 T0 
-3506  SUB   5   0  1  1:   0x1301 FI SU EO AI 
-3507 SUBI   5   0  1  1:   0x0002 T0 
+3503  STA   5   0  1  1:   0x0006 T0 
+3504  ADD   5   0  1  1:   0x040b EO FI AI 
+3505 ADDI   5   0  1  1:   0x0006 T0 
+3506  SUB   5   0  1  1:   0x050b EO FI SU AI 
+3507 SUBI   5   0  1  1:   0x0006 T0 
 3508  OUT   5   0  1  1:   0x0000 
 3509  HLT   5   0  1  1:   0x0000 
-350a  JMP   5   0  1  1:   0x0000 
-350b   JZ   5   0  1  1:   0x0000 
-350c  JNZ   5   0  1  1:   0x0000 
-350d   JC   5   0  1  1:   0x0000 
-350e  JNC   5   0  1  1:   0x0000 
-350f   JS   5   0  1  1:   0x0000 
-3510  JNS   5   0  1  1:   0x0000 
-3511 JMPI   5   0  1  1:   0x0002 T0 
-3512  JZI   5   0  1  1:   0x0002 T0 
-3513 JNZI   5   0  1  1:   0x0000 
-3514  JCI   5   0  1  1:   0x0000 
-3515 JNCI   5   0  1  1:   0x0002 T0 
-3516  JSI   5   0  1  1:   0x0002 T0 
-3517 JNSI   5   0  1  1:   0x0000 
-3800  NOP   0   1  1  1:   0x8080 MAI CO 
-3801  LDA   0   1  1  1:   0x8080 MAI CO 
-3802 LDAI   0   1  1  1:   0x8080 MAI CO 
-3803  STA   0   1  1  1:   0x8080 MAI CO 
-3804  ADD   0   1  1  1:   0x8080 MAI CO 
-3805 ADDI   0   1  1  1:   0x8080 MAI CO 
-3806  SUB   0   1  1  1:   0x8080 MAI CO 
-3807 SUBI   0   1  1  1:   0x8080 MAI CO 
-3808  OUT   0   1  1  1:   0x8080 MAI CO 
-3809  HLT   0   1  1  1:   0x8080 MAI CO 
-380a  JMP   0   1  1  1:   0x8080 MAI CO 
-380b   JZ   0   1  1  1:   0x8080 MAI CO 
-380c  JNZ   0   1  1  1:   0x8080 MAI CO 
-380d   JC   0   1  1  1:   0x8080 MAI CO 
-380e  JNC   0   1  1  1:   0x8080 MAI CO 
-380f   JS   0   1  1  1:   0x8080 MAI CO 
-3810  JNS   0   1  1  1:   0x8080 MAI CO 
-3811 JMPI   0   1  1  1:   0x8080 MAI CO 
-3812  JZI   0   1  1  1:   0x8080 MAI CO 
-3813 JNZI   0   1  1  1:   0x8080 MAI CO 
-3814  JCI   0   1  1  1:   0x8080 MAI CO 
-3815 JNCI   0   1  1  1:   0x8080 MAI CO 
-3816  JSI   0   1  1  1:   0x8080 MAI CO 
-3817 JNSI   0   1  1  1:   0x8080 MAI CO 
-3900  NOP   1   1  1  1:   0x4030 II RO CE 
-3901  LDA   1   1  1  1:   0x4030 II RO CE 
-3902 LDAI   1   1  1  1:   0x4030 II RO CE 
-3903  STA   1   1  1  1:   0x4030 II RO CE 
-3904  ADD   1   1  1  1:   0x4030 II RO CE 
-3905 ADDI   1   1  1  1:   0x4030 II RO CE 
-3906  SUB   1   1  1  1:   0x4030 II RO CE 
-3907 SUBI   1   1  1  1:   0x4030 II RO CE 
-3908  OUT   1   1  1  1:   0x4030 II RO CE 
-3909  HLT   1   1  1  1:   0x4030 II RO CE 
-390a  JMP   1   1  1  1:   0x4030 II RO CE 
-390b   JZ   1   1  1  1:   0x4030 II RO CE 
-390c  JNZ   1   1  1  1:   0x4030 II RO CE 
-390d   JC   1   1  1  1:   0x4030 II RO CE 
-390e  JNC   1   1  1  1:   0x4030 II RO CE 
-390f   JS   1   1  1  1:   0x4030 II RO CE 
-3910  JNS   1   1  1  1:   0x4030 II RO CE 
-3911 JMPI   1   1  1  1:   0x4030 II RO CE 
-3912  JZI   1   1  1  1:   0x4030 II RO CE 
-3913 JNZI   1   1  1  1:   0x4030 II RO CE 
-3914  JCI   1   1  1  1:   0x4030 II RO CE 
-3915 JNCI   1   1  1  1:   0x4030 II RO CE 
-3916  JSI   1   1  1  1:   0x4030 II RO CE 
-3917 JNSI   1   1  1  1:   0x4030 II RO CE 
+350a  PHA   5   0  1  1:   0x0006 T0 
+350b  PLA   5   0  1  1:   0x0006 T0 
+350c  JMP   5   0  1  1:   0x0000 
+350d   JZ   5   0  1  1:   0x0000 
+350e  JNZ   5   0  1  1:   0x0000 
+350f   JC   5   0  1  1:   0x0000 
+3510  JNC   5   0  1  1:   0x0000 
+3511   JS   5   0  1  1:   0x0000 
+3512  JNS   5   0  1  1:   0x0000 
+3513 JMPI   5   0  1  1:   0x0006 T0 
+3514  JZI   5   0  1  1:   0x0006 T0 
+3515 JNZI   5   0  1  1:   0x0000 
+3516  JCI   5   0  1  1:   0x0000 
+3517 JNCI   5   0  1  1:   0x0006 T0 
+3518  JSI   5   0  1  1:   0x0006 T0 
+3519 JNSI   5   0  1  1:   0x0000 
+3800  NOP   0   1  1  1:   0x0081 CO MAI 
+3801  LDA   0   1  1  1:   0x0081 CO MAI 
+3802 LDAI   0   1  1  1:   0x0081 CO MAI 
+3803  STA   0   1  1  1:   0x0081 CO MAI 
+3804  ADD   0   1  1  1:   0x0081 CO MAI 
+3805 ADDI   0   1  1  1:   0x0081 CO MAI 
+3806  SUB   0   1  1  1:   0x0081 CO MAI 
+3807 SUBI   0   1  1  1:   0x0081 CO MAI 
+3808  OUT   0   1  1  1:   0x0081 CO MAI 
+3809  HLT   0   1  1  1:   0x0081 CO MAI 
+380a  PHA   0   1  1  1:   0x0081 CO MAI 
+380b  PLA   0   1  1  1:   0x0081 CO MAI 
+380c  JMP   0   1  1  1:   0x0081 CO MAI 
+380d   JZ   0   1  1  1:   0x0081 CO MAI 
+380e  JNZ   0   1  1  1:   0x0081 CO MAI 
+380f   JC   0   1  1  1:   0x0081 CO MAI 
+3810  JNC   0   1  1  1:   0x0081 CO MAI 
+3811   JS   0   1  1  1:   0x0081 CO MAI 
+3812  JNS   0   1  1  1:   0x0081 CO MAI 
+3813 JMPI   0   1  1  1:   0x0081 CO MAI 
+3814  JZI   0   1  1  1:   0x0081 CO MAI 
+3815 JNZI   0   1  1  1:   0x0081 CO MAI 
+3816  JCI   0   1  1  1:   0x0081 CO MAI 
+3817 JNCI   0   1  1  1:   0x0081 CO MAI 
+3818  JSI   0   1  1  1:   0x0081 CO MAI 
+3819 JNSI   0   1  1  1:   0x0081 CO MAI 
+3900  NOP   1   1  1  1:   0x1024 RO II CE 
+3901  LDA   1   1  1  1:   0x1024 RO II CE 
+3902 LDAI   1   1  1  1:   0x1024 RO II CE 
+3903  STA   1   1  1  1:   0x1024 RO II CE 
+3904  ADD   1   1  1  1:   0x1024 RO II CE 
+3905 ADDI   1   1  1  1:   0x1024 RO II CE 
+3906  SUB   1   1  1  1:   0x1024 RO II CE 
+3907 SUBI   1   1  1  1:   0x1024 RO II CE 
+3908  OUT   1   1  1  1:   0x1024 RO II CE 
+3909  HLT   1   1  1  1:   0x1024 RO II CE 
+390a  PHA   1   1  1  1:   0x1024 RO II CE 
+390b  PLA   1   1  1  1:   0x1024 RO II CE 
+390c  JMP   1   1  1  1:   0x1024 RO II CE 
+390d   JZ   1   1  1  1:   0x1024 RO II CE 
+390e  JNZ   1   1  1  1:   0x1024 RO II CE 
+390f   JC   1   1  1  1:   0x1024 RO II CE 
+3910  JNC   1   1  1  1:   0x1024 RO II CE 
+3911   JS   1   1  1  1:   0x1024 RO II CE 
+3912  JNS   1   1  1  1:   0x1024 RO II CE 
+3913 JMPI   1   1  1  1:   0x1024 RO II CE 
+3914  JZI   1   1  1  1:   0x1024 RO II CE 
+3915 JNZI   1   1  1  1:   0x1024 RO II CE 
+3916  JCI   1   1  1  1:   0x1024 RO II CE 
+3917 JNCI   1   1  1  1:   0x1024 RO II CE 
+3918  JSI   1   1  1  1:   0x1024 RO II CE 
+3919 JNSI   1   1  1  1:   0x1024 RO II CE 
 3a00  NOP   2   1  1  1:   0x0000 
-3a01  LDA   2   1  1  1:   0x8080 MAI CO 
-3a02 LDAI   2   1  1  1:   0x8080 MAI CO 
-3a03  STA   2   1  1  1:   0x8080 MAI CO 
-3a04  ADD   2   1  1  1:   0x8080 MAI CO 
-3a05 ADDI   2   1  1  1:   0x8080 MAI CO 
-3a06  SUB   2   1  1  1:   0x8080 MAI CO 
-3a07 SUBI   2   1  1  1:   0x8080 MAI CO 
-3a08  OUT   2   1  1  1:   0x0808 OI AO 
-3a09  HLT   2   1  1  1:   0x0004 HT 
-3a0a  JMP   2   1  1  1:   0x8080 MAI CO 
-3a0b   JZ   2   1  1  1:   0x8080 MAI CO 
-3a0c  JNZ   2   1  1  1:   0x8080 MAI CO 
-3a0d   JC   2   1  1  1:   0x8080 MAI CO 
-3a0e  JNC   2   1  1  1:   0x8080 MAI CO 
-3a0f   JS   2   1  1  1:   0x8080 MAI CO 
-3a10  JNS   2   1  1  1:   0x8080 MAI CO 
-3a11 JMPI   2   1  1  1:   0x8080 MAI CO 
-3a12  JZI   2   1  1  1:   0x8080 MAI CO 
-3a13 JNZI   2   1  1  1:   0x8080 MAI CO 
-3a14  JCI   2   1  1  1:   0x8080 MAI CO 
-3a15 JNCI   2   1  1  1:   0x8080 MAI CO 
-3a16  JSI   2   1  1  1:   0x8080 MAI CO 
-3a17 JNSI   2   1  1  1:   0x8080 MAI CO 
+3a01  LDA   2   1  1  1:   0x0081 CO MAI 
+3a02 LDAI   2   1  1  1:   0x0081 CO MAI 
+3a03  STA   2   1  1  1:   0x0081 CO MAI 
+3a04  ADD   2   1  1  1:   0x0081 CO MAI 
+3a05 ADDI   2   1  1  1:   0x0081 CO MAI 
+3a06  SUB   2   1  1  1:   0x0081 CO MAI 
+3a07 SUBI   2   1  1  1:   0x0081 CO MAI 
+3a08  OUT   2   1  1  1:   0x0012 AO OI 
+3a09  HLT   2   1  1  1:   0x0005 HT 
+3a0a  PHA   2   1  1  1:   0x0087 SPO MAI 
+3a0b  PLA   2   1  1  1:   0x2000 SPE 
+3a0c  JMP   2   1  1  1:   0x0081 CO MAI 
+3a0d   JZ   2   1  1  1:   0x0081 CO MAI 
+3a0e  JNZ   2   1  1  1:   0x0000 
+3a0f   JC   2   1  1  1:   0x0081 CO MAI 
+3a10  JNC   2   1  1  1:   0x0000 
+3a11   JS   2   1  1  1:   0x0081 CO MAI 
+3a12  JNS   2   1  1  1:   0x0000 
+3a13 JMPI   2   1  1  1:   0x0081 CO MAI 
+3a14  JZI   2   1  1  1:   0x0081 CO MAI 
+3a15 JNZI   2   1  1  1:   0x0000 
+3a16  JCI   2   1  1  1:   0x0081 CO MAI 
+3a17 JNCI   2   1  1  1:   0x0000 
+3a18  JSI   2   1  1  1:   0x0081 CO MAI 
+3a19 JNSI   2   1  1  1:   0x0000 
 3b00  NOP   3   1  1  1:   0x0000 
-3b01  LDA   3   1  1  1:   0x40a0 RO MAI CE 
-3b02 LDAI   3   1  1  1:   0x5020 RO AI CE 
-3b03  STA   3   1  1  1:   0x40a0 RO MAI CE 
-3b04  ADD   3   1  1  1:   0x40a0 RO MAI CE 
-3b05 ADDI   3   1  1  1:   0x4420 RO BI CE 
-3b06  SUB   3   1  1  1:   0x40a0 RO MAI CE 
-3b07 SUBI   3   1  1  1:   0x4420 RO BI CE 
-3b08  OUT   3   1  1  1:   0x0002 T0 
+3b01  LDA   3   1  1  1:   0x1084 RO MAI CE 
+3b02 LDAI   3   1  1  1:   0x1404 RO AI CE 
+3b03  STA   3   1  1  1:   0x1084 RO MAI CE 
+3b04  ADD   3   1  1  1:   0x1084 RO MAI CE 
+3b05 ADDI   3   1  1  1:   0x1204 RO BI CE 
+3b06  SUB   3   1  1  1:   0x1084 RO MAI CE 
+3b07 SUBI   3   1  1  1:   0x1204 RO BI CE 
+3b08  OUT   3   1  1  1:   0x0006 T0 
 3b09  HLT   3   1  1  1:   0x0000 
-3b0a  JMP   3   1  1  1:   0x2020 RO J 
-3b0b   JZ   3   1  1  1:   0x2020 RO J 
-3b0c  JNZ   3   1  1  1:   0x4002 T0 CE 
-3b0d   JC   3   1  1  1:   0x2020 RO J 
-3b0e  JNC   3   1  1  1:   0x4002 T0 CE 
-3b0f   JS   3   1  1  1:   0x2020 RO J 
-3b10  JNS   3   1  1  1:   0x4002 T0 CE 
-3b11 JMPI   3   1  1  1:   0x40a0 RO MAI CE 
-3b12  JZI   3   1  1  1:   0x40a0 RO MAI CE 
-3b13 JNZI   3   1  1  1:   0x4002 T0 CE 
-3b14  JCI   3   1  1  1:   0x40a0 RO MAI CE 
-3b15 JNCI   3   1  1  1:   0x4002 T0 CE 
-3b16  JSI   3   1  1  1:   0x40a0 RO MAI CE 
-3b17 JNSI   3   1  1  1:   0x4002 T0 CE 
+3b0a  PHA   3   1  1  1:   0x0042 AO RI 
+3b0b  PLA   3   1  1  1:   0x0087 SPO MAI 
+3b0c  JMP   3   1  1  1:   0x0804 RO J 
+3b0d   JZ   3   1  1  1:   0x0804 RO J 
+3b0e  JNZ   3   1  1  1:   0x1006 T0 CE 
+3b0f   JC   3   1  1  1:   0x0804 RO J 
+3b10  JNC   3   1  1  1:   0x1006 T0 CE 
+3b11   JS   3   1  1  1:   0x0804 RO J 
+3b12  JNS   3   1  1  1:   0x1006 T0 CE 
+3b13 JMPI   3   1  1  1:   0x1084 RO MAI CE 
+3b14  JZI   3   1  1  1:   0x1084 RO MAI CE 
+3b15 JNZI   3   1  1  1:   0x1006 T0 CE 
+3b16  JCI   3   1  1  1:   0x1084 RO MAI CE 
+3b17 JNCI   3   1  1  1:   0x1006 T0 CE 
+3b18  JSI   3   1  1  1:   0x1084 RO MAI CE 
+3b19 JNSI   3   1  1  1:   0x1006 T0 CE 
 3c00  NOP   4   1  1  1:   0x0000 
-3c01  LDA   4   1  1  1:   0x1020 RO AI 
-3c02 LDAI   4   1  1  1:   0x0002 T0 
-3c03  STA   4   1  1  1:   0x0840 RI AO 
-3c04  ADD   4   1  1  1:   0x0420 RO BI 
-3c05 ADDI   4   1  1  1:   0x1201 FI EO AI 
-3c06  SUB   4   1  1  1:   0x0420 RO BI 
-3c07 SUBI   4   1  1  1:   0x1301 FI SU EO AI 
+3c01  LDA   4   1  1  1:   0x0404 RO AI 
+3c02 LDAI   4   1  1  1:   0x0006 T0 
+3c03  STA   4   1  1  1:   0x0042 AO RI 
+3c04  ADD   4   1  1  1:   0x0204 RO BI 
+3c05 ADDI   4   1  1  1:   0x040b EO FI AI 
+3c06  SUB   4   1  1  1:   0x0204 RO BI 
+3c07 SUBI   4   1  1  1:   0x050b EO FI SU AI 
 3c08  OUT   4   1  1  1:   0x0000 
 3c09  HLT   4   1  1  1:   0x0000 
-3c0a  JMP   4   1  1  1:   0x0002 T0 
-3c0b   JZ   4   1  1  1:   0x0002 T0 
-3c0c  JNZ   4   1  1  1:   0x0000 
-3c0d   JC   4   1  1  1:   0x0002 T0 
-3c0e  JNC   4   1  1  1:   0x0000 
-3c0f   JS   4   1  1  1:   0x0002 T0 
-3c10  JNS   4   1  1  1:   0x0000 
-3c11 JMPI   4   1  1  1:   0x2020 RO J 
-3c12  JZI   4   1  1  1:   0x2020 RO J 
-3c13 JNZI   4   1  1  1:   0x0000 
-3c14  JCI   4   1  1  1:   0x2020 RO J 
-3c15 JNCI   4   1  1  1:   0x0000 
-3c16  JSI   4   1  1  1:   0x2020 RO J 
-3c17 JNSI   4   1  1  1:   0x0000 
+3c0a  PHA   4   1  1  1:   0x6000 SPE SPD 
+3c0b  PLA   4   1  1  1:   0x0404 RO AI 
+3c0c  JMP   4   1  1  1:   0x0006 T0 
+3c0d   JZ   4   1  1  1:   0x0006 T0 
+3c0e  JNZ   4   1  1  1:   0x0000 
+3c0f   JC   4   1  1  1:   0x0006 T0 
+3c10  JNC   4   1  1  1:   0x0000 
+3c11   JS   4   1  1  1:   0x0006 T0 
+3c12  JNS   4   1  1  1:   0x0000 
+3c13 JMPI   4   1  1  1:   0x0804 RO J 
+3c14  JZI   4   1  1  1:   0x0804 RO J 
+3c15 JNZI   4   1  1  1:   0x0000 
+3c16  JCI   4   1  1  1:   0x0804 RO J 
+3c17 JNCI   4   1  1  1:   0x0000 
+3c18  JSI   4   1  1  1:   0x0804 RO J 
+3c19 JNSI   4   1  1  1:   0x0000 
 3d00  NOP   5   1  1  1:   0x0000 
-3d01  LDA   5   1  1  1:   0x0002 T0 
+3d01  LDA   5   1  1  1:   0x0006 T0 
 3d02 LDAI   5   1  1  1:   0x0000 
-3d03  STA   5   1  1  1:   0x0002 T0 
-3d04  ADD   5   1  1  1:   0x1201 FI EO AI 
-3d05 ADDI   5   1  1  1:   0x0002 T0 
-3d06  SUB   5   1  1  1:   0x1301 FI SU EO AI 
-3d07 SUBI   5   1  1  1:   0x0002 T0 
+3d03  STA   5   1  1  1:   0x0006 T0 
+3d04  ADD   5   1  1  1:   0x040b EO FI AI 
+3d05 ADDI   5   1  1  1:   0x0006 T0 
+3d06  SUB   5   1  1  1:   0x050b EO FI SU AI 
+3d07 SUBI   5   1  1  1:   0x0006 T0 
 3d08  OUT   5   1  1  1:   0x0000 
 3d09  HLT   5   1  1  1:   0x0000 
-3d0a  JMP   5   1  1  1:   0x0000 
-3d0b   JZ   5   1  1  1:   0x0000 
-3d0c  JNZ   5   1  1  1:   0x0000 
-3d0d   JC   5   1  1  1:   0x0000 
-3d0e  JNC   5   1  1  1:   0x0000 
-3d0f   JS   5   1  1  1:   0x0000 
-3d10  JNS   5   1  1  1:   0x0000 
-3d11 JMPI   5   1  1  1:   0x0002 T0 
-3d12  JZI   5   1  1  1:   0x0002 T0 
-3d13 JNZI   5   1  1  1:   0x0000 
-3d14  JCI   5   1  1  1:   0x0002 T0 
-3d15 JNCI   5   1  1  1:   0x0000 
-3d16  JSI   5   1  1  1:   0x0002 T0 
-3d17 JNSI   5   1  1  1:   0x0000 
+3d0a  PHA   5   1  1  1:   0x0006 T0 
+3d0b  PLA   5   1  1  1:   0x0006 T0 
+3d0c  JMP   5   1  1  1:   0x0000 
+3d0d   JZ   5   1  1  1:   0x0000 
+3d0e  JNZ   5   1  1  1:   0x0000 
+3d0f   JC   5   1  1  1:   0x0000 
+3d10  JNC   5   1  1  1:   0x0000 
+3d11   JS   5   1  1  1:   0x0000 
+3d12  JNS   5   1  1  1:   0x0000 
+3d13 JMPI   5   1  1  1:   0x0006 T0 
+3d14  JZI   5   1  1  1:   0x0006 T0 
+3d15 JNZI   5   1  1  1:   0x0000 
+3d16  JCI   5   1  1  1:   0x0006 T0 
+3d17 JNCI   5   1  1  1:   0x0000 
+3d18  JSI   5   1  1  1:   0x0006 T0 
+3d19 JNSI   5   1  1  1:   0x0000 
