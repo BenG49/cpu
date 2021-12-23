@@ -43,20 +43,20 @@ FETCH_ADDR = Ctrl.RO | Ctrl.MAI | Ctrl.CE
 # T2 = CO | MAI (for non-implied instructions)
 # ucode for T2-5
 ucode = [
-[0,                   0,                           0,                                     0],                                     # NOP
-[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.AI,                     Ctrl.T0],                               # LDA
-[FETCH_VAL,           Ctrl.RO | Ctrl.AI | Ctrl.CE, Ctrl.T0,                               0],                                     # LDA imm
-[FETCH_VAL,           FETCH_ADDR,                  Ctrl.AO | Ctrl.RI,                     Ctrl.T0],                               # STA
-[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.FI],           # ADD
-[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.FI,           Ctrl.T0],                               # ADD imm
-[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI], # SUB
-[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI, Ctrl.T0],                               # SUB imm
-[Ctrl.AO | Ctrl.OI,   Ctrl.T0,                     0,                                     0],                                     # OUT
-[Ctrl.HT,             0,                           0,                                     0],                                     # HLT
-[Ctrl.SPO | Ctrl.MAI, Ctrl.AO | Ctrl.RI,           Ctrl.SPE | Ctrl.SPD,                   Ctrl.T0],                               # PHA
-[Ctrl.SPE,            0,                           0,                                     0],                                     # PLA
-[FETCH_VAL,           Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JMP
-[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.J,                      Ctrl.T0],                               # JMP indirect
+	[0,                   0,                           0,                                     0],                                     # NOP
+	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.AI,                     Ctrl.T0],                               # LDA
+	[FETCH_VAL,           Ctrl.RO | Ctrl.AI | Ctrl.CE, Ctrl.T0,                               0],                                     # LDA imm
+	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.AO | Ctrl.RI,                     Ctrl.T0],                               # STA
+	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.FI],           # ADD
+	[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.FI,           Ctrl.T0],                               # ADD imm
+	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.BI,                     Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI], # SUB
+	[FETCH_VAL,           Ctrl.RO | Ctrl.BI | Ctrl.CE, Ctrl.EO | Ctrl.AI | Ctrl.SU | Ctrl.FI, Ctrl.T0],                               # SUB imm
+	[Ctrl.AO | Ctrl.OI,   Ctrl.T0,                     0,                                     0],                                     # OUT
+	[Ctrl.HT,             0,                           0,                                     0],                                     # HLT
+	[Ctrl.SPO | Ctrl.MAI, Ctrl.AO | Ctrl.RI,           Ctrl.SPE | Ctrl.SPD,                   Ctrl.T0],                               # PHA
+	[Ctrl.SPE,            Ctrl.SPO | Ctrl.MAI,         Ctrl.RO | Ctrl.AI,                     Ctrl.T0],                               # PLA
+	[FETCH_VAL,           Ctrl.RO | Ctrl.J,            Ctrl.T0,                               0],                                     # JMP
+	[FETCH_VAL,           FETCH_ADDR,                  Ctrl.RO | Ctrl.J,                      Ctrl.T0],                               # JMP indirect
 ]
 
 def valid_jmp(instr: int, zero: bool, carry: bool, sign: bool) -> bool:
