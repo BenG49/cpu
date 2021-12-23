@@ -16,29 +16,32 @@
 	out => 0x08
 	hlt => 0x09
 
-	jmp {addr: u8} => 0x0a @ addr `8
+	pha => 0x0a
+	pla => 0x0b
 
-	jz  {addr: u8} => 0x0b @ addr `8
-	je  {addr: u8} => 0x0b @ addr `8
-	jnz {addr: u8} => 0x0c @ addr `8
-	jne {addr: u8} => 0x0c @ addr `8
+	jmp {addr: u8} => 0x0c @ addr `8
 
-	jc  {addr: u8} => 0x0d @ addr `8
-	jnc {addr: u8} => 0x0e @ addr `8
+	jz  {addr: u8} => 0x0d @ addr `8
+	je  {addr: u8} => 0x0d @ addr `8
+	jnz {addr: u8} => 0x0e @ addr `8
+	jne {addr: u8} => 0x0e @ addr `8
 
-	js  {addr: u8} => 0x0f @ addr `8
-	jns {addr: u8} => 0x10 @ addr `8
+	jc  {addr: u8} => 0x0f @ addr `8
+	jnc {addr: u8} => 0x10 @ addr `8
 
-	jmp #{addr: u8} => 0x11 @ addr`8
+	js  {addr: u8} => 0x10 @ addr `8
+	jns {addr: u8} => 0x12 @ addr `8
 
-	jz  #{addr: u8} => 0x12 @ addr`8
-	je  #{addr: u8} => 0x12 @ addr`8
-	jnz #{addr: u8} => 0x13 @ addr`8
-	jne #{addr: u8} => 0x13 @ addr`8
+	jmp #{addr: u8} => 0x13 @ addr`8
 
-	jc  #{addr: u8} => 0x14 @ addr
-	jnc #{addr: u8} => 0x15 @ addr
+	jz  #{addr: u8} => 0x14 @ addr`8
+	je  #{addr: u8} => 0x14 @ addr`8
+	jnz #{addr: u8} => 0x15 @ addr`8
+	jne #{addr: u8} => 0x15 @ addr`8
 
-	js  #{addr: u8} => 0x16 @ addr
-	jns #{addr: u8} => 0x17 @ addr
+	jc  #{addr: u8} => 0x16 @ addr
+	jnc #{addr: u8} => 0x17 @ addr
+
+	js  #{addr: u8} => 0x18 @ addr
+	jns #{addr: u8} => 0x19 @ addr
 }
