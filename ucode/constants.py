@@ -12,7 +12,7 @@ A Reg:     ~AI, (AO)
 ALU:       (EO), SU
 MAR:       ~MAI
 RAM:       RI, (RO)
-Stack:     (SPO), ~SPE, ~SPD
+Stack:     (SPO), ~SPE, ~SPD, ~SPI
 Flags:     ~FI
 Out Reg:   ~OI
 Instr Reg: ~II
@@ -91,12 +91,12 @@ class Ctrl:
 	CE = CtrlLine.bit('CE', 12)
 	SPE = CtrlLine.bit('SPE', 13, True)
 	SPD = CtrlLine.bit('SPD', 14, True)
+	SPI = CtrlLine.bit('SPI', 15, True)
 
-	ALL = (CO, AO, EO, RO, HT, T0, SPO, FI, OI, II, RI, MAI, SU, BI, AI, J, CE, SPE, SPD)
+	ALL = (CO, AO, EO, RO, HT, T0, SPO, FI, OI, II, RI, MAI, SU, BI, AI, J, CE, SPE, SPD, SPI)
 	NONE = 0
 	for a in ALL:
 		NONE = a.applyto(NONE, False)
-	NONE &= 0x7FFF
 
 Instr = IntEnum('Instr', 'NOP LDA LDAI STA ADD ADDI SUB SUBI OUT HLT PHA PHC PLA RET JMP JZ JNZ JC JNC JS JNS JMPI JZI JNZI JCI JNCI JSI JNSI', start=0)
 

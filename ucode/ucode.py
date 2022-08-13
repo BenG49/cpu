@@ -30,7 +30,7 @@ def read_ucode(f):
 
 			data = int(l.strip(), 16)
 
-			print(f'{addr:04X} {str(Instr(instr))[6:].rjust(4)}   {tclk}   {cflag}  {zflag}  {sflag}:   0x{data:04X}', ctrl_line_str(data))	
+			print(f'{addr:04X} {str(Instr(instr))[6:].rjust(4)}   {tclk}   {cflag}  {zflag}  {sflag}:   0x{data & 0xFFFF:04X}', ctrl_line_str(data))	
 
 # get data byte after instruction
 FETCH_VAL =  Ctrl.CO, Ctrl.MAI
@@ -70,6 +70,8 @@ ucode = [
 	[FETCH_VAL,            (Ctrl.RO, Ctrl.AI, Ctrl.CE),            (Ctrl.SPO, Ctrl.MAI),                 (Ctrl.CO, Ctrl.RI, Ctrl.SPE, Ctrl.SPD, Ctrl.AO, Ctrl.J)],
 	# RET
 	[[Ctrl.SPE],           (Ctrl.SPO, Ctrl.MAI),                   (Ctrl.RO, Ctrl.J)],
+	# TXS
+	[(Ctrl.AO, Ctrl.SPI)],
 	# JMP
 	[FETCH_VAL,            (Ctrl.RO, Ctrl.J)],
 	# JMP indirect
