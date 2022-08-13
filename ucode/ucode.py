@@ -1,7 +1,5 @@
 from constants import *
 
-# TODO: everything is offset by 1, maybe not outputting NOP
-
 # readable output of which control lines are activated
 def ctrl_line_str(data: int) -> str:
 	out = ''
