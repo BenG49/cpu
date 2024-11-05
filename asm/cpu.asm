@@ -32,7 +32,7 @@
 	jc  {addr: u8} => 0x11 @ addr `8
 	jnc {addr: u8} => 0x12 @ addr `8
 
-	js  {addr: u8} => 0x12 @ addr `8
+	js  {addr: u8} => 0x13 @ addr `8
 	jns {addr: u8} => 0x14 @ addr `8
 
 	jmp #{addr: u8} => 0x15 @ addr`8
